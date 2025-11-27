@@ -1,0 +1,10 @@
+portfolio-api: bash -c 'source .venv/bin/activate && cd services/api && PYTHONPATH=. uvicorn app.main:app --reload --host 127.0.0.1 --port 8000'
+portfolio-web: npm run dev --workspace=@anna/web -- --port 3000
+mcp-edgar: bash -c 'source .venv/bin/activate && (command -v edgartools-mcp >/dev/null && EDGAR_IDENTITY="${EDGAR_IDENTITY:-Anna Mosaki mosakianna@gmail.com}" edgartools-mcp --transport streamable-http --port 8210 || (echo "edgartools-mcp not installed; sleeping"; sleep 3600))'
+mcp-yfinance: bash -c 'source .venv/bin/activate && python scripts/run_yfmcp.py'
+lab-api: bash -c 'source .venv/bin/activate && cd projects/01-llm-lab/api && PYTHONPATH=. uvicorn llm_lab.app:app --reload --host 127.0.0.1 --port 8100'
+lab-web: bash -c 'export ZONE_BASE_PATH=/demos/llm-lab LAB_API_URL=http://localhost:8100 NEXT_PUBLIC_PORTFOLIO_URL=http://localhost:3000 && npm run dev --workspace=@lab/web -- --port 3100'
+desk-api: bash -c 'source .venv/bin/activate && cd projects/02-agent-desk/api && PYTHONPATH=. uvicorn desk.app:app --reload --host 127.0.0.1 --port 8200'
+desk-web: bash -c 'export ZONE_BASE_PATH=/demos/agent-desk AGENT_DESK_API_URL=http://localhost:8200 NEXT_PUBLIC_AGENT_DESK_API_URL=http://localhost:8200 NEXT_PUBLIC_PORTFOLIO_URL=http://localhost:3000 && npm run dev --workspace=@desk/web -- --port 3200'
+digest-api: bash -c 'source .venv/bin/activate && cd projects/03-research-digest/api && PYTHONPATH=..:. uvicorn digest.app:app --reload --host 127.0.0.1 --port 8300'
+digest-web: bash -c 'export ZONE_BASE_PATH=/demos/research-digest RESEARCH_DIGEST_API_URL=http://localhost:8300 NEXT_PUBLIC_RESEARCH_DIGEST_API_URL=http://localhost:8300 NEXT_PUBLIC_PORTFOLIO_URL=http://localhost:3000 && npm run dev --workspace=@digest/web -- --port 3300'
