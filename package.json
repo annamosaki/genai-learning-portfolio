@@ -1,0 +1,22 @@
+{
+  "name": "anna-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "projects/01-llm-lab/web",
+    "projects/02-agent-desk/web",
+    "projects/03-research-digest/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@anna/web",
+    "dev:api": "cd services/api && python -m uvicorn app.main:app --reload --port 8000",
+    "build": "npm run build --workspace=@anna/web",
+    "lint": "npm run lint --workspace=@anna/web",
+    "start": "npm run start --workspace=@anna/web"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
