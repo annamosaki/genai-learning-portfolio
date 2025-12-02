@@ -1,0 +1,474 @@
+{
+  "kind": "personal-review",
+  "delivery": "local-only",
+  "number": 20260806,
+  "date": "2026-08-06",
+  "mode": "live",
+  "title": "Reading desk \u2014 2026-08-06",
+  "lede": "Time series applied to finance and what quant / fund research desks are",
+  "profile": "Anna Mosaki",
+  "matched_topics": [
+    "financial-nlp",
+    "green-finance",
+    "llm-agents",
+    "quant-research",
+    "time-series"
+  ],
+  "topics": [
+    {
+      "id": "time-series",
+      "label": "Time series \u00d7 finance",
+      "weight": 1.0
+    },
+    {
+      "id": "quant-research",
+      "label": "Quantitative research & market microstructure",
+      "weight": 1.0
+    },
+    {
+      "id": "llm-agents",
+      "label": "LLM agents, MCP, A2A",
+      "weight": 0.55
+    },
+    {
+      "id": "financial-nlp",
+      "label": "Financial NLP & sentiment",
+      "weight": 0.5
+    },
+    {
+      "id": "green-finance",
+      "label": "Green finance & climate risk",
+      "weight": 0.35
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Literature",
+      "paragraphs": [
+        {
+          "text": "Forecasting Realized Volatility with Time Series Foundation Models: A Comparison with Econometric Benchmarks \u2014 We ask whether pretrained time series foundation models (TSFMs) improve on established econometric benchmarks for forecasting realized volatility. Using the VOLARE dataset, we conduct the first systematic comparison of n\u2026",
+          "citations": [
+            {
+              "id": "1",
+              "url": "https://arxiv.org/abs/2607.05291",
+              "title": "Forecasting Realized Volatility with Time Series Foundation Models: A Comparison with Econometric Benchmarks"
+            }
+          ],
+          "meta": {
+            "score": 4.047,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-07-06",
+            "authors": "Alessio Brini"
+          }
+        },
+        {
+          "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
+          "citations": [
+            {
+              "id": "2",
+              "url": "https://arxiv.org/abs/2608.01599",
+              "title": "Latent-Regime Bias Auditing for Volatility Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 3.356,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-03",
+            "authors": "Arthur Chagas, Pedro Bento, Yan Aquino, Arthur Buzelin, Wagner Meira, Cristiano Arbex Valle"
+          }
+        },
+        {
+          "text": "PRISM: Powerful Time Series to Image (TS2I) Representations for Multivariate Anomaly Detection \u2014 Time series anomaly detection (TSAD) underpins applications in predictive maintenance, finance, and cloud computing, however performance remains sensitive to representation choices, especially in multivariate settings. W\u2026",
+          "citations": [
+            {
+              "id": "3",
+              "url": "https://arxiv.org/abs/2608.03926",
+              "title": "PRISM: Powerful Time Series to Image (TS2I) Representations for Multivariate Anomaly Detection"
+            }
+          ],
+          "meta": {
+            "score": 3.356,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-04",
+            "authors": "Mateusz Smendowski, Kamil Faber, Piotr Nawrocki, Nathalie Japkowicz, Roberto Corizzo"
+          }
+        },
+        {
+          "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
+          "citations": [
+            {
+              "id": "4",
+              "url": "https://arxiv.org/abs/2607.22491",
+              "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 2.795,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-07-24",
+            "authors": "Aliaksei Kaliutau"
+          }
+        },
+        {
+          "text": "How Fast Do Signatures Learn? Statistical Theory and Applications for Path Regression \u2014 Many prediction and decision-making problems in operations research involve path-valued covariates -- data that evolve over time -- for which path signatures have become a canonical feature representation. Their use is j\u2026",
+          "citations": [
+            {
+              "id": "5",
+              "url": "https://arxiv.org/abs/2607.17865",
+              "title": "How Fast Do Signatures Learn? Statistical Theory and Applications for Path Regression"
+            }
+          ],
+          "meta": {
+            "score": 2.794,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-07-20",
+            "authors": "Blanka Horvath, Wen Su, Wu Su, Binnan Wang, Ruixun Zhang"
+          }
+        },
+        {
+          "text": "Volatility in Prediction Markets: A Structural Approach \u2014 Forward-looking volatility forecasts are central inputs to derivatives pricing, market making, risk management, and volatility-linked trading strategies, with ARCH and GARCH models serving as the canonical workhorses. Su\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2607.08199",
+              "title": "Volatility in Prediction Markets: A Structural Approach"
+            }
+          ],
+          "meta": {
+            "score": 2.794,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-07-09",
+            "authors": "Weiye Xi, Ciamac C. Moallemi, Mallesh Pai, Shouqiao Wang"
+          }
+        }
+      ]
+    },
+    {
+      "heading": "News",
+      "paragraphs": [
+        {
+          "text": "Climate disclosure language under sharper scrutiny \u2014 Supervisors keep pressure on substantiating transition claims \u2014 greenwashing detection stays relevant.",
+          "citations": [
+            {
+              "id": "n1",
+              "url": "https://finance.ec.europa.eu/",
+              "title": "Climate disclosure language under sharper scrutiny"
+            }
+          ],
+          "meta": {
+            "score": 3.3,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp",
+              "green-finance"
+            ],
+            "kind": "news",
+            "source": "policy digest",
+            "date": "2026-07-15",
+            "authors": null
+          }
+        },
+        {
+          "text": "Hyperscalers flag power and networking as the new AI bottleneck \u2014 Capex commentary emphasizes long-duration power and networking constraints rather than pure chip scarcity.",
+          "citations": [
+            {
+              "id": "n2",
+              "url": "https://www.sec.gov/",
+              "title": "Hyperscalers flag power and networking as the new AI bottleneck"
+            }
+          ],
+          "meta": {
+            "score": 2.225,
+            "topics": [
+              "quant-research",
+              "llm-agents",
+              "financial-nlp"
+            ],
+            "kind": "news",
+            "source": "SEC / earnings notes (local digest)",
+            "date": "2026-07-18",
+            "authors": null
+          }
+        },
+        {
+          "text": "European banks raise capital buffers amid rate uncertainty \u2014 Prudential language remains cautious; higher buffers framed as resilience, not a growth signal.",
+          "citations": [
+            {
+              "id": "n3",
+              "url": "https://www.ecb.europa.eu/",
+              "title": "European banks raise capital buffers amid rate uncertainty"
+            }
+          ],
+          "meta": {
+            "score": 1.15,
+            "topics": [
+              "quant-research"
+            ],
+            "kind": "news",
+            "source": "ECB digest",
+            "date": "2026-07-17",
+            "authors": null
+          }
+        }
+      ]
+    },
+    {
+      "heading": "Fund research",
+      "paragraphs": [
+        {
+          "text": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks \u2014 Financial markets are often viewed primarily through lens of equity index movements, as they attract most of the attention. However, commodities represent an important component of the global economy, and shocks in commo\u2026",
+          "citations": [
+            {
+              "id": "f1",
+              "url": "https://quantpedia.com/commodity-crisis-analysis-how-portfolios-react-to-commodity-shocks/",
+              "title": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks"
+            }
+          ],
+          "meta": {
+            "score": 3.112,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Sat, 18 Ju",
+            "authors": null
+          }
+        },
+        {
+          "text": "Getting the Target Right in Return Prediction \u2014 Recent interesting research from Cakici and Zaremba, highlights an often-overlooked aspect of machine learning for equity return prediction: the choice of prediction target. Rather than focusing on increasingly sophistic\u2026",
+          "citations": [
+            {
+              "id": "f2",
+              "url": "https://quantpedia.com/getting-the-target-right-in-return-prediction/",
+              "title": "Getting the Target Right in Return Prediction"
+            }
+          ],
+          "meta": {
+            "score": 3.112,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Thu, 23 Ju",
+            "authors": null
+          }
+        },
+        {
+          "text": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following \u2014 Trend following was one of the most persistent anomalies in finance for nearly two centuries, yet its performance deteriorated sharply after the 2008 financial crisis. An analysis of approximately 100 liquid futures cont\u2026",
+          "citations": [
+            {
+              "id": "f3",
+              "url": "https://quantpedia.com/is-trend-still-your-friend-a-microstructural-account-of-the-demise-of-short-term-trend-following/",
+              "title": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following"
+            }
+          ],
+          "meta": {
+            "score": 2.587,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Wed, 29 Ju",
+            "authors": null
+          }
+        },
+        {
+          "text": "Results from the Advent of FPGA Challenge \u2014 At the end of last year, we decided to try something new: a challenge that would run alongside Advent of Code , where we asked the community to show us how they could design hardware to solve the same problems. We had no\u2026",
+          "citations": [
+            {
+              "id": "f4",
+              "url": "https://blog.janestreet.com/advent-of-fpga-challenge-2025-results/",
+              "title": "Results from the Advent of FPGA Challenge"
+            }
+          ],
+          "meta": {
+            "score": 1.732,
+            "topics": [
+              "time-series",
+              "financial-nlp"
+            ],
+            "kind": "fund_research",
+            "source": "jane-street-tech",
+            "date": "Wed, 11 Fe",
+            "authors": null
+          }
+        },
+        {
+          "text": "From Backtest to Benchmark: Validating New Strategies with Quantpedia API \u2014 A profitable backtest is rarely the end of a research process. In professional quantitative research, the more important question often comes after the first positive result: is the strategy genuinely new, or is it simpl\u2026",
+          "citations": [
+            {
+              "id": "f5",
+              "url": "https://quantpedia.com/from-backtest-to-benchmark-validating-new-strategies-with-quantpedia-api/",
+              "title": "From Backtest to Benchmark: Validating New Strategies with Quantpedia API"
+            }
+          ],
+          "meta": {
+            "score": 1.38,
+            "topics": [
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Mon, 27 Ju",
+            "authors": null
+          }
+        },
+        {
+          "text": "Can AI Do Financial Research? \u2014 Large language models are already capable of summarizing financial research, but are they ready to conduct it? In their latest paper, researchers from Google, Boston College, and Columbia introduce a framework where a la\u2026",
+          "citations": [
+            {
+              "id": "f6",
+              "url": "https://quantpedia.com/can-ai-do-financial-research/",
+              "title": "Can AI Do Financial Research?"
+            }
+          ],
+          "meta": {
+            "score": 1.265,
+            "topics": [
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Thu, 16 Ju",
+            "authors": null
+          }
+        }
+      ]
+    },
+    {
+      "heading": "Watchlist",
+      "paragraphs": [
+        {
+          "text": "Active interests this run: financial-nlp, green-finance, llm-agents, quant-research, time-series.",
+          "citations": [],
+          "meta": {
+            "kind": "watchlist"
+          }
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "literature_items": 6,
+    "news_items": 3,
+    "fund_research_items": 6,
+    "claims_dropped": 1,
+    "sources_local": false,
+    "emailed": false,
+    "sources": {
+      "local_literature": {
+        "ok": true,
+        "count": 6
+      },
+      "papers_inbox": {
+        "ok": true,
+        "count": 0
+      },
+      "arxiv": {
+        "ok": true,
+        "count": 20,
+        "errors": [],
+        "source": "arxiv"
+      },
+      "rss": {
+        "ok": true,
+        "count": 24,
+        "source": "rss",
+        "feeds": [
+          {
+            "name": "jane-street-tech",
+            "ok": true,
+            "count": 8
+          },
+          {
+            "name": "quantpedia",
+            "ok": true,
+            "count": 8
+          },
+          {
+            "name": "man-institute",
+            "ok": false,
+            "reason": "Client error '404 Not Found' for url 'https://www.man.com/rss.xml'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
+            "count": 0
+          },
+          {
+            "name": "aqr-insights",
+            "ok": true,
+            "count": 0
+          },
+          {
+            "name": "two-sigma-insights",
+            "ok": true,
+            "count": 8
+          },
+          {
+            "name": "ssrn-qfin",
+            "ok": false,
+            "reason": "Client error '403 Forbidden' for url 'https://papers.ssrn.com/sol3/Jeljour_results.cfm?form_name=journalBrowse&journal_id=1504394&Network=no&lim=false&format=atom'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+            "count": 0
+          }
+        ]
+      },
+      "finnhub": {
+        "ok": true,
+        "skipped": true,
+        "reason": "FINNHUB_API_KEY unset",
+        "count": 0,
+        "source": "finnhub"
+      },
+      "local_news": {
+        "ok": true,
+        "count": 5
+      },
+      "news_inbox": {
+        "ok": true,
+        "count": 0
+      }
+    },
+    "items_ingested": 54,
+    "items_ranked": 38
+  }
+}
