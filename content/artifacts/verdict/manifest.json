@@ -1,0 +1,5 @@
+{
+  "seed": 42,
+  "mode": "smoke",
+  "repro": "python -m verdict.run_benchmark --smoke"
+}

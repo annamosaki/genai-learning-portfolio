@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "strategy": "Long positive / short negative headlines",
+  "note": "Most accurate classifier is not the most profitable.",
+  "strategies": [
+    {
+      "model": "FinBERT",
+      "sharpe": 0.92,
+      "max_dd": -0.11
+    },
+    {
+      "model": "BERT-base",
+      "sharpe": 0.71,
+      "max_dd": -0.14
+    },
+    {
+      "model": "LSTM+GloVe",
+      "sharpe": 0.48,
+      "max_dd": -0.19
+    },
+    {
+      "model": "Qwen3-8B few-shot",
+      "sharpe": 1.08,
+      "max_dd": -0.09
+    },
+    {
+      "model": "Frontier API",
+      "sharpe": 1.02,
+      "max_dd": -0.1
+    }
+  ]
+}
