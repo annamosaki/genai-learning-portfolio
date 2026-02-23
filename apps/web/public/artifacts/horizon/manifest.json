@@ -1,0 +1,6 @@
+{
+  "seed": 42,
+  "mode": "smoke",
+  "target": "log-returns + realised vol",
+  "repro": "python -m horizon.run_benchmark --smoke"
+}
