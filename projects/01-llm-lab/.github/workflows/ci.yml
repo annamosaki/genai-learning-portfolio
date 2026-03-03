@@ -1,0 +1,76 @@
+name: LLM Lab CI
+
+on:
+  push:
+    branches: [main]
+    paths: ['projects/01-llm-lab/**']
+  pull_request:
+    branches: [main]
+    paths: ['projects/01-llm-lab/**']
+
+jobs:
+  test-api:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/01-llm-lab
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install API dependencies
+        run: |
+          cd api
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Test API import
+        run: |
+          cd api
+          python -c "import llm_lab.app; print('✓ API imports successfully')"
+
+      - name: Run basic health check
+        run: |
+          cd api
+          python -c "
+          from llm_lab.app import app
+          from fastapi.testclient import TestClient
+          client = TestClient(app)
+          response = client.get('/health')
+          assert response.status_code == 200
+          print('✓ Health check passed')
+          "
+
+  test-web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/01-llm-lab/web
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: projects/01-llm-lab/web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build web app
+        run: npm run build
+        env:
+          ZONE_BASE_PATH: /demos/llm-lab
+
+      - name: Test build artifacts
+        run: |
+          test -d .next
+          echo "✓ Build completed successfully"

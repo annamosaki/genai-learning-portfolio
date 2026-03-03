@@ -1,0 +1,72 @@
+import pandas as pd
+import random
+
+def question1(new_employees, employees):
+	lower_bounds = [45, 100, 160, 175]
+	upper_bounds = [ 100, 160, 175, float("inf")]
+	pending = pd.DataFrame()
+	for i in range(4):
+	    pending = pd.concat([pending, new_employees[ ((new_employees["PositionID"]==i) &((new_employees["Compensation"]>upper_bounds[i]*1000) | (new_employees["Compensation"]<= lower_bounds[i]*1000))) ]])
+	    new_employees.drop(new_employees[ ((new_employees["PositionID"]==i)  &((new_employees["Compensation"]>upper_bounds[i]*1000) | (new_employees["Compensation"]<= lower_bounds[i]*1000))) ].index, inplace=True)
+	new_employees = new_employees.reset_index()
+	pending.to_excel("pending.xlsx")
+	return new_employees, pending
+
+
+def add_email(row, emails):
+	domain = "@seedcapital.example"
+	fn = row["FirstName"]
+	ln = row["LastName"]
+	email_head = f"{fn.lower()}.{ln.lower()}"
+	counter = 0
+	while email_head + domain in emails:
+	    counter += 1
+	    email_head += str(counter)
+	email_head += domain
+	return email_head
+
+
+def add_manager(row, employees):
+    new_dep_id = row["DepartmentID"]
+    new_pos_id = row["PositionID"]
+    subset_managers = employees[((employees["DepartmentID"] == new_dep_id) & (employees["PositionID"] > new_pos_id))]
+    manager_id = random.choice(list(subset_managers["EmployeeID"]))
+    return manager_id
+
+def add_emp_id(row, employees):
+	maxemp = max(employees["EmployeeID"])
+	return maxemp + int(row.name) + 1
+
+def add_full_name(row):
+	fn = row["FirstName"]
+	ln = row["LastName"]
+	full_name = fn + " " + ln
+	return full_name
+
+
+def main():
+	new_employees = pd.read_excel("./source_data/New Joiners Form - HR.xlsx")
+	employees = pd.read_csv("./target_data/employees.csv")
+	emails = set(employees["Email"])
+	new_employees , pending = question1(new_employees, employees)
+	new_employees.drop(["index","Id", "Start time", "Completion time", "Agreed Notice Period" ], axis = 1, inplace = True)
+	new_employees["Email"] = new_employees.apply(lambda v: add_email(v, emails = emails), axis=1)
+	new_employees.drop("Submission Email" , axis = 1, inplace = True)
+	new_employees["ManagerID"] = new_employees.apply(lambda v: add_manager(v, employees = employees), axis=1)
+	new_employees["EmployeeID"] = new_employees.apply(lambda v: add_emp_id(v, employees = employees), axis=1)
+	new_employees = new_employees.rename(columns={"StartDate": "HireDate"})
+	new_employees["HireDate"] = pd.to_datetime(new_employees["HireDate"], format="%Y-%m-%d")
+	new_employees["HireDate"] = new_employees["HireDate"].dt.strftime("%d/%m/%Y")
+	new_employees["DateOfBirth"] = pd.to_datetime(new_employees["DateOfBirth"], format="%Y-%m-%d")
+	new_employees["DateOfBirth"] = new_employees["DateOfBirth"].dt.strftime("%d/%m/%Y")
+	new_employees["Grade"] = [5]*len(new_employees)
+	new_employees["ProductivityScore"] = [0.5]*len(new_employees)
+	new_employees["FullName"] = new_employees.apply(add_full_name, axis=1)
+	new_employees = new_employees[list(employees.columns)]
+
+	new_employees.to_csv("target_data/employees.csv", mode="a", header=False, index=False)
+
+
+
+if __name__ == "__main__":
+    main()
