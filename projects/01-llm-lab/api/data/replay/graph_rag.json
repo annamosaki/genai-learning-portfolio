@@ -1,0 +1,26 @@
+{
+  "level": "graph_rag",
+  "description": "Graph RAG level replay responses",
+  "responses": [
+    {
+      "answer": "Based on the knowledge graph analysis, NVIDIA's financial performance shows strong interconnected growth across multiple business segments. The entity relationships indicate that NVIDIA's revenue growth is closely tied to the AI revolution and data center expansion [1]. The graph shows connections between NVIDIA, data center technologies, and AI platforms, with community analysis revealing that NVIDIA operates in a highly interconnected ecosystem of technology companies including relationships with cloud service providers and enterprise customers [2]. The financial metrics community shows NVIDIA's revenue significantly outperforming other technology companies in the AI acceleration space.",
+      "citations": [
+        "Community: Financial Entities",
+        "Community: Key Connected Entities",
+        "Entity: NVIDIA"
+      ],
+      "level": "graph_rag", 
+      "trace": {
+        "replay": true,
+        "replay_reason": "OpenAI API unavailable",
+        "level": "graph_rag",
+        "search_type": "both",
+        "graph_nodes": 45,
+        "graph_edges": 23,
+        "communities_count": 4,
+        "local_entities_found": 8,
+        "global_communities_matched": 2
+      }
+    }
+  ]
+}

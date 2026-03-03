@@ -1,0 +1,36 @@
+{
+  "level": "agent_rag",
+  "description": "Agent RAG level replay responses",
+  "responses": [
+    {
+      "answer": "I performed a multi-step analysis to answer your question about NVIDIA's financial performance. First, I searched through the available financial filings and found comprehensive data about NVIDIA's fiscal 2024 results [1]. The search revealed that NVIDIA achieved record revenue of $60.9 billion, representing a 126% year-over-year increase [1]. The analysis shows this growth was primarily driven by the Data Center segment, which reached $47.5 billion in revenue - a remarkable 217% increase [1]. This demonstrates NVIDIA's successful transition from primarily a gaming GPU company to a leader in AI infrastructure and data center acceleration.",
+      "citations": [
+        "NVDA_10K_2025.md",
+        "search_filings_tool_result"
+      ],
+      "level": "agent_rag",
+      "trace": {
+        "replay": true,
+        "replay_reason": "OpenAI API unavailable", 
+        "level": "agent_rag",
+        "agent_type": "simple_multi_step",
+        "steps": [
+          {
+            "step": 1,
+            "action": "search_filings",
+            "results_count": 5,
+            "elapsed_seconds": 0.45
+          },
+          {
+            "step": 2,
+            "action": "generate_answer",
+            "context_length": 2400,
+            "elapsed_seconds": 0.82
+          }
+        ],
+        "total_steps": 2,
+        "search_results_used": 5
+      }
+    }
+  ]
+}
