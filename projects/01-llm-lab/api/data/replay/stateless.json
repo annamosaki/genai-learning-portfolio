@@ -1,0 +1,18 @@
+{
+  "level": "stateless",
+  "description": "Stateless level replay responses",
+  "responses": [
+    {
+      "answer": "I can provide general information about NVIDIA's financial performance, but I don't have access to specific real-time financial data. NVIDIA is primarily known for its graphics processing units (GPUs) and has seen significant growth in recent years, particularly driven by AI and data center applications. For the most current and accurate revenue figures, I'd recommend checking NVIDIA's official investor relations website or recent SEC filings.",
+      "citations": [],
+      "level": "stateless",
+      "trace": {
+        "replay": true,
+        "replay_reason": "OpenAI API unavailable",
+        "level": "stateless",
+        "prompt": "Basic financial question without external context",
+        "method": "stateless_generation"
+      }
+    }
+  ]
+}

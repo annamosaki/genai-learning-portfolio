@@ -1,0 +1,21 @@
+{
+  "level": "naive_rag",
+  "description": "Naive RAG level replay responses",
+  "responses": [
+    {
+      "answer": "Based on the available financial documents, NVIDIA Corporation reported total revenue of $60.9 billion for fiscal year 2024, representing a 126% increase from the prior year [1]. This remarkable growth was primarily driven by the Data Center segment, which generated $47.5 billion in revenue, a 217% increase from the previous year [1]. The surge in data center revenue reflects strong demand for NVIDIA's AI computing platforms and GPUs used in machine learning and artificial intelligence applications.",
+      "citations": [
+        "NVDA_10K_2025.md"
+      ],
+      "level": "naive_rag",
+      "trace": {
+        "replay": true,
+        "replay_reason": "OpenAI API unavailable",
+        "level": "naive_rag",
+        "retrieval_method": "cosine_similarity",
+        "chunks_retrieved": 5,
+        "top_scores": [0.85, 0.78, 0.72, 0.69, 0.65]
+      }
+    }
+  ]
+}
