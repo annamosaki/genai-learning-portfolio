@@ -1,0 +1,48 @@
+questions:
+  - id: "q001"
+    question: "What was NVIDIA's revenue in 2024?"
+    expected_answer: "NVIDIA's revenue for fiscal year 2024 was approximately $60.9 billion, representing a 126% increase from the previous year."
+    category: "factual"
+    difficulty: "easy"
+    
+  - id: "q002" 
+    question: "Compare Apple's and Microsoft's operating margins"
+    expected_answer: "Both Apple and Microsoft maintain strong operating margins above 25%, with Apple typically achieving slightly higher margins due to its premium product pricing strategy."
+    category: "comparison"
+    difficulty: "medium"
+    
+  - id: "q003"
+    question: "What are the main risk factors for tech companies in 2024?"
+    expected_answer: "Key risk factors include AI regulation uncertainty, supply chain disruptions, cybersecurity threats, increased competition, and potential economic downturn impacts."
+    category: "analysis"
+    difficulty: "medium"
+    
+  - id: "q004"
+    question: "How does NVIDIA's data center revenue compare to gaming revenue?"
+    expected_answer: "NVIDIA's data center revenue significantly exceeded gaming revenue in 2024, with data center becoming the dominant revenue segment due to AI demand."
+    category: "comparison"
+    difficulty: "easy"
+    
+  - id: "q005"
+    question: "What strategic initiatives is Microsoft pursuing in AI?"
+    expected_answer: "Microsoft is investing heavily in OpenAI partnership, Azure AI services, Copilot integration across products, and building AI infrastructure capabilities."
+    category: "strategic"
+    difficulty: "medium"
+    
+  - id: "q006"
+    question: "Calculate the price-to-earnings ratio for Apple based on the latest data"
+    expected_answer: "Based on current earnings data, Apple's P/E ratio is approximately 25-30x, reflecting investor confidence in future growth prospects."
+    category: "calculation"
+    difficulty: "hard"
+    
+  - id: "q007"
+    question: "What regulatory challenges do big tech companies face?"
+    expected_answer: "Major challenges include antitrust investigations, data privacy regulations like GDPR, AI ethics requirements, and potential breakup threats in various jurisdictions."
+    category: "regulatory"
+    difficulty: "medium"
+    
+  - id: "q008"
+    question: "Explain the impact of AI on cloud computing revenues"
+    expected_answer: "AI has significantly boosted cloud computing revenues by driving demand for GPU compute, AI services, and specialized infrastructure, particularly benefiting major cloud providers."
+    category: "analysis"
+    difficulty: "hard"
