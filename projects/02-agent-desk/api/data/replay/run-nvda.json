@@ -1,0 +1,375 @@
+[
+  {
+    "type": "agent.discovered",
+    "timestamp": "2026-07-26T00:52:00.000Z",
+    "run_id": "replay-nvda-001",
+    "agent": "research",
+    "data": {
+      "description": "Deep SEC filing analysis with GraphRAG"
+    }
+  },
+  {
+    "type": "agent.discovered", 
+    "timestamp": "2026-07-26T00:52:00.100Z",
+    "run_id": "replay-nvda-001",
+    "agent": "macro",
+    "data": {
+      "description": "Sector and economic analysis"
+    }
+  },
+  {
+    "type": "agent.discovered",
+    "timestamp": "2026-07-26T00:52:00.200Z", 
+    "run_id": "replay-nvda-001",
+    "agent": "quant",
+    "data": {
+      "description": "Technical and statistical analysis"
+    }
+  },
+  {
+    "type": "agent.discovered",
+    "timestamp": "2026-07-26T00:52:00.300Z",
+    "run_id": "replay-nvda-001", 
+    "agent": "risk",
+    "data": {
+      "description": "Integrated risk assessment"
+    }
+  },
+  {
+    "type": "agent.discovered",
+    "timestamp": "2026-07-26T00:52:00.400Z",
+    "run_id": "replay-nvda-001",
+    "agent": "scribe", 
+    "data": {
+      "description": "Investment memo synthesis"
+    }
+  },
+  {
+    "type": "task.created",
+    "timestamp": "2026-07-26T00:52:01.000Z",
+    "run_id": "replay-nvda-001",
+    "agent": "orchestrator",
+    "data": {
+      "task": "Create analysis plan for NVDA"
+    }
+  },
+  {
+    "type": "approval.required",
+    "timestamp": "2026-07-26T00:52:02.000Z", 
+    "run_id": "replay-nvda-001",
+    "agent": null,
+    "data": {
+      "gate_id": "replay-nvda-001_plan_0",
+      "type": "plan",
+      "description": "Analysis plan for NVDA",
+      "content": "# Analysis Plan: NVDA\n\n## Objective\nProvide comprehensive investment analysis\n\n## Multi-Agent Analysis Approach\n\n### 1. Research Agent\n- Focus: SEC filings analysis using GraphRAG\n- Data Sources: 10-K, 10-Q, 8-K filings\n- Output: Fundamental strength assessment\n\n### 2. Macro Agent\n- Focus: Sector dynamics and economic environment  \n- Analysis: Market sentiment, economic indicators\n- Output: Macro context and positioning\n\n### 3. Quantitative Agent\n- Focus: Technical analysis and statistical metrics\n- Data Sources: Historical price data\n- Output: Technical signals and risk metrics\n\n### 4. Risk Agent\n- Focus: Integrated risk assessment\n- Inputs: All other agent outputs\n- Output: Risk rating and recommendations\n\n### 5. Scribe Agent\n- Focus: Investment memo synthesis\n- Output: Structured recommendation\n\nProceed with this analysis plan?"
+    }
+  },
+  {
+    "type": "approval.resolved",
+    "timestamp": "2026-07-26T00:52:15.000Z",
+    "run_id": "replay-nvda-001", 
+    "agent": null,
+    "data": {
+      "gate_id": "replay-nvda-001_plan_0",
+      "decision": "approve",
+      "message": "Plan approved by user"
+    }
+  },
+  {
+    "type": "message.sent",
+    "timestamp": "2026-07-26T00:52:16.000Z",
+    "run_id": "replay-nvda-001",
+    "agent": "orchestrator",
+    "data": {
+      "message": "Starting parallel agent analysis"
+    }
+  },
+  {
+    "type": "message.sent", 
+    "timestamp": "2026-07-26T00:52:16.100Z",
+    "run_id": "replay-nvda-001",
+    "agent": "orchestrator",
+    "data": {
+      "to_agent": "research",
+      "message_type": "task_assignment",
+      "content": "Starting research analysis"
+    }
+  },
+  {
+    "type": "task.created",
+    "timestamp": "2026-07-26T00:52:16.200Z",
+    "run_id": "replay-nvda-001",
+    "agent": "research",
+    "data": {
+      "task": "Research analysis for NVDA",
+      "question": "Provide comprehensive investment analysis"
+    }
+  },
+  {
+    "type": "tool.called",
+    "timestamp": "2026-07-26T00:52:16.300Z",
+    "run_id": "replay-nvda-001", 
+    "agent": "research",
+    "data": {
+      "tool": "graph_search",
+      "query": "NVDA Provide comprehensive investment analysis"
+    }
+  },
+  {
+    "type": "tool.returned",
+    "timestamp": "2026-07-26T00:52:17.500Z",
+    "run_id": "replay-nvda-001",
+    "agent": "research", 
+    "data": {
+      "tool": "graph_search",
+      "results_count": 3
+    }
+  },
+  {
+    "type": "tool.called",
+    "timestamp": "2026-07-26T00:52:17.600Z",
+    "run_id": "replay-nvda-001",
+    "agent": "research",
+    "data": {
+      "tool": "edgar_mcp",
+      "ticker": "NVDA"
+    }
+  },
+  {
+    "type": "tool.returned", 
+    "timestamp": "2026-07-26T00:52:18.200Z",
+    "run_id": "replay-nvda-001",
+    "agent": "research",
+    "data": {
+      "tool": "edgar_mcp",
+      "data_keys": ["ticker", "latest_10k", "recent_8k", "insider_trading", "note"]
+    }
+  },
+  {
+    "type": "message.sent",
+    "timestamp": "2026-07-26T00:52:16.150Z",
+    "run_id": "replay-nvda-001",
+    "agent": "orchestrator", 
+    "data": {
+      "to_agent": "macro",
+      "message_type": "task_assignment",
+      "content": "Starting macro analysis"
+    }
+  },
+  {
+    "type": "task.created",
+    "timestamp": "2026-07-26T00:52:16.250Z",
+    "run_id": "replay-nvda-001",
+    "agent": "macro",
+    "data": {
+      "task": "Macro analysis for NVDA"
+    }
+  },
+  {
+    "type": "tool.called",
+    "timestamp": "2026-07-26T00:52:16.400Z",
+    "run_id": "replay-nvda-001",
+    "agent": "macro",
+    "data": {
+      "tool": "sector_lookup", 
+      "ticker": "NVDA"
+    }
+  },
+  {
+    "type": "tool.returned",
+    "timestamp": "2026-07-26T00:52:16.800Z", 
+    "run_id": "replay-nvda-001",
+    "agent": "macro",
+    "data": {
+      "tool": "sector_lookup",
+      "sector": "Technology"
+    }
+  },
+  {
+    "type": "message.sent",
+    "timestamp": "2026-07-26T00:52:16.175Z",
+    "run_id": "replay-nvda-001",
+    "agent": "orchestrator",
+    "data": {
+      "to_agent": "quant",
+      "message_type": "task_assignment",
+      "content": "Starting quant analysis"
+    }
+  },
+  {
+    "type": "task.created",
+    "timestamp": "2026-07-26T00:52:16.275Z",
+    "run_id": "replay-nvda-001", 
+    "agent": "quant",
+    "data": {
+      "task": "Quantitative analysis for NVDA"
+    }
+  },
+  {
+    "type": "tool.called", 
+    "timestamp": "2026-07-26T00:52:16.500Z",
+    "run_id": "replay-nvda-001",
+    "agent": "quant",
+    "data": {
+      "tool": "load_price_data",
+      "ticker": "NVDA"
+    }
+  },
+  {
+    "type": "tool.returned",
+    "timestamp": "2026-07-26T00:52:16.900Z",
+    "run_id": "replay-nvda-001",
+    "agent": "quant", 
+    "data": {
+      "tool": "load_price_data",
+      "rows": 60
+    }
+  },
+  {
+    "type": "agent.finished",
+    "timestamp": "2026-07-26T00:52:19.000Z",
+    "run_id": "replay-nvda-001",
+    "agent": "research",
+    "data": {
+      "analysis": "Research analysis completed successfully"
+    }
+  },
+  {
+    "type": "message.received",
+    "timestamp": "2026-07-26T00:52:19.100Z",
+    "run_id": "replay-nvda-001",
+    "agent": "research",
+    "data": {
+      "from_agent": "research", 
+      "message_type": "analysis_result",
+      "content": "Research analysis completed"
+    }
+  },
+  {
+    "type": "agent.finished",
+    "timestamp": "2026-07-26T00:52:19.200Z",
+    "run_id": "replay-nvda-001",
+    "agent": "macro",
+    "data": {
+      "analysis": "Macro analysis completed successfully"
+    }
+  },
+  {
+    "type": "agent.finished",
+    "timestamp": "2026-07-26T00:52:19.800Z", 
+    "run_id": "replay-nvda-001",
+    "agent": "quant",
+    "data": {
+      "analysis": "Quantitative analysis completed successfully"
+    }
+  },
+  {
+    "type": "message.sent",
+    "timestamp": "2026-07-26T00:52:20.000Z",
+    "run_id": "replay-nvda-001",
+    "agent": "orchestrator",
+    "data": {
+      "message": "Starting risk assessment"
+    }
+  },
+  {
+    "type": "task.created",
+    "timestamp": "2026-07-26T00:52:20.100Z",
+    "run_id": "replay-nvda-001",
+    "agent": "risk",
+    "data": {
+      "task": "Risk assessment for NVDA"
+    }
+  },
+  {
+    "type": "tool.called",
+    "timestamp": "2026-07-26T00:52:20.200Z",
+    "run_id": "replay-nvda-001", 
+    "agent": "risk",
+    "data": {
+      "tool": "research_risk_extraction"
+    }
+  },
+  {
+    "type": "agent.finished", 
+    "timestamp": "2026-07-26T00:52:21.500Z",
+    "run_id": "replay-nvda-001",
+    "agent": "risk",
+    "data": {
+      "analysis": "Risk assessment completed successfully"
+    }
+  },
+  {
+    "type": "message.sent",
+    "timestamp": "2026-07-26T00:52:22.000Z",
+    "run_id": "replay-nvda-001",
+    "agent": "orchestrator",
+    "data": {
+      "message": "Drafting investment memo"
+    }
+  },
+  {
+    "type": "task.created",
+    "timestamp": "2026-07-26T00:52:22.100Z",
+    "run_id": "replay-nvda-001",
+    "agent": "scribe",
+    "data": {
+      "task": "Investment memo for NVDA"
+    }
+  },
+  {
+    "type": "agent.finished",
+    "timestamp": "2026-07-26T00:52:24.000Z",
+    "run_id": "replay-nvda-001",
+    "agent": "scribe", 
+    "data": {
+      "memo_length": 2847
+    }
+  },
+  {
+    "type": "approval.required",
+    "timestamp": "2026-07-26T00:52:24.500Z",
+    "run_id": "replay-nvda-001",
+    "agent": null,
+    "data": {
+      "gate_id": "replay-nvda-001_memo_1",
+      "type": "memo",
+      "description": "Investment memo for NVDA",
+      "content": "# INVESTMENT MEMO: NVDA\n\n**Date**: July 26, 2026\n**Analyst**: Agent Desk Multi-Agent System\n\n## EXECUTIVE SUMMARY\n\n**Recommendation**: BUY\n**Conviction**: High\n**Risk Rating**: Medium\n**Position Sizing**: Standard (2-5%)\n**Time Horizon**: 12 months\n\n## INVESTMENT THESIS\n\n### Key Drivers:\n- Strong AI semiconductor positioning\n- Data center growth acceleration\n- Market leadership in GPU computing\n\n### Risks to Thesis:\n- Cyclical semiconductor dynamics\n- Regulatory scrutiny on AI chips\n- High valuation multiples\n\n## DETAILED ANALYSIS\n\nBased on comprehensive multi-agent analysis, NVDA demonstrates strong fundamentals with favorable AI tailwinds despite elevated valuation concerns.\n\n**Conclusion**: Strong BUY recommendation based on AI leadership position and data center growth drivers."
+    }
+  },
+  {
+    "type": "approval.resolved",
+    "timestamp": "2026-07-26T00:52:35.000Z",
+    "run_id": "replay-nvda-001",
+    "agent": null,
+    "data": {
+      "gate_id": "replay-nvda-001_memo_1", 
+      "decision": "approve",
+      "message": "Memo approved for publication"
+    }
+  },
+  {
+    "type": "run.finished",
+    "timestamp": "2026-07-26T00:52:36.000Z",
+    "run_id": "replay-nvda-001",
+    "agent": null,
+    "data": {
+      "message": "Analysis completed successfully",
+      "memo_available": true
+    }
+  },
+  {
+    "type": "token.usage",
+    "timestamp": "2026-07-26T00:52:36.100Z", 
+    "run_id": "replay-nvda-001",
+    "agent": null,
+    "data": {
+      "total_tokens": 14750,
+      "prompt_tokens": 9800,
+      "completion_tokens": 4950,
+      "estimated_cost": 0.148
+    }
+  }
+]
