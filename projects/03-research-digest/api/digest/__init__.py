@@ -1,0 +1,1 @@
+"""Research Digest FastAPI package."""
