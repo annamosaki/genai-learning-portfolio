@@ -1,0 +1,2 @@
+# Inbox
+Drop .md notes here for the local review pipeline.
