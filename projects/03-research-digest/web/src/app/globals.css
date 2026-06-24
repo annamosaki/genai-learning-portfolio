@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #05070b;
+  --color-surface: #0b1018;
+  --color-panel: #111823;
+  --color-text: #e8eef7;
+  --color-muted: #8b9bb4;
+  --color-accent: #3dffb5;
+  --color-accent-2: #4cc9ff;
+  --color-line: rgba(148, 163, 184, 0.14);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--color-void);
+  color: var(--color-text);
+  font-family: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+}
+
+.display {
+  font-family: var(--font-syne), "Syne", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.digest-shell {
+  position: relative;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(61, 255, 181, 0.08), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(76, 201, 255, 0.06), transparent 50%),
+    var(--color-void);
+}
+
+.digest-glow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), transparent 70%);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.btn:hover {
+  border-color: color-mix(in oklab, var(--color-accent) 50%, transparent);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #04110c;
+  border-color: var(--color-accent);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  border: 1px solid var(--color-line);
+  color: var(--color-muted);
+}
+
+.chip-accent {
+  border-color: color-mix(in oklab, var(--color-accent) 35%, transparent);
+  color: color-mix(in oklab, var(--color-accent) 80%, white);
+}
