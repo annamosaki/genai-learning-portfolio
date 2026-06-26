@@ -1,0 +1,137 @@
+# Anna's personal reading interests — source of truth for Research Digest.
+# Edit this file; regenerate with: python -m signal_desk.run --once
+# Or hit POST /api/run on the digest API / Regenerate in the demo UI.
+
+profile: Anna Mosaki
+locale: fr-FR
+focus: |
+  Time series applied to finance and what quant / fund research desks are
+  shipping next. Prefer primary papers (ArXiv q-fin, cs.LG) and serious
+  house research notes over secondary blogs. Drop hype and unsupported claims.
+
+topics:
+  - id: time-series
+    label: Time series × finance
+    weight: 1.0
+    keywords:
+      - timesfm
+      - chronos
+      - moirai
+      - time series
+      - forecasting
+      - realised volatility
+      - realized volatility
+      - garch
+      - har
+      - returns
+      - volatility forecasting
+      - foundation model
+      - decoder-only
+      - multivariate forecasting
+      - walk-forward
+
+  - id: quant-research
+    label: Quantitative research & market microstructure
+    weight: 1.0
+    keywords:
+      - anomaly detection
+      - pnl
+      - volatility
+      - microstructure
+      - risk
+      - hedging
+      - sharpe
+      - alpha
+      - factor
+      - portfolio
+      - systematic
+      - quant
+      - trading
+
+  - id: llm-agents
+    label: LLM agents, MCP, A2A
+    weight: 0.55
+    keywords: [langgraph, langchain, mcp, a2a, multi-agent, tool use, rag]
+
+  - id: financial-nlp
+    label: Financial NLP & sentiment
+    weight: 0.5
+    keywords: [finbert, sentiment, earnings, filings, calibration, ece]
+
+  - id: green-finance
+    label: Green finance & climate risk
+    weight: 0.35
+    keywords: [greenwashing, climate risk, transition, taxonomy]
+
+sources:
+  literature:
+    - name: arxiv
+      type: arxiv
+      max_results: 20
+      queries:
+        # Keep to 1–2 queries; ArXiv rate-limits aggressive clients.
+        - 'all:"time series" AND (cat:q-fin.ST OR cat:q-fin.CP OR cat:cs.LG)'
+        - 'all:"volatility forecasting" OR all:"realized volatility" OR ti:TimesFM OR ti:Chronos'
+    - name: local-arxiv-digest
+      type: local_jsonl
+      path: data/literature.jsonl
+    - name: papers-inbox
+      type: local_inbox
+      path: data/papers/
+      kind: literature
+
+  news:
+    - name: finnhub
+      type: finnhub
+      # Requires FINNHUB_API_KEY in env (free tier). Skipped when unset.
+      category: general
+      max_results: 20
+    - name: local-news-digest
+      type: local_jsonl
+      path: data/news.jsonl
+    - name: news-inbox
+      type: local_inbox
+      path: data/news/
+      kind: news
+
+  fund_research:
+    - name: jane-street-tech
+      type: rss
+      kind: fund_research
+      url: https://blog.janestreet.com/feed.xml
+      max_results: 8
+    - name: quantpedia
+      type: rss
+      kind: fund_research
+      url: https://quantpedia.com/feed/
+      max_results: 8
+    - name: man-institute
+      type: rss
+      kind: fund_research
+      url: https://www.man.com/maninstitute/rss.xml
+      max_results: 8
+    - name: aqr-insights
+      type: rss
+      kind: fund_research
+      url: https://www.aqr.com/Insights/Research?format=rss
+      max_results: 8
+    - name: two-sigma-insights
+      type: rss
+      kind: fund_research
+      url: https://www.twosigma.com/articles/feed/
+      max_results: 8
+    - name: ssrn-qfin
+      type: rss
+      kind: fund_research
+      url: https://papers.ssrn.com/sol3/Jeljour_results.cfm?form_name=journalBrowse&journal_id=1504394&Network=no&lim=false&format=atom
+      max_results: 10
+
+rules:
+  drop_unsupported_claims: true
+  prefer_primary_sources: true
+  max_items_per_section: 6
+  sections:
+    - literature
+    - news
+    - fund_research
+    - watchlist

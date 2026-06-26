@@ -1,0 +1,12 @@
+pydantic>=2.10.0
+python-dotenv>=1.0.1
+pyyaml>=6.0.0
+langfuse>=2.60.0
+httpx>=0.27.0
+feedparser>=6.0.11
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+sse-starlette>=2.1.0
+# Optional if you later wire LangGraph research agents:
+# langgraph>=0.2.0
+# langchain>=0.3.0
