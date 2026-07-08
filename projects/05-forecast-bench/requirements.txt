@@ -1,0 +1,8 @@
+numpy>=2.0.0
+pandas>=2.2.0
+pydantic>=2.10.0
+# Full stack (optional GPU host):
+# timesfm[torch]
+# chronos-forecasting>=2.0
+# statsforecast
+# neuralforecast
