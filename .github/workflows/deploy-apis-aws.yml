@@ -1,0 +1,51 @@
+name: Deploy APIs to AWS
+
+# Runs after every merge/push to main (including merged PRs),
+# and on-demand from the Actions tab.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Optional note for this deploy"
+        required: false
+        default: "manual"
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: deploy-apis-aws
+  cancel-in-progress: false
+
+jobs:
+  deploy-apis:
+    name: Start CodePipeline deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::174590259640:role/anna-portfolio-gha-start-pipeline
+          aws-region: us-east-1
+          role-session-name: gha-anna-portfolio-deploy
+
+      - name: Start CodePipeline (anna-portfolio-deploy)
+        env:
+          DEPLOY_REASON: ${{ github.event_name == 'workflow_dispatch' && inputs.reason || github.event_name }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          echo "Trigger=$DEPLOY_REASON commit=$COMMIT_SHA"
+          EXEC=$(aws codepipeline start-pipeline-execution \
+            --name anna-portfolio-deploy \
+            --region us-east-1 \
+            --query pipelineExecutionId \
+            --output text)
+          echo "Started CodePipeline execution: $EXEC"
+          echo "### Deploy APIs to AWS" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Trigger: \`$DEPLOY_REASON\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Commit: \`$COMMIT_SHA\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Pipeline execution: \`$EXEC\`" >> "$GITHUB_STEP_SUMMARY"
