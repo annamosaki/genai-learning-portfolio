@@ -1,0 +1,14 @@
+---
+description: Always use Claude Sonnet 5 for Task/subagent launches
+alwaysApply: true
+---
+
+# Subagent model preference
+
+When launching any Cursor `Task` subagent (explore, shell, generalPurpose, best-of-n-runner, etc.), always set:
+
+```
+model: claude-sonnet-5-thinking-high
+```
+
+Do not default to the parent model or pick another Claude/GPT slug unless the user explicitly requests a different model for that run.
