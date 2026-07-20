@@ -1,0 +1,28 @@
+# Research Digest API — Lambda Web Adapter
+FROM public.ecr.aws/awsguru/aws-lambda-adapter:0.9.1 AS adapter
+FROM public.ecr.aws/docker/library/python:3.12-slim
+
+COPY --from=adapter /lambda-adapter /opt/extensions/lambda-adapter
+
+WORKDIR /var/task
+COPY projects/03-research-digest/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt boto3 \
+    && pip install --no-cache-dir --upgrade pip
+
+COPY projects/03-research-digest/api/digest ./digest
+COPY projects/03-research-digest/signal_desk ./signal_desk
+COPY projects/03-research-digest/topics.yaml ./topics.yaml
+COPY projects/03-research-digest/data ./data
+COPY content/artifacts/signal-desk ./content/artifacts/signal-desk
+COPY infra/docker/entrypoint.py ./entrypoint.py
+
+ENV PYTHONPATH=/var/task
+ENV PORT=8300
+ENV AWS_LWA_PORT=8300
+ENV AWS_LWA_INVOKE_MODE=response_stream
+ENV AWS_LWA_READINESS_CHECK_PATH=/health
+ENV AWS_LWA_READINESS_CHECK_TIMEOUT=15000
+ENV ARTIFACT_DIR=/tmp/artifacts/signal-desk
+
+EXPOSE 8300
+CMD ["python", "entrypoint.py", "uvicorn", "digest.app:app", "--host", "0.0.0.0", "--port", "8300"]

@@ -1,0 +1,25 @@
+# Edgar / SEC MCP (edgartools-mcp) — Lambda Web Adapter
+FROM public.ecr.aws/awsguru/aws-lambda-adapter:0.9.1 AS adapter
+FROM public.ecr.aws/docker/library/python:3.12-slim
+
+COPY --from=adapter /lambda-adapter /opt/extensions/lambda-adapter
+
+WORKDIR /var/task
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir "edgartools[ai]" boto3
+
+COPY infra/docker/entrypoint.py ./entrypoint.py
+
+ENV PORT=8210
+ENV AWS_LWA_PORT=8210
+ENV HOME=/tmp
+ENV EDGAR_IDENTITY="Anna Mosaki mosakianna@gmail.com"
+ENV EDGAR_LOCAL_DATA_DIR=/tmp/edgar
+ENV EDGAR_CACHE_DIR=/tmp/edgar_cache
+ENV AWS_LWA_INVOKE_MODE=response_stream
+ENV AWS_LWA_READINESS_CHECK_PATH=/health
+ENV AWS_LWA_READINESS_CHECK_TIMEOUT=60000
+ENV AWS_LWA_ASYNC_INIT=true
+
+EXPOSE 8210
+CMD ["python", "entrypoint.py", "edgartools-mcp", "--transport", "streamable-http", "--host", "0.0.0.0", "--port", "8210"]

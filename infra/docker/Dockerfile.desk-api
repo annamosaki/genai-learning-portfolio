@@ -1,0 +1,30 @@
+# Agent Desk API — Lambda Web Adapter
+FROM public.ecr.aws/awsguru/aws-lambda-adapter:0.9.1 AS adapter
+FROM public.ecr.aws/docker/library/python:3.12-slim
+
+COPY --from=adapter /lambda-adapter /opt/extensions/lambda-adapter
+
+WORKDIR /var/task
+COPY projects/02-agent-desk/api/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir \
+      fastapi==0.115.6 uvicorn==0.32.1 pydantic==2.10.3 pydantic-settings==2.7.0 \
+      openai==1.57.2 numpy==2.2.1 networkx==3.4.2 httpx==0.28.1 \
+      python-dotenv==1.0.1 sse-starlette==2.2.0 pyyaml==6.0.2 \
+      yfinance mcp "edgartools[ai]" boto3 \
+    && pip install --no-cache-dir --upgrade pip
+
+COPY projects/02-agent-desk/api/desk ./desk
+COPY projects/02-agent-desk/api/data ./data
+COPY infra/docker/entrypoint.py ./entrypoint.py
+
+ENV PYTHONPATH=/var/task
+ENV PORT=8200
+ENV AWS_LWA_PORT=8200
+ENV AWS_LWA_INVOKE_MODE=response_stream
+ENV AWS_LWA_READINESS_CHECK_PATH=/health
+ENV AWS_LWA_READINESS_CHECK_TIMEOUT=15000
+ENV AUTO_APPROVE_ON_TIMEOUT=true
+ENV APPROVAL_TIMEOUT_SECONDS=120
+
+EXPOSE 8200
+CMD ["python", "entrypoint.py", "uvicorn", "desk.app:app", "--host", "0.0.0.0", "--port", "8200"]

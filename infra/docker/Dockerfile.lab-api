@@ -1,0 +1,27 @@
+# LLM Lab API — Lambda Web Adapter
+FROM public.ecr.aws/awsguru/aws-lambda-adapter:0.9.1 AS adapter
+FROM public.ecr.aws/docker/library/python:3.12-slim
+
+COPY --from=adapter /lambda-adapter /opt/extensions/lambda-adapter
+
+WORKDIR /var/task
+COPY projects/01-llm-lab/api/requirements.txt ./requirements.txt
+# Drop heavy optional MCP stacks that bloat the image; lazy imports fall back.
+RUN pip install --no-cache-dir \
+      fastapi uvicorn pydantic pydantic-settings openai numpy networkx \
+      httpx python-dotenv sse-starlette pyyaml boto3 python-multipart mcp \
+    && pip install --no-cache-dir --upgrade pip
+
+COPY projects/01-llm-lab/api/llm_lab ./llm_lab
+COPY projects/01-llm-lab/api/data ./data
+COPY infra/docker/entrypoint.py ./entrypoint.py
+
+ENV PYTHONPATH=/var/task
+ENV PORT=8100
+ENV AWS_LWA_PORT=8100
+ENV AWS_LWA_INVOKE_MODE=response_stream
+ENV AWS_LWA_READINESS_CHECK_PATH=/health
+ENV AWS_LWA_READINESS_CHECK_TIMEOUT=15000
+
+EXPOSE 8100
+CMD ["python", "entrypoint.py", "uvicorn", "llm_lab.app:app", "--host", "0.0.0.0", "--port", "8100"]
