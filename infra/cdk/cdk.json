@@ -1,0 +1,8 @@
+{
+  "app": "npx tsx bin/app.ts",
+  "context": {
+    "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+    "@aws-cdk/core:checkSecretUsage": true,
+    "githubConnectionArn": "arn:aws:codeconnections:us-east-1:174590259640:connection/bd0683d7-3d31-4de3-b67c-00bb5c8ac5a0"
+  }
+}
