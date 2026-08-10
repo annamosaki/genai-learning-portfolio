@@ -1,0 +1,31 @@
+# CodeBuild: rebuild Lambda container images and deploy AnnaPortfolioServerless.
+# Amplify already auto-builds the four Next.js apps on the same CodeCommit push.
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+      python: 3.12
+    commands:
+      - node -v && npm -v && docker -v && aws --version
+      - npm ci --prefix infra/cdk
+  pre_build:
+    commands:
+      - export CDK_DEFAULT_ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
+      - export CDK_DEFAULT_REGION=${AWS_DEFAULT_REGION:-us-east-1}
+      - echo "Account=$CDK_DEFAULT_ACCOUNT Region=$CDK_DEFAULT_REGION"
+      - npx --prefix infra/cdk cdk bootstrap aws://$CDK_DEFAULT_ACCOUNT/$CDK_DEFAULT_REGION || true
+  build:
+    commands:
+      - cd infra/cdk
+      - npx cdk diff AnnaPortfolioServerless || true
+      - npx cdk deploy AnnaPortfolioServerless --require-approval never --progress events
+  post_build:
+    commands:
+      - echo "CDK deploy finished with CODEBUILD_BUILD_SUCCEEDING=$CODEBUILD_BUILD_SUCCEEDING"
+
+cache:
+  paths:
+    - infra/cdk/node_modules/**/*
+    - /root/.npm/**/*
