@@ -1,0 +1,29 @@
+name: Signal Desk / Research Digest
+
+on:
+  schedule:
+    - cron: "0 6 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -r projects/03-research-digest/requirements.txt
+      - name: Refresh digest (live ArXiv + RSS)
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: python -m signal_desk.run --once
+        working-directory: projects/03-research-digest
+      - name: Commit review artifact
+        run: |
+          git config user.name "signal-desk-bot"
+          git config user.email "bot@annamosaki.com"
+          git add content/artifacts/signal-desk/latest-review.json content/artifacts/signal-desk/latest-issue.json
+          git diff --staged --quiet || git commit -m "chore(signal-desk): refresh research digest"
+          git push || true
