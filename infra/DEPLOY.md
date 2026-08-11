@@ -35,7 +35,9 @@ That single push:
 | What changed | What runs |
 |--------------|-----------|
 | Web / anything | **Amplify** rebuilds the 4 Next.js apps |
-| Repo `main` tip | **GitHub Actions** starts **CodePipeline** `anna-portfolio-deploy` → CodeBuild `cdk deploy` (Lambda APIs/MCPs) |
+| Repo `main` tip (including merged PRs) | **GitHub Action** [Deploy APIs to AWS](https://github.com/annamosaki/genai-learning-portfolio/actions/workflows/deploy-apis-aws.yml) starts **CodePipeline** `anna-portfolio-deploy` |
+
+You can also run **Deploy APIs to AWS** manually from the Actions tab (`workflow_dispatch`).
 
 Manual API-only redeploy (no git push):
 
