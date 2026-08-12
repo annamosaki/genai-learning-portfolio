@@ -5,7 +5,6 @@ import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
 import * as ecr_assets from "aws-cdk-lib/aws-ecr-assets";
 import * as iam from "aws-cdk-lib/aws-iam";
 import * as lambda from "aws-cdk-lib/aws-lambda";
-import * as route53 from "aws-cdk-lib/aws-route53";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import * as secretsmanager from "aws-cdk-lib/aws-secretsmanager";
 import { Construct } from "constructs";
@@ -37,31 +36,10 @@ export class PortfolioServerlessStack extends cdk.Stack {
       "anna-portfolio/app-secrets",
     );
 
-    // Amazon SES domain identity (annamosaki.com) was verified outside this stack.
-    // Do not create AWS::SES::EmailIdentity here — it already exists and blocks deploy.
-    // Custom MAIL FROM subdomain DNS so SPF/alignment works for digest@annamosaki.com.
-    const zone = route53.HostedZone.fromLookup(this, "RootZone", {
-      domainName: "annamosaki.com",
-    });
-    new route53.MxRecord(this, "SesMailFromMx", {
-      zone,
-      recordName: "mail",
-      values: [
-        {
-          hostName: "feedback-smtp.us-east-1.amazonses.com",
-          priority: 10,
-        },
-      ],
-      ttl: cdk.Duration.minutes(5),
-      comment: "SES custom MAIL FROM for annamosaki.com",
-    });
-    new route53.TxtRecord(this, "SesMailFromSpf", {
-      zone,
-      recordName: "mail",
-      values: ["v=spf1 include:amazonses.com ~all"],
-      ttl: cdk.Duration.minutes(5),
-      comment: "SPF for SES MAIL FROM subdomain",
-    });
+    // Amazon SES for Research Digest newsletters (digest@annamosaki.com):
+    // - Domain identity + DKIM + custom MAIL FROM (mail.annamosaki.com) are managed
+    //   outside this stack (already verified in SES / Route53). Do not recreate them here.
+    // - DigestApi is granted ses:SendEmail below.
 
     const artifacts = new s3.Bucket(this, "Artifacts", {
       encryption: s3.BucketEncryption.S3_MANAGED,
