@@ -8,7 +8,6 @@ import * as lambda from "aws-cdk-lib/aws-lambda";
 import * as route53 from "aws-cdk-lib/aws-route53";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import * as secretsmanager from "aws-cdk-lib/aws-secretsmanager";
-import * as ses from "aws-cdk-lib/aws-ses";
 import { Construct } from "constructs";
 import * as path from "path";
 
@@ -38,14 +37,30 @@ export class PortfolioServerlessStack extends cdk.Stack {
       "anna-portfolio/app-secrets",
     );
 
-    // Amazon SES — send Research Digest newsletters from the verified domain.
-    // Domain identity + DKIM are managed in Route53 for annamosaki.com.
+    // Amazon SES domain identity (annamosaki.com) was verified outside this stack.
+    // Do not create AWS::SES::EmailIdentity here — it already exists and blocks deploy.
+    // Custom MAIL FROM subdomain DNS so SPF/alignment works for digest@annamosaki.com.
     const zone = route53.HostedZone.fromLookup(this, "RootZone", {
       domainName: "annamosaki.com",
     });
-    new ses.EmailIdentity(this, "SesDomain", {
-      identity: ses.Identity.publicHostedZone(zone),
-      mailFromDomain: "mail.annamosaki.com",
+    new route53.MxRecord(this, "SesMailFromMx", {
+      zone,
+      recordName: "mail",
+      values: [
+        {
+          hostName: "feedback-smtp.us-east-1.amazonses.com",
+          priority: 10,
+        },
+      ],
+      ttl: cdk.Duration.minutes(5),
+      comment: "SES custom MAIL FROM for annamosaki.com",
+    });
+    new route53.TxtRecord(this, "SesMailFromSpf", {
+      zone,
+      recordName: "mail",
+      values: ["v=spf1 include:amazonses.com ~all"],
+      ttl: cdk.Duration.minutes(5),
+      comment: "SPF for SES MAIL FROM subdomain",
     });
 
     const artifacts = new s3.Bucket(this, "Artifacts", {
@@ -161,12 +176,13 @@ export class PortfolioServerlessStack extends cdk.Stack {
     const apiUrls: Record<string, string> = {};
 
     // Pretty hostnames (CloudFront → Function URLs). Prefer these over raw lambda-url hosts.
+    // No trailing slashes — web clients join paths as `${base}/api/...`.
     const customApi = {
-      PortfolioApi: "https://api.annamosaki.com/",
-      LabApi: "https://lab-api.annamosaki.com/",
-      DeskApi: "https://desk-api.annamosaki.com/",
-      DigestApi: "https://digest-api.annamosaki.com/",
-      YfMcp: "https://yf.annamosaki.com/",
+      PortfolioApi: "https://api.annamosaki.com",
+      LabApi: "https://lab-api.annamosaki.com",
+      DeskApi: "https://desk-api.annamosaki.com",
+      DigestApi: "https://digest-api.annamosaki.com",
+      YfMcp: "https://yf.annamosaki.com",
       EdgarMcp: "https://edgar.annamosaki.com/mcp",
     };
 
@@ -203,7 +219,9 @@ export class PortfolioServerlessStack extends cdk.Stack {
           SERVERLESS: "1",
           OPENAI_SECRET_ARN: openaiSecret.secretArn,
           APP_SECRETS_ARN: appSecrets.secretArn,
-          CORS_ORIGINS: "*",
+          // App middleware owns CORS. Do not also enable Function URL CORS —
+          // duplicate Access-Control-Allow-Origin headers make browsers fail fetch.
+          CORS_ORIGINS: "https://annamosaki.com,https://www.annamosaki.com,http://localhost:3000",
           AUTO_APPROVE_ON_TIMEOUT: "true",
           APPROVAL_TIMEOUT_SECONDS: "120",
           ...extraEnv,
@@ -227,12 +245,6 @@ export class PortfolioServerlessStack extends cdk.Stack {
       const fnUrl = fn.addFunctionUrl({
         authType: lambda.FunctionUrlAuthType.NONE,
         invokeMode: lambda.InvokeMode.RESPONSE_STREAM,
-        cors: {
-          allowedOrigins: ["*"],
-          allowedMethods: [lambda.HttpMethod.ALL],
-          allowedHeaders: ["*"],
-          maxAge: cdk.Duration.days(1),
-        },
       });
 
       apiUrls[api.id] = fnUrl.url;
