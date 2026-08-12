@@ -62,7 +62,21 @@ async def fetch_rss(
             try:
                 resp = await client.get(url)
                 resp.raise_for_status()
+                ctype = (resp.headers.get("content-type") or "").lower()
                 parsed = feedparser.parse(resp.text)
+                if not parsed.entries:
+                    reason = "empty or not a feed"
+                    if "html" in ctype and "xml" not in ctype and "atom" not in ctype and "rss" not in ctype:
+                        reason = "HTML response (feed URL likely dead)"
+                    feed_meta.append({"name": name, "ok": False, "reason": reason, "count": 0})
+                    if on_progress:
+                        await _maybe_await(
+                            on_progress(
+                                "source.skipped",
+                                {"source": "rss", "feed": name, "reason": reason},
+                            )
+                        )
+                    continue
                 count = 0
                 for e in parsed.entries[:limit]:
                     title = _clean(e.get("title") or "", 240)

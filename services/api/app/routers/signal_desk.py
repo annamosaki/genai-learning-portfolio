@@ -19,10 +19,13 @@ if is_serverless():
     PROJECT = ROOT / "projects" / "03-research-digest"
     if not PROJECT.exists():
         PROJECT = ROOT  # flattened image layout
-    ARTIFACT = artifact_dir("signal-desk") / "latest-review.json"
-    ARTIFACT_LEGACY = artifact_dir("signal-desk") / "latest-issue.json"
+    # Match digest-api / pipeline: ARTIFACT_DIR already points at the desk folder.
+    _art = Path(os.environ.get("ARTIFACT_DIR") or str(artifact_dir("signal-desk")))
+    _art.mkdir(parents=True, exist_ok=True)
+    ARTIFACT = _art / "latest-review.json"
+    ARTIFACT_LEGACY = _art / "latest-issue.json"
     TOPICS = PROJECT / "topics.yaml"
-    PUBLIC_COPY = artifact_dir("signal-desk")
+    PUBLIC_COPY = _art
 else:
     ROOT = Path(__file__).resolve().parents[4]
     PROJECT = ROOT / "projects" / "03-research-digest"
@@ -79,12 +82,12 @@ def get_topics():
 
 
 @router.post("/regenerate")
-async def regenerate(live: bool = True):
+async def regenerate(live: bool = True, focus_query: str = ""):
     """Re-run the digest pipeline (live ArXiv/RSS by default)."""
     try:
         from signal_desk.pipeline import run_once_async
 
-        data = await run_once_async(live=live)
+        data = await run_once_async(live=live, focus_query=focus_query)
     except Exception as exc:
         raise HTTPException(500, f"Pipeline failed: {exc}") from exc
     _sync_public(data)

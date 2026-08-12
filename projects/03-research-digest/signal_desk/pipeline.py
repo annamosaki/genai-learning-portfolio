@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
@@ -23,6 +24,36 @@ from .sources.finnhub import fetch_finnhub
 from .sources.local import fetch_local_inbox, fetch_local_jsonl
 from .sources.rss import fetch_rss
 
+_FOCUS_STOP = {
+    "a",
+    "an",
+    "and",
+    "or",
+    "the",
+    "of",
+    "in",
+    "on",
+    "for",
+    "to",
+    "with",
+    "about",
+    "into",
+    "over",
+    "vs",
+    "versus",
+    "using",
+    "based",
+    "from",
+    "that",
+    "this",
+    "these",
+    "those",
+    "my",
+    "our",
+    "me",
+    "i",
+}
+
 PROJECT = Path(__file__).resolve().parents[1]
 ROOT = Path(__file__).resolve().parents[3]
 TOPICS_PATH = PROJECT / "topics.yaml"
@@ -32,6 +63,13 @@ PUBLIC_COPY = ROOT / "apps" / "web" / "public" / "artifacts" / "signal-desk"
 
 # Lambda / container layout: flatten paths via env
 import os
+
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(ROOT / ".env", override=False)
+except Exception:
+    pass
 
 if os.environ.get("SERVERLESS") == "1" or os.environ.get("LAMBDA_TASK_ROOT"):
     task = Path(os.environ.get("LAMBDA_TASK_ROOT") or Path(__file__).resolve().parents[1])
@@ -47,7 +85,7 @@ if os.environ.get("SERVERLESS") == "1" or os.environ.get("LAMBDA_TASK_ROOT"):
 ProgressCb = Callable[[str, dict[str, Any]], Awaitable[None] | None]
 
 # Prefer these topics when scoring (plan: TS-finance + quant dominate)
-_BOOST_TOPICS = {"time-series", "quant-research"}
+_BOOST_TOPICS = {"time-series", "quant-research", "user-focus"}
 
 
 @dataclass
@@ -61,6 +99,8 @@ class State:
     matched_topics: list[str] = field(default_factory=list)
     source_stats: dict[str, Any] = field(default_factory=dict)
     live_sources_used: bool = False
+    focus_query: str = ""
+    focus_keywords: list[str] = field(default_factory=list)
 
 
 def load_topics(path: Path = TOPICS_PATH) -> dict[str, Any]:
@@ -76,6 +116,64 @@ def load_topics(path: Path = TOPICS_PATH) -> dict[str, Any]:
         "rules": {"drop_unsupported_claims": True, "max_items_per_section": 6},
         "sources": {},
     }
+
+
+def parse_focus_keywords(focus: str) -> list[str]:
+    """Turn free-text focus into ranking / ArXiv keywords."""
+    text = (focus or "").strip()
+    if not text:
+        return []
+    parts = [p.strip() for p in re.split(r"[,;\n|/]+", text) if p.strip()]
+    keywords: list[str] = []
+    seen: set[str] = set()
+
+    def add(term: str) -> None:
+        cleaned = re.sub(r"\s+", " ", term).strip(" .")
+        if len(cleaned) < 2:
+            return
+        key = cleaned.lower()
+        if key in seen or key in _FOCUS_STOP:
+            return
+        seen.add(key)
+        keywords.append(cleaned)
+
+    if len(parts) >= 2:
+        for p in parts:
+            add(p)
+    else:
+        # Keep the full phrase, then useful tokens.
+        add(text)
+        for token in re.findall(r"[A-Za-z][A-Za-z0-9\-+]{2,}", text):
+            add(token)
+    return keywords[:24]
+
+
+def _arxiv_query_from_focus(keywords: list[str]) -> str | None:
+    if not keywords:
+        return None
+    terms = keywords[:5]
+    clauses = [f'all:"{t}"' for t in terms]
+    return " OR ".join(clauses)
+
+
+def apply_focus_to_topics(cfg: dict[str, Any], focus: str) -> tuple[dict[str, Any], list[str]]:
+    """Inject a high-weight user-focus topic; optionally override lede."""
+    keywords = parse_focus_keywords(focus)
+    if not keywords:
+        return cfg, []
+    topics = list(cfg.get("topics") or [])
+    topics = [t for t in topics if t.get("id") != "user-focus"]
+    topics.insert(
+        0,
+        {
+            "id": "user-focus",
+            "label": "Your focus",
+            "weight": 1.55,
+            "keywords": keywords,
+        },
+    )
+    cfg = {**cfg, "topics": topics, "focus": focus.strip()}
+    return cfg, keywords
 
 
 def _dedupe(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -95,8 +193,13 @@ async def ingest_async(
     *,
     live: bool = True,
     on_progress: ProgressCb | None = None,
+    focus_query: str = "",
 ) -> State:
-    state.topics_cfg = load_topics()
+    cfg = load_topics()
+    cfg, focus_keywords = apply_focus_to_topics(cfg, focus_query)
+    state.topics_cfg = cfg
+    state.focus_query = (focus_query or "").strip()
+    state.focus_keywords = focus_keywords
     sources = state.topics_cfg.get("sources") or {}
     items: list[dict[str, Any]] = []
     stats: dict[str, Any] = {}
@@ -105,21 +208,27 @@ async def ingest_async(
     lit_cfgs = sources.get("literature") or []
     arxiv_queries: list[str] = []
     arxiv_max = 25
-    for cfg in lit_cfgs:
-        stype = cfg.get("type")
+    for cfg_src in lit_cfgs:
+        stype = cfg_src.get("type")
         if stype == "arxiv" and live:
-            arxiv_queries.extend(cfg.get("queries") or [])
-            arxiv_max = int(cfg.get("max_results") or 25)
+            arxiv_queries.extend(cfg_src.get("queries") or [])
+            arxiv_max = int(cfg_src.get("max_results") or 25)
         elif stype == "local_jsonl":
-            path = PROJECT / cfg["path"]
+            path = PROJECT / cfg_src["path"]
             rows = fetch_local_jsonl(path, default_kind="literature")
             items.extend(rows)
             stats["local_literature"] = {"ok": True, "count": len(rows)}
         elif stype == "local_inbox":
-            path = PROJECT / cfg["path"]
-            rows = fetch_local_inbox(path, cfg.get("kind") or "literature")
+            path = PROJECT / cfg_src["path"]
+            rows = fetch_local_inbox(path, cfg_src.get("kind") or "literature")
             items.extend(rows)
             stats["papers_inbox"] = {"ok": True, "count": len(rows)}
+
+    focus_arxiv = _arxiv_query_from_focus(focus_keywords)
+    if live and focus_arxiv:
+        # Put user focus first so ArXiv rate budget prefers it.
+        arxiv_queries = [focus_arxiv, *[q for q in arxiv_queries if q != focus_arxiv]][:3]
+        stats["focus"] = {"query": state.focus_query, "keywords": focus_keywords, "arxiv_query": focus_arxiv}
 
     if live and arxiv_queries:
         arxiv_items, arxiv_meta = await fetch_arxiv(
@@ -145,12 +254,12 @@ async def ingest_async(
 
     # --- News: Finnhub + local ---
     news_cfgs = sources.get("news") or []
-    for cfg in news_cfgs:
-        stype = cfg.get("type")
+    for cfg_src in news_cfgs:
+        stype = cfg_src.get("type")
         if stype == "finnhub" and live:
             fh_items, fh_meta = await fetch_finnhub(
-                category=cfg.get("category") or "general",
-                max_results=int(cfg.get("max_results") or 20),
+                category=cfg_src.get("category") or "general",
+                max_results=int(cfg_src.get("max_results") or 20),
                 on_progress=on_progress,
             )
             items.extend(fh_items)
@@ -158,13 +267,13 @@ async def ingest_async(
             if fh_meta.get("count", 0) > 0:
                 state.live_sources_used = True
         elif stype == "local_jsonl":
-            path = PROJECT / cfg["path"]
+            path = PROJECT / cfg_src["path"]
             rows = fetch_local_jsonl(path, default_kind="news")
             items.extend(rows)
             stats["local_news"] = {"ok": True, "count": len(rows)}
         elif stype == "local_inbox":
-            path = PROJECT / cfg["path"]
-            rows = fetch_local_inbox(path, cfg.get("kind") or "news")
+            path = PROJECT / cfg_src["path"]
+            rows = fetch_local_inbox(path, cfg_src.get("kind") or "news")
             items.extend(rows)
             stats["news_inbox"] = {"ok": True, "count": len(rows)}
 
@@ -182,7 +291,12 @@ def ingest(state: State) -> State:
     return asyncio.run(ingest_async(state, live=False))
 
 
-def _score_item(item: dict[str, Any], topics: list[dict[str, Any]]) -> tuple[float, list[str]]:
+def _score_item(
+    item: dict[str, Any],
+    topics: list[dict[str, Any]],
+    *,
+    focus_keywords: list[str] | None = None,
+) -> tuple[float, list[str]]:
     blob = " ".join(
         str(item.get(k, ""))
         for k in ("title", "abstract", "text", "venue", "authors", "source")
@@ -201,6 +315,9 @@ def _score_item(item: dict[str, Any], topics: list[dict[str, Any]]) -> tuple[flo
                 kw_hits += 1
         if hit:
             boost = 1.15 if tid in _BOOST_TOPICS else 1.0
+            # Extra weight for the user-focus topic
+            if tid == "user-focus":
+                boost *= 1.25 + 0.08 * min(kw_hits, 5)
             score += weight * boost * (1.0 + 0.05 * min(kw_hits, 4))
             matched.append(tid)
     if item.get("unsupported"):
@@ -209,6 +326,16 @@ def _score_item(item: dict[str, Any], topics: list[dict[str, Any]]) -> tuple[flo
     src = str(item.get("source") or "")
     if src == "arxiv":
         score *= 1.08
+
+    # When the user set a focus field, demote items that miss it so ranking is field-specific.
+    if focus_keywords:
+        focus_hits = sum(1 for kw in focus_keywords if kw.lower() in blob)
+        if focus_hits == 0:
+            score *= 0.18
+        else:
+            score *= 1.0 + 0.12 * min(focus_hits, 4)
+            if "user-focus" not in matched:
+                matched.append("user-focus")
     return score, matched
 
 
@@ -217,7 +344,7 @@ def personalize_and_rank(state: State) -> State:
     ranked = []
     topic_hits: set[str] = set()
     for item in state.items:
-        score, matched = _score_item(item, topics)
+        score, matched = _score_item(item, topics, focus_keywords=state.focus_keywords)
         if score <= 0:
             continue
         topic_hits.update(matched)
@@ -261,12 +388,18 @@ def synthesize(state: State) -> State:
     news_paras = [_para_from_item(item, f"n{i}") for i, item in enumerate(news, 1)]
     fund_paras = [_para_from_item(item, f"f{i}") for i, item in enumerate(fund, 1)]
 
+    watch_bits = []
+    if state.focus_query:
+        watch_bits.append(f"Focus this run: {state.focus_query}.")
+    watch_bits.append(
+        f"Matched topics: {', '.join(state.matched_topics) or 'none matched'}."
+    )
     watch = [
         {
-            "text": f"Active interests this run: {', '.join(state.matched_topics) or 'none matched'}.",
+            "text": " ".join(watch_bits),
             "citations": [],
             "supported": True,
-            "meta": {"kind": "watchlist"},
+            "meta": {"kind": "watchlist", "focus": state.focus_query or None},
         }
     ]
 
@@ -312,7 +445,7 @@ def _count_section(heading: str, sections: list[dict[str, Any]]) -> int:
 
 def render_local(state: State, *, sync_public: bool = True) -> dict[str, Any]:
     profile = state.topics_cfg.get("profile", "Anna Mosaki")
-    focus = (state.topics_cfg.get("focus") or "").strip().split("\n")[0]
+    focus = state.focus_query or (state.topics_cfg.get("focus") or "").strip().split("\n")[0]
     lit_n = _count_section("Literature", state.verified_sections)
     news_n = _count_section("News", state.verified_sections)
     fund_n = _count_section("Fund research", state.verified_sections)
@@ -325,6 +458,8 @@ def render_local(state: State, *, sync_public: bool = True) -> dict[str, Any]:
         "mode": "live" if state.live_sources_used else "local",
         "title": f"Reading desk — {date.today().isoformat()}",
         "lede": focus or f"Personalized literature & news review for {profile}.",
+        "focus_query": state.focus_query or None,
+        "focus_keywords": state.focus_keywords or [],
         "profile": profile,
         "matched_topics": state.matched_topics,
         "topics": [
@@ -342,6 +477,7 @@ def render_local(state: State, *, sync_public: bool = True) -> dict[str, Any]:
             "sources": state.source_stats,
             "items_ingested": len(state.items),
             "items_ranked": len(state.ranked),
+            "focus_keywords": state.focus_keywords,
         },
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -383,6 +519,7 @@ def _langfuse_trace():
 async def run_once_async(
     *,
     live: bool = True,
+    focus_query: str = "",
     on_progress: ProgressCb | None = None,
 ) -> dict[str, Any]:
     trace = _langfuse_trace()
@@ -394,8 +531,16 @@ async def run_once_async(
             if hasattr(result, "__await__"):
                 await result
 
-    await emit("run.started", {"live": live})
-    state = await ingest_async(state, live=live, on_progress=on_progress)
+    await emit(
+        "run.started",
+        {
+            "live": live,
+            "focus": (focus_query or "").strip() or None,
+        },
+    )
+    state = await ingest_async(
+        state, live=live, on_progress=on_progress, focus_query=focus_query
+    )
 
     span = None
     if trace is not None:
@@ -404,7 +549,14 @@ async def run_once_async(
         except Exception:
             span = None
     state = personalize_and_rank(state)
-    await emit("rank.done", {"ranked": len(state.ranked), "topics": state.matched_topics})
+    await emit(
+        "rank.done",
+        {
+            "ranked": len(state.ranked),
+            "topics": state.matched_topics,
+            "focus_keywords": state.focus_keywords,
+        },
+    )
     if span is not None:
         try:
             span.end()
@@ -424,6 +576,7 @@ async def run_once_async(
                     "dropped": review["stats"]["claims_dropped"],
                     "topics": review["matched_topics"],
                     "mode": review["mode"],
+                    "focus": review.get("focus_query"),
                 }
             )
         except Exception:
@@ -434,14 +587,16 @@ async def run_once_async(
     return review
 
 
-def run_once(*, live: bool = True) -> dict[str, Any]:
+def run_once(*, live: bool = True, focus_query: str = "") -> dict[str, Any]:
     """CLI / sync entrypoint."""
     try:
         loop = asyncio.get_running_loop()
     except RuntimeError:
-        return asyncio.run(run_once_async(live=live))
+        return asyncio.run(run_once_async(live=live, focus_query=focus_query))
     # Already in an event loop (e.g. Jupyter) — run in a thread
     import concurrent.futures
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
-        return pool.submit(lambda: asyncio.run(run_once_async(live=live))).result()
+        return pool.submit(
+            lambda: asyncio.run(run_once_async(live=live, focus_query=focus_query))
+        ).result()

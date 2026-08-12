@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Any, Dict, Optional
 
@@ -13,20 +14,39 @@ from sse_starlette import EventSourceResponse
 
 from .events import event_bus, stream_events
 from .orchestrator import orchestrator
-from .serverless_runtime import artifact_dir, is_serverless, task_root
+from .serverless_runtime import is_serverless, task_root
 
 if is_serverless():
     ROOT = task_root()
     PROJECT = task_root()
-    ARTIFACT = artifact_dir("signal-desk") / "latest-review.json"
-    ARTIFACT_LEGACY = artifact_dir("signal-desk") / "latest-issue.json"
+    # Dockerfile sets ARTIFACT_DIR=/tmp/artifacts/signal-desk (already the desk folder).
+    # Do not nest another "signal-desk" segment under it.
+    _art = Path(os.environ.get("ARTIFACT_DIR") or "/tmp/artifacts/signal-desk")
+    _art.mkdir(parents=True, exist_ok=True)
+    ARTIFACT = _art / "latest-review.json"
+    ARTIFACT_LEGACY = _art / "latest-issue.json"
     TOPICS = PROJECT / "topics.yaml"
+    # Seed writable /tmp from the image-baked copy on cold start.
+    _seed = PROJECT / "content" / "artifacts" / "signal-desk"
+    for name in ("latest-review.json", "latest-issue.json"):
+        dest = _art / name
+        src = _seed / name
+        if not dest.exists() and src.exists():
+            dest.write_text(src.read_text())
 else:
     ROOT = Path(__file__).resolve().parents[4]  # repo root (local monorepo)
     PROJECT = Path(__file__).resolve().parents[2]  # projects/03-research-digest
     ARTIFACT = ROOT / "content" / "artifacts" / "signal-desk" / "latest-review.json"
     ARTIFACT_LEGACY = ROOT / "content" / "artifacts" / "signal-desk" / "latest-issue.json"
     TOPICS = PROJECT / "topics.yaml"
+
+# Load repo-root .env so FINNHUB_API_KEY / Langfuse work even when not exported by the shell.
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(ROOT / ".env", override=False)
+except Exception:
+    pass
 
 app = FastAPI(
     title="Research Digest API",
@@ -45,6 +65,11 @@ app.add_middleware(
 
 class RunRequest(BaseModel):
     live: bool = Field(default=True, description="Fetch ArXiv/RSS/Finnhub when true")
+    focus_query: str = Field(
+        default="",
+        max_length=400,
+        description="Domain / keywords that steer ArXiv queries and ranking for this run",
+    )
 
 
 def _load_review() -> dict:
@@ -106,8 +131,14 @@ async def get_topics():
 @app.post("/api/run")
 async def start_run(request: Optional[RunRequest] = None) -> Dict[str, Any]:
     live = True if request is None else bool(request.live)
-    run_id = await orchestrator.start_run(live=live)
-    return {"run_id": run_id, "status": "started", "live": live}
+    focus_query = "" if request is None else (request.focus_query or "").strip()
+    run_id = await orchestrator.start_run(live=live, focus_query=focus_query)
+    return {
+        "run_id": run_id,
+        "status": "started",
+        "live": live,
+        "focus_query": focus_query or None,
+    }
 
 
 @app.get("/api/run/{run_id}/stream")
@@ -129,6 +160,7 @@ async def get_run(run_id: str):
         "run_id": run_id,
         "status": run_state.status,
         "live": run_state.live,
+        "focus_query": run_state.focus_query or None,
         "error": run_state.error,
         "review": run_state.review,
     }

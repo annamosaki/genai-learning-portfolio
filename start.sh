@@ -134,13 +134,18 @@ ensure_node() {
 
 ensure_python() {
   local venv="$ROOT/.venv"
+  # Prefer 3.12 (CI / pinned deps); fall back to python3.
+  local py="python3"
+  if command -v python3.12 >/dev/null 2>&1; then
+    py="python3.12"
+  fi
   if [[ ! -x "$venv/bin/uvicorn" ]]; then
     if [[ "$SKIP_INSTALL" -eq 1 ]]; then
       err "Python venv missing. Run without --no-install, or install deps manually"
       exit 1
     fi
-    log "Creating shared Python venv and installing all API deps…"
-    python3 -m venv "$venv"
+    log "Creating shared Python venv ($py) and installing all API deps…"
+    "$py" -m venv "$venv"
     # shellcheck disable=SC1091
     source "$venv/bin/activate"
     

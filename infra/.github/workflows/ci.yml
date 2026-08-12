@@ -29,11 +29,13 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r services/api/requirements.txt
+      - run: pip install -r projects/03-research-digest/requirements.txt
       - run: pip install -r projects/04-sentiment-bench/requirements.txt
       - run: pip install -r projects/05-forecast-bench/requirements.txt numpy
       - run: python -m verdict.run_benchmark --smoke
         working-directory: projects/04-sentiment-bench
       - run: python -m horizon.run_benchmark --smoke
         working-directory: projects/05-forecast-bench
-      - run: python -m signal_desk.run --once
+      - run: python -m signal_desk.run --once --offline
         working-directory: projects/03-research-digest
+        # Offline keeps CI deterministic; live ArXiv/RSS runs in signal-desk.yml

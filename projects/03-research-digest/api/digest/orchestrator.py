@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import uuid
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Any, Dict, Optional
 
 from .events import EventType, event_bus
@@ -15,6 +15,7 @@ class RunState:
     run_id: str
     status: str = "running"
     live: bool = True
+    focus_query: str = ""
     review: Optional[Dict[str, Any]] = None
     error: Optional[str] = None
     started: bool = False
@@ -25,18 +26,38 @@ class DigestOrchestrator:
         self._runs: Dict[str, RunState] = {}
         self._lock = asyncio.Lock()
 
-    async def start_run(self, *, live: bool = True) -> str:
-        run_id = str(uuid.uuid4())
-        state = RunState(run_id=run_id, live=live, started=False)
-        self._runs[run_id] = state
+    def _persist(self, state: RunState) -> None:
         from .serverless_runtime import is_serverless, run_store
 
+        if not is_serverless():
+            return
+        run_store.put(
+            f"digest#{state.run_id}",
+            "meta",
+            {
+                "run_id": state.run_id,
+                "live": state.live,
+                "focus_query": state.focus_query,
+                "status": state.status,
+                "started": state.started,
+                "error": state.error,
+                "review": state.review,
+            },
+        )
+
+    async def start_run(self, *, live: bool = True, focus_query: str = "") -> str:
+        run_id = str(uuid.uuid4())
+        state = RunState(
+            run_id=run_id,
+            live=live,
+            focus_query=(focus_query or "").strip()[:400],
+            started=False,
+        )
+        self._runs[run_id] = state
+        from .serverless_runtime import is_serverless
+
         if is_serverless():
-            run_store.put(
-                f"digest#{run_id}",
-                "meta",
-                {"run_id": run_id, "live": live, "status": "running", "started": False},
-            )
+            self._persist(state)
         else:
             state.started = True
             asyncio.create_task(self._execute(run_id))
@@ -49,13 +70,7 @@ class DigestOrchestrator:
         if state.started:
             return state
         state.started = True
-        from .serverless_runtime import run_store
-
-        run_store.put(
-            f"digest#{run_id}",
-            "meta",
-            {"run_id": run_id, "live": state.live, "status": state.status, "started": True},
-        )
+        self._persist(state)
         asyncio.create_task(self._execute(run_id))
         return state
 
@@ -73,8 +88,11 @@ class DigestOrchestrator:
         state = RunState(
             run_id=meta["run_id"],
             live=bool(meta.get("live", True)),
+            focus_query=str(meta.get("focus_query") or ""),
             status=meta.get("status") or "running",
             started=bool(meta.get("started")),
+            error=meta.get("error"),
+            review=meta.get("review"),
         )
         self._runs[run_id] = state
         return state
@@ -87,6 +105,7 @@ class DigestOrchestrator:
         except ImportError as exc:
             state.status = "error"
             state.error = f"signal_desk import failed: {exc}"
+            self._persist(state)
             await event_bus.emit(run_id, EventType.ERROR.value, {"message": state.error})
             await event_bus.emit(run_id, EventType.RUN_FINISHED.value, {"ok": False})
             return
@@ -95,17 +114,28 @@ class DigestOrchestrator:
             await event_bus.emit(run_id, etype, data)
 
         try:
-            review = await run_once_async(live=state.live, on_progress=on_progress)
+            review = await run_once_async(
+                live=state.live,
+                focus_query=state.focus_query,
+                on_progress=on_progress,
+            )
             state.review = review
             state.status = "finished"
+            self._persist(state)
             await event_bus.emit(
                 run_id,
                 EventType.RUN_FINISHED.value,
-                {"date": review.get("date"), "mode": review.get("mode"), "ok": True},
+                {
+                    "date": review.get("date"),
+                    "mode": review.get("mode"),
+                    "focus": review.get("focus_query"),
+                    "ok": True,
+                },
             )
         except Exception as exc:
             state.status = "error"
             state.error = str(exc)
+            self._persist(state)
             await event_bus.emit(run_id, EventType.ERROR.value, {"message": str(exc)})
             await event_bus.emit(run_id, EventType.RUN_FINISHED.value, {"ok": False})
 

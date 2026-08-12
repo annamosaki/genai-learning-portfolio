@@ -6,6 +6,8 @@ const digestApi = process.env.RESEARCH_DIGEST_API_URL ?? "http://localhost:8300"
 const nextConfig: NextConfig = {
   basePath: basePath || undefined,
   assetPrefix: basePath || undefined,
+  // Local multi-zone / curl often hits 127.0.0.1 while Next binds to localhost.
+  allowedDevOrigins: ["127.0.0.1", "localhost"],
   env: {
     NEXT_PUBLIC_ZONE_BASE_PATH: basePath,
     NEXT_PUBLIC_RESEARCH_DIGEST_API_URL: digestApi,

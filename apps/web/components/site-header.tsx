@@ -66,11 +66,11 @@ export function SiteHeader() {
               <ZoneLink href="/demos/agent-desk" className="block px-3 py-2 text-sm hover:bg-[var(--color-panel-2)] rounded">
                 Agent Desk
               </ZoneLink>
+              <ZoneLink href="/demos/research-digest" className="block px-3 py-2 text-sm hover:bg-[var(--color-panel-2)] rounded">
+                Research Digest
+              </ZoneLink>
             </div>
           </div>
-          <Link className="hover:text-[var(--color-accent)]" href="/status">
-            {d.nav.status}
-          </Link>
         </nav>
         <div className="flex items-center gap-2">
           <button

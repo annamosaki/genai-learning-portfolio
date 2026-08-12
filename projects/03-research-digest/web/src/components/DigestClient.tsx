@@ -17,6 +17,8 @@ import {
   type TopicsPayload,
 } from "@/lib/api";
 
+const FOCUS_STORAGE_KEY = "research-digest:focus-query";
+
 const SECTION_META: Record<
   string,
   { label: string; icon: typeof BookOpen; blurb: string }
@@ -24,7 +26,7 @@ const SECTION_META: Record<
   Literature: {
     label: "Papers",
     icon: BookOpen,
-    blurb: "ArXiv + local seed — time series × finance",
+    blurb: "ArXiv + local seed — steered by your focus keywords",
   },
   News: {
     label: "News",
@@ -34,7 +36,7 @@ const SECTION_META: Record<
   "Fund research": {
     label: "Fund research",
     icon: Building2,
-    blurb: "AQR, Man, Two Sigma, Jane Street, Quantpedia, SSRN",
+    blurb: "Jane Street, Two Sigma, Quantpedia, Robot Wealth, Newfound, Alpha Architect",
   },
 };
 
@@ -42,6 +44,7 @@ function formatEvent(ev: DigestEvent): string {
   const d = ev.data || {};
   switch (ev.type) {
     case "run.started":
+      if (d.focus) return `Starting with focus · ${String(d.focus).slice(0, 80)}`;
       return d.live === false ? "Starting offline review…" : "Starting live fetch…";
     case "source.fetching":
       if (d.feed) return `Fetching RSS · ${d.feed}`;
@@ -142,18 +145,41 @@ function SectionBlock({ section }: { section: Section }) {
 export function DigestClient() {
   const [review, setReview] = useState<Review | null>(null);
   const [topics, setTopics] = useState<TopicsPayload | null>(null);
+  const [focusQuery, setFocusQuery] = useState("");
   const [running, setRunning] = useState(false);
   const [events, setEvents] = useState<DigestEvent[]>([]);
   const [error, setError] = useState<string | null>(null);
   const esRef = useRef<EventSource | null>(null);
 
   useEffect(() => {
+    try {
+      const saved = localStorage.getItem(FOCUS_STORAGE_KEY);
+      if (saved) setFocusQuery(saved);
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
+  useEffect(() => {
     let cancelled = false;
     (async () => {
-      const [r, t] = await Promise.all([fetchLatest(), fetchTopics()]);
-      if (cancelled) return;
-      setReview(r);
-      setTopics(t);
+      try {
+        const [r, t] = await Promise.all([fetchLatest(), fetchTopics()]);
+        if (cancelled) return;
+        setReview(r);
+        setTopics(t);
+        if (!r && !t) {
+          setError("Could not reach Digest API — is it running on :8300?");
+        }
+        // Prefill focus from last successful run if localStorage empty.
+        if (r?.focus_query) {
+          setFocusQuery((prev) => prev || r.focus_query || "");
+        }
+      } catch (e) {
+        if (!cancelled) {
+          setError(e instanceof Error ? e.message : String(e));
+        }
+      }
     })();
     return () => {
       cancelled = true;
@@ -171,6 +197,15 @@ export function DigestClient() {
 
   const watch = review?.sections?.find((s) => s.heading === "Watchlist");
 
+  const onFocusChange = useCallback((value: string) => {
+    setFocusQuery(value);
+    try {
+      localStorage.setItem(FOCUS_STORAGE_KEY, value);
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
   const regenerate = useCallback(async () => {
     setError(null);
     setRunning(true);
@@ -178,7 +213,7 @@ export function DigestClient() {
     esRef.current?.close();
 
     try {
-      const { run_id } = await startRun(true);
+      const { run_id } = await startRun(true, focusQuery);
       const es = new EventSource(apiUrl(`/api/run/${run_id}/stream`));
       esRef.current = es;
 
@@ -215,9 +250,10 @@ export function DigestClient() {
       setRunning(false);
       setError(e instanceof Error ? e.message : String(e));
     }
-  }, []);
+  }, [focusQuery]);
 
   const eventLines = events.map(formatEvent).filter(Boolean);
+  const activeFocus = review?.focus_query || focusQuery.trim() || null;
 
   return (
     <div className="digest-shell">
@@ -268,6 +304,34 @@ export function DigestClient() {
             </div>
           </motion.div>
 
+          <div className="rounded-xl border border-line bg-panel/70 p-4">
+            <label htmlFor="focus-query" className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
+              Focus field / keywords
+            </label>
+            <textarea
+              id="focus-query"
+              className="focus-field mt-2"
+              value={focusQuery}
+              onChange={(e) => onFocusChange(e.target.value)}
+              placeholder='e.g. realized volatility, GARCH, TimesFM — or “market microstructure liquidity”'
+              rows={3}
+              maxLength={400}
+              disabled={running}
+            />
+            <p className="mt-2 text-xs text-muted">
+              Steers ArXiv queries and ranking for this run. Comma-separate terms, or write a short domain phrase.
+            </p>
+            {(review?.focus_keywords?.length || 0) > 0 && (
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {review!.focus_keywords!.map((kw) => (
+                  <span key={kw} className="chip chip-accent">
+                    {kw}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+
           {error && (
             <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-sm text-amber-100">
               {error}
@@ -280,6 +344,11 @@ export function DigestClient() {
                 {t.label}
               </span>
             ))}
+            {activeFocus && (
+              <span className="chip chip-accent" title={activeFocus}>
+                focus
+              </span>
+            )}
           </div>
 
           {watch && <SectionBlock section={watch} />}
@@ -308,7 +377,7 @@ export function DigestClient() {
             </h3>
             <ul className="mt-3 max-h-72 space-y-2 overflow-y-auto font-mono text-[11px] leading-snug text-muted">
               {eventLines.length === 0 && !running && (
-                <li>Idle — hit Regenerate to pull ArXiv + RSS.</li>
+                <li>Idle — set a focus, then Regenerate.</li>
               )}
               {eventLines.map((line, i) => (
                 <li key={`${i}-${line.slice(0, 24)}`} className="border-l border-accent/40 pl-2">

@@ -99,3 +99,28 @@ body {
   border-color: color-mix(in oklab, var(--color-accent) 35%, transparent);
   color: color-mix(in oklab, var(--color-accent) 80%, white);
 }
+
+.focus-field {
+  width: 100%;
+  resize: vertical;
+  min-height: 4.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-line);
+  background: color-mix(in oklab, var(--color-panel) 88%, black);
+  color: var(--color-text);
+  padding: 0.75rem 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.focus-field::placeholder {
+  color: color-mix(in oklab, var(--color-muted) 75%, transparent);
+}
+
+.focus-field:focus {
+  border-color: color-mix(in oklab, var(--color-accent) 55%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-accent) 16%, transparent);
+}

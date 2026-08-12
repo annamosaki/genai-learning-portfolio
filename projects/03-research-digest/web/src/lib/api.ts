@@ -40,6 +40,8 @@ export type Review = {
   mode?: string;
   title: string;
   lede: string;
+  focus_query?: string | null;
+  focus_keywords?: string[];
   profile?: string;
   matched_topics?: string[];
   topics?: { id: string; label: string; weight: number }[];
@@ -53,6 +55,7 @@ export type Review = {
     sources?: Record<string, unknown>;
     items_ingested?: number;
     items_ranked?: number;
+    focus_keywords?: string[];
   };
 };
 
@@ -96,17 +99,20 @@ export async function fetchTopics(): Promise<TopicsPayload | null> {
   }
 }
 
-export async function startRun(live = true): Promise<{ run_id: string }> {
+export async function startRun(
+  live = true,
+  focusQuery = ""
+): Promise<{ run_id: string; focus_query?: string | null }> {
   const res = await fetch(apiUrl("/api/run"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ live }),
+    body: JSON.stringify({ live, focus_query: focusQuery.trim() }),
   });
   if (!res.ok) {
     const detail = await res.text();
     throw new Error(detail || `Failed to start run (${res.status})`);
   }
-  return (await res.json()) as { run_id: string };
+  return (await res.json()) as { run_id: string; focus_query?: string | null };
 }
 
 export async function fetchRun(runId: string): Promise<{

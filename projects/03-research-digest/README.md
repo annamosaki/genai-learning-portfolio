@@ -23,7 +23,8 @@ ArXiv + RSS (+ Finnhub?) + local seed
 
 1. Edit interests & feed URLs in [`topics.yaml`](topics.yaml)
 2. Optional: set `FINNHUB_API_KEY` for free-tier market news (skipped if unset)
-3. Run CLI or hit **Regenerate** in the demo
+3. Enter a **Focus field / keywords** in the demo UI (or `--focus` on the CLI)
+4. Run CLI or hit **Regenerate** in the demo — ArXiv queries + ranking steer toward that field
 
 ## Run
 
@@ -52,3 +53,14 @@ projects/03-research-digest/
 ## Personalization
 
 `topics.yaml` is the source of truth: topic weights (time-series × finance and quant research dominate), ArXiv queries, and RSS feed URLs. Unsupported / rumor items are dropped, not hedged.
+
+## Keys (optional)
+
+Nothing is required for a working local demo: ArXiv + RSS + local JSONL work without keys.
+
+| Variable | Required? | Where to create |
+|---|---|---|
+| `FINNHUB_API_KEY` | Optional (live market news) | [Finnhub — free API key](https://finnhub.io/register) |
+| `LANGFUSE_PUBLIC_KEY` / `LANGFUSE_SECRET_KEY` | Optional (trace runs) | [Langfuse cloud](https://cloud.langfuse.com) → project → Settings → API Keys |
+
+Put them in the repo-root `.env` (copied from `.env.example` by `./start.sh`).

@@ -1,20 +1,33 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260806,
-  "date": "2026-08-06",
+  "number": 20260812,
+  "date": "2026-08-12",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-06",
-  "lede": "Time series applied to finance and what quant / fund research desks are",
+  "title": "Reading desk \u2014 2026-08-12",
+  "lede": "Master data management",
+  "focus_query": "Master data management",
+  "focus_keywords": [
+    "Master data management",
+    "Master",
+    "data",
+    "management"
+  ],
   "profile": "Anna Mosaki",
   "matched_topics": [
     "financial-nlp",
     "green-finance",
     "llm-agents",
     "quant-research",
-    "time-series"
+    "time-series",
+    "user-focus"
   ],
   "topics": [
+    {
+      "id": "user-focus",
+      "label": "Your focus",
+      "weight": 1.55
+    },
     {
       "id": "time-series",
       "label": "Time series \u00d7 finance",
@@ -46,40 +59,18 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Forecasting Realized Volatility with Time Series Foundation Models: A Comparison with Econometric Benchmarks \u2014 We ask whether pretrained time series foundation models (TSFMs) improve on established econometric benchmarks for forecasting realized volatility. Using the VOLARE dataset, we conduct the first systematic comparison of n\u2026",
-          "citations": [
-            {
-              "id": "1",
-              "url": "https://arxiv.org/abs/2607.05291",
-              "title": "Forecasting Realized Volatility with Time Series Foundation Models: A Comparison with Econometric Benchmarks"
-            }
-          ],
-          "meta": {
-            "score": 4.047,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-07-06",
-            "authors": "Alessio Brini"
-          }
-        },
-        {
           "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
           "citations": [
             {
-              "id": "2",
+              "id": "1",
               "url": "https://arxiv.org/abs/2608.01599",
               "title": "Latent-Regime Bias Auditing for Volatility Forecasting"
             }
           ],
           "meta": {
-            "score": 3.356,
+            "score": 6.77,
             "topics": [
+              "user-focus",
               "time-series",
               "quant-research",
               "llm-agents"
@@ -91,88 +82,115 @@
           }
         },
         {
-          "text": "PRISM: Powerful Time Series to Image (TS2I) Representations for Multivariate Anomaly Detection \u2014 Time series anomaly detection (TSAD) underpins applications in predictive maintenance, finance, and cloud computing, however performance remains sensitive to representation choices, especially in multivariate settings. W\u2026",
+          "text": "Anisotropic Flow in Ultra-Central Pb$-$Pb Collisions at $\\sqrt{\\mathrm{s_{NN}}}=5.36$ TeV with ALICE \u2014 Anisotropic flow measurements in heavy-ion collisions are sensitive to the spatial distribution of the initial state, and quark-gluon plasma transport properties such as the shear viscosity to entropy density ratio $(\u03b7/s\u2026",
           "citations": [
             {
-              "id": "3",
-              "url": "https://arxiv.org/abs/2608.03926",
-              "title": "PRISM: Powerful Time Series to Image (TS2I) Representations for Multivariate Anomaly Detection"
+              "id": "2",
+              "url": "https://arxiv.org/abs/2608.11199",
+              "title": "Anisotropic Flow in Ultra-Central Pb$-$Pb Collisions at $\\sqrt{\\mathrm{s_{NN}}}=5.36$ TeV with ALICE"
             }
           ],
           "meta": {
-            "score": 3.356,
+            "score": 6.631,
             "topics": [
+              "user-focus",
               "time-series",
               "quant-research",
               "llm-agents"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-08-04",
-            "authors": "Mateusz Smendowski, Kamil Faber, Piotr Nawrocki, Nathalie Japkowicz, Roberto Corizzo"
+            "date": "2026-08-11",
+            "authors": "Iris Likmeta"
           }
         },
         {
-          "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
+          "text": "Real-Time Climate Risk Assessment for Supply Chain Resilience: A Data-Driven Nowcasting Framework for Colombian Agriculture \u2014 This paper presents a methodological framework for real-time climate risk assessment using data-driven nowcasting techniques to enhance supply chain resilience in Colombian agricultural contexts. Climate variability in C\u2026",
+          "citations": [
+            {
+              "id": "3",
+              "url": "https://arxiv.org/abs/2608.09846",
+              "title": "Real-Time Climate Risk Assessment for Supply Chain Resilience: A Data-Driven Nowcasting Framework for Colombian Agriculture"
+            }
+          ],
+          "meta": {
+            "score": 6.516,
+            "topics": [
+              "user-focus",
+              "time-series",
+              "quant-research",
+              "green-finance"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-10",
+            "authors": "Hernan J. Silva-Sosa"
+          }
+        },
+        {
+          "text": "Benchmarking Time Series Generation Methods for Privacy-Preserving Forecasting \u2014 Time series forecasting in privacy-sensitive domains often requires training models on released data rather than original observations. Synthetic time series generation has been developed primarily for data augmentation,\u2026",
           "citations": [
             {
               "id": "4",
-              "url": "https://arxiv.org/abs/2607.22491",
-              "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting"
+              "url": "https://arxiv.org/abs/2608.10891",
+              "title": "Benchmarking Time Series Generation Methods for Privacy-Preserving Forecasting"
             }
           ],
           "meta": {
-            "score": 2.795,
+            "score": 6.071,
             "topics": [
+              "user-focus",
               "time-series",
               "quant-research"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-07-24",
-            "authors": "Aliaksei Kaliutau"
+            "date": "2026-08-11",
+            "authors": "Luis Amorim, Vitor Cerqueira, Moises Santos, Paulo J. Azevedo, Carlos Soares"
           }
         },
         {
-          "text": "How Fast Do Signatures Learn? Statistical Theory and Applications for Path Regression \u2014 Many prediction and decision-making problems in operations research involve path-valued covariates -- data that evolve over time -- for which path signatures have become a canonical feature representation. Their use is j\u2026",
+          "text": "Bayesian inference on beta diversity via feature allocation models with imperfect detection \u2014 Beta diversity quantifies variation in species composition across ecological communities and is fundamental for understanding biodiversity patterns across space and environmental gradients. Statistical inference on beta\u2026",
           "citations": [
             {
               "id": "5",
-              "url": "https://arxiv.org/abs/2607.17865",
-              "title": "How Fast Do Signatures Learn? Statistical Theory and Applications for Path Regression"
+              "url": "https://arxiv.org/abs/2608.11180",
+              "title": "Bayesian inference on beta diversity via feature allocation models with imperfect detection"
             }
           ],
           "meta": {
-            "score": 2.794,
+            "score": 5.932,
             "topics": [
+              "user-focus",
               "time-series",
               "quant-research"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-07-20",
-            "authors": "Blanka Horvath, Wen Su, Wu Su, Binnan Wang, Ruixun Zhang"
+            "date": "2026-08-11",
+            "authors": "Federica Stolf, Tommaso Rigon, David B. Dunson"
           }
         },
         {
-          "text": "Volatility in Prediction Markets: A Structural Approach \u2014 Forward-looking volatility forecasts are central inputs to derivatives pricing, market making, risk management, and volatility-linked trading strategies, with ARCH and GARCH models serving as the canonical workhorses. Su\u2026",
+          "text": "Do Time-Series Forecasters Use the Right History: Recoverability, Recovery, and Functional Use of Temporal Delays \u2014 Forecast accuracy does not tell us which past inputs produced a prediction. We separate three questions for time-series models with known delay structure: can the true delay be recovered from the observed data, does the\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2607.08199",
-              "title": "Volatility in Prediction Markets: A Structural Approach"
+              "url": "https://arxiv.org/abs/2608.10433",
+              "title": "Do Time-Series Forecasters Use the Right History: Recoverability, Recovery, and Functional Use of Temporal Delays"
             }
           ],
           "meta": {
-            "score": 2.794,
+            "score": 5.932,
             "topics": [
+              "user-focus",
               "time-series",
               "quant-research"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-07-09",
-            "authors": "Weiye Xi, Ciamac C. Moallemi, Mallesh Pai, Shouqiao Wang"
+            "date": "2026-08-11",
+            "authors": "Qipeng Qian, Yuntao Qian"
           }
         }
       ]
@@ -181,16 +199,57 @@
       "heading": "News",
       "paragraphs": [
         {
-          "text": "Climate disclosure language under sharper scrutiny \u2014 Supervisors keep pressure on substantiating transition claims \u2014 greenwashing detection stays relevant.",
+          "text": "European stocks steady ahead of US inflation data; geopolitical risks in focus - Reuters \u2014 European stocks steady ahead of US inflation data; geopolitical risks in focus\u00a0\u00a0Reuters",
           "citations": [
             {
               "id": "n1",
+              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcEJrelVuLWNvQVpMQ0FHVXF0aE9vZTZqcklqQUNLSHpCOGxiQkl3Tko1UVJZTHpnVUhUQ0R6RTNWc08yMXRrb2tMNUI1MWpFby1qM1RUWVllYU9NT0x6MzFzQk1tY0U2Q0lCcGhrNUVRYjJtdDVEbVFObndDeFBiVDdmTXdsQW5FV09uRl9aSzFzWVMtVTdkQkFWMFZPdjBzdk1pWA?oc=5",
+              "title": "European stocks steady ahead of US inflation data; geopolitical risks in focus - Reuters"
+            }
+          ],
+          "meta": {
+            "score": 4.14,
+            "topics": [
+              "user-focus",
+              "quant-research"
+            ],
+            "kind": "news",
+            "source": "finnhub:Reuters",
+            "date": "2026-08-12",
+            "authors": null
+          }
+        },
+        {
+          "text": "Dollar ticks up on Iran tensions, with US data in focus - Reuters \u2014 Dollar ticks up on Iran tensions, with US data in focus\u00a0\u00a0Reuters",
+          "citations": [
+            {
+              "id": "n2",
+              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZnhDSnpIWUFyU185anRuZ0lKYjItT2RJaWU3czNGbGdwVVBTbzRlaEF1QjJ3cERWVEZUVkV2Q0kwc3FtQVBpVWx3SmFnbTVlcEkyX0ZYb0lhd2tDQ0ZXcXl1RHl4aTR6dXVjYnRYZjZVUlN0TDE1QXJ4cF9SaHNueElkRF94cGlXbHJZdnlBSExxZzhaMVAxa0lKblNReU0tdFJJ?oc=5",
+              "title": "Dollar ticks up on Iran tensions, with US data in focus - Reuters"
+            }
+          ],
+          "meta": {
+            "score": 2.788,
+            "topics": [
+              "user-focus"
+            ],
+            "kind": "news",
+            "source": "finnhub:Reuters",
+            "date": "2026-08-12",
+            "authors": null
+          }
+        },
+        {
+          "text": "Climate disclosure language under sharper scrutiny \u2014 Supervisors keep pressure on substantiating transition claims \u2014 greenwashing detection stays relevant.",
+          "citations": [
+            {
+              "id": "n3",
               "url": "https://finance.ec.europa.eu/",
               "title": "Climate disclosure language under sharper scrutiny"
             }
           ],
           "meta": {
-            "score": 3.3,
+            "score": 0.594,
             "topics": [
               "time-series",
               "quant-research",
@@ -207,13 +266,13 @@
           "text": "Hyperscalers flag power and networking as the new AI bottleneck \u2014 Capex commentary emphasizes long-duration power and networking constraints rather than pure chip scarcity.",
           "citations": [
             {
-              "id": "n2",
+              "id": "n4",
               "url": "https://www.sec.gov/",
               "title": "Hyperscalers flag power and networking as the new AI bottleneck"
             }
           ],
           "meta": {
-            "score": 2.225,
+            "score": 0.401,
             "topics": [
               "quant-research",
               "llm-agents",
@@ -226,22 +285,42 @@
           }
         },
         {
-          "text": "European banks raise capital buffers amid rate uncertainty \u2014 Prudential language remains cautious; higher buffers framed as resilience, not a growth signal.",
+          "text": "Air Canada reinstates annual forecast, signals fuel price volatility remains a risk - Reuters \u2014 Air Canada reinstates annual forecast, signals fuel price volatility remains a risk\u00a0\u00a0Reuters",
           "citations": [
             {
-              "id": "n3",
-              "url": "https://www.ecb.europa.eu/",
-              "title": "European banks raise capital buffers amid rate uncertainty"
+              "id": "n5",
+              "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPN2luYkU4ZEFpMEJIREFqb3RSaV9xWExzMTFZa2pDVERyRDlLSzVrc1RBWVlLblBhQkRfWUMxUUk4bnpGZkF5NGt5V2RNZ0hMWFp3akVUNXFyRnQyc1gwUUZ2eTV3WlFLeFNOZ08zTTJoRHlzSHE0Mmk3QkRsei11TmhyYVRQSl9nMlB1QmNna2MzcUxSZDdn?oc=5",
+              "title": "Air Canada reinstates annual forecast, signals fuel price volatility remains a risk - Reuters"
             }
           ],
           "meta": {
-            "score": 1.15,
+            "score": 0.228,
             "topics": [
               "quant-research"
             ],
             "kind": "news",
-            "source": "ECB digest",
-            "date": "2026-07-17",
+            "source": "finnhub:Reuters",
+            "date": "2026-08-11",
+            "authors": null
+          }
+        },
+        {
+          "text": "Trading Day: Peace fog - Reuters \u2014 Trading Day: Peace fog\u00a0\u00a0Reuters",
+          "citations": [
+            {
+              "id": "n6",
+              "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTnR0TVJVQ1JVR1pFTXZPaWIwT2V3cmFzdzBQNUw3bWQ2cGxGcE9EOWVLd2laZVQyZzREZE9uVU1LQTJIV28yU29BcElxYXI1YnJ1ZHJXQllVMnFaX1h6aXh5WnloOXNPUDliazBLZ01yeldLRHRWeFdRVExMRFF1MnozSTl6WXF2Z29oX0N2QTR1dmpRTWVweDVhZ0pBQkhCU3FseE1R?oc=5",
+              "title": "Trading Day: Peace fog - Reuters"
+            }
+          ],
+          "meta": {
+            "score": 0.217,
+            "topics": [
+              "quant-research"
+            ],
+            "kind": "news",
+            "source": "finnhub:Reuters",
+            "date": "2026-08-11",
             "authors": null
           }
         }
@@ -251,103 +330,18 @@
       "heading": "Fund research",
       "paragraphs": [
         {
-          "text": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks \u2014 Financial markets are often viewed primarily through lens of equity index movements, as they attract most of the attention. However, commodities represent an important component of the global economy, and shocks in commo\u2026",
-          "citations": [
-            {
-              "id": "f1",
-              "url": "https://quantpedia.com/commodity-crisis-analysis-how-portfolios-react-to-commodity-shocks/",
-              "title": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks"
-            }
-          ],
-          "meta": {
-            "score": 3.112,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Sat, 18 Ju",
-            "authors": null
-          }
-        },
-        {
-          "text": "Getting the Target Right in Return Prediction \u2014 Recent interesting research from Cakici and Zaremba, highlights an often-overlooked aspect of machine learning for equity return prediction: the choice of prediction target. Rather than focusing on increasingly sophistic\u2026",
-          "citations": [
-            {
-              "id": "f2",
-              "url": "https://quantpedia.com/getting-the-target-right-in-return-prediction/",
-              "title": "Getting the Target Right in Return Prediction"
-            }
-          ],
-          "meta": {
-            "score": 3.112,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Thu, 23 Ju",
-            "authors": null
-          }
-        },
-        {
-          "text": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following \u2014 Trend following was one of the most persistent anomalies in finance for nearly two centuries, yet its performance deteriorated sharply after the 2008 financial crisis. An analysis of approximately 100 liquid futures cont\u2026",
-          "citations": [
-            {
-              "id": "f3",
-              "url": "https://quantpedia.com/is-trend-still-your-friend-a-microstructural-account-of-the-demise-of-short-term-trend-following/",
-              "title": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following"
-            }
-          ],
-          "meta": {
-            "score": 2.587,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Wed, 29 Ju",
-            "authors": null
-          }
-        },
-        {
-          "text": "Results from the Advent of FPGA Challenge \u2014 At the end of last year, we decided to try something new: a challenge that would run alongside Advent of Code , where we asked the community to show us how they could design hardware to solve the same problems. We had no\u2026",
-          "citations": [
-            {
-              "id": "f4",
-              "url": "https://blog.janestreet.com/advent-of-fpga-challenge-2025-results/",
-              "title": "Results from the Advent of FPGA Challenge"
-            }
-          ],
-          "meta": {
-            "score": 1.732,
-            "topics": [
-              "time-series",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "jane-street-tech",
-            "date": "Wed, 11 Fe",
-            "authors": null
-          }
-        },
-        {
           "text": "From Backtest to Benchmark: Validating New Strategies with Quantpedia API \u2014 A profitable backtest is rarely the end of a research process. In professional quantitative research, the more important question often comes after the first positive result: is the strategy genuinely new, or is it simpl\u2026",
           "citations": [
             {
-              "id": "f5",
+              "id": "f1",
               "url": "https://quantpedia.com/from-backtest-to-benchmark-validating-new-strategies-with-quantpedia-api/",
               "title": "From Backtest to Benchmark: Validating New Strategies with Quantpedia API"
             }
           ],
           "meta": {
-            "score": 1.38,
+            "score": 4.334,
             "topics": [
+              "user-focus",
               "quant-research"
             ],
             "kind": "fund_research",
@@ -360,19 +354,103 @@
           "text": "Can AI Do Financial Research? \u2014 Large language models are already capable of summarizing financial research, but are they ready to conduct it? In their latest paper, researchers from Google, Boston College, and Columbia introduce a framework where a la\u2026",
           "citations": [
             {
-              "id": "f6",
+              "id": "f2",
               "url": "https://quantpedia.com/can-ai-do-financial-research/",
               "title": "Can AI Do Financial Research?"
             }
           ],
           "meta": {
-            "score": 1.265,
+            "score": 4.205,
             "topics": [
+              "user-focus",
               "quant-research"
             ],
             "kind": "fund_research",
             "source": "quantpedia",
             "date": "Thu, 16 Ju",
+            "authors": null
+          }
+        },
+        {
+          "text": "For The Love of The Game \u2014 Why the path to making money in trading runs through work you&#8217;d better find interesting Data mining and vibe quanting are essentially the same thing. Both fundamentally and philosophically. Fundamentally, data mini\u2026",
+          "citations": [
+            {
+              "id": "f3",
+              "url": "https://robotwealth.com/for-the-love-of-the-game/",
+              "title": "For The Love of The Game"
+            }
+          ],
+          "meta": {
+            "score": 4.205,
+            "topics": [
+              "user-focus",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "robot-wealth",
+            "date": "Wed, 29 Ap",
+            "authors": null
+          }
+        },
+        {
+          "text": "The Data Infrastructure Behind Algorithmic Trading: Understanding Financial Data APIs \u2014 Learn how financial data APIs power quant research pipelines, from data ingestion to scalable analysis using structured financial datasets.",
+          "citations": [
+            {
+              "id": "f4",
+              "url": "https://blog.quantinsti.com/financial-data-apis-algorithmic-trading-fmp/",
+              "title": "The Data Infrastructure Behind Algorithmic Trading: Understanding Financial Data APIs"
+            }
+          ],
+          "meta": {
+            "score": 4.205,
+            "topics": [
+              "user-focus",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantinsti",
+            "date": "Fri, 15 Ma",
+            "authors": null
+          }
+        },
+        {
+          "text": "To Trend or Not To Trend? (Wrong question) \u2014 Someone asked me recently whether strategies based on mean reversion, trend following, and momentum are \u201cgood\u201d or just data mining. It\u2019s a reasonable question, but it reveals some confusion that arises from mixing up two\u2026",
+          "citations": [
+            {
+              "id": "f5",
+              "url": "https://robotwealth.com/to-trend-or-not-to-trend-wrong-question/",
+              "title": "To Trend or Not To Trend? (Wrong question)"
+            }
+          ],
+          "meta": {
+            "score": 3.376,
+            "topics": [
+              "user-focus",
+              "financial-nlp"
+            ],
+            "kind": "fund_research",
+            "source": "robot-wealth",
+            "date": "Fri, 10 Ap",
+            "authors": null
+          }
+        },
+        {
+          "text": "Using OxCaml to implement type-safe reference counting between OCaml and Python \u2014 Jane Street is known for being an OCaml shop, but for years now Python has been our second major programming language, acting as the primary tool for data analysis and (especially importantly these days) machine learning\u2026",
+          "citations": [
+            {
+              "id": "f6",
+              "url": "https://blog.janestreet.com/oxcaml-typesafe-reference-counting-python/",
+              "title": "Using OxCaml to implement type-safe reference counting between OCaml and Python"
+            }
+          ],
+          "meta": {
+            "score": 2.788,
+            "topics": [
+              "user-focus"
+            ],
+            "kind": "fund_research",
+            "source": "jane-street-tech",
+            "date": "Mon, 15 Ju",
             "authors": null
           }
         }
@@ -382,10 +460,11 @@
       "heading": "Watchlist",
       "paragraphs": [
         {
-          "text": "Active interests this run: financial-nlp, green-finance, llm-agents, quant-research, time-series.",
+          "text": "Focus this run: Master data management. Matched topics: financial-nlp, green-finance, llm-agents, quant-research, time-series, user-focus.",
           "citations": [],
           "meta": {
-            "kind": "watchlist"
+            "kind": "watchlist",
+            "focus": "Master data management"
           }
         }
       ]
@@ -393,9 +472,9 @@
   ],
   "stats": {
     "literature_items": 6,
-    "news_items": 3,
+    "news_items": 6,
     "fund_research_items": 6,
-    "claims_dropped": 1,
+    "claims_dropped": 0,
     "sources_local": false,
     "emailed": false,
     "sources": {
@@ -407,15 +486,25 @@
         "ok": true,
         "count": 0
       },
+      "focus": {
+        "query": "Master data management",
+        "keywords": [
+          "Master data management",
+          "Master",
+          "data",
+          "management"
+        ],
+        "arxiv_query": "all:\"Master data management\" OR all:\"Master\" OR all:\"data\" OR all:\"management\""
+      },
       "arxiv": {
         "ok": true,
-        "count": 20,
+        "count": 24,
         "errors": [],
         "source": "arxiv"
       },
       "rss": {
         "ok": true,
-        "count": 24,
+        "count": 53,
         "source": "rss",
         "feeds": [
           {
@@ -429,34 +518,36 @@
             "count": 8
           },
           {
-            "name": "man-institute",
-            "ok": false,
-            "reason": "Client error '404 Not Found' for url 'https://www.man.com/rss.xml'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
-            "count": 0
-          },
-          {
-            "name": "aqr-insights",
-            "ok": true,
-            "count": 0
-          },
-          {
             "name": "two-sigma-insights",
             "ok": true,
             "count": 8
           },
           {
-            "name": "ssrn-qfin",
-            "ok": false,
-            "reason": "Client error '403 Forbidden' for url 'https://papers.ssrn.com/sol3/Jeljour_results.cfm?form_name=journalBrowse&journal_id=1504394&Network=no&lim=false&format=atom'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
-            "count": 0
+            "name": "robot-wealth",
+            "ok": true,
+            "count": 8
+          },
+          {
+            "name": "flirting-with-models",
+            "ok": true,
+            "count": 8
+          },
+          {
+            "name": "alpha-architect",
+            "ok": true,
+            "count": 5
+          },
+          {
+            "name": "quantinsti",
+            "ok": true,
+            "count": 8
           }
         ]
       },
       "finnhub": {
         "ok": true,
-        "skipped": true,
-        "reason": "FINNHUB_API_KEY unset",
-        "count": 0,
+        "skipped": false,
+        "count": 20,
         "source": "finnhub"
       },
       "local_news": {
@@ -468,7 +559,13 @@
         "count": 0
       }
     },
-    "items_ingested": 54,
-    "items_ranked": 38
+    "items_ingested": 103,
+    "items_ranked": 73,
+    "focus_keywords": [
+      "Master data management",
+      "Master",
+      "data",
+      "management"
+    ]
   }
 }

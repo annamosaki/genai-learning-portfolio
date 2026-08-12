@@ -16,9 +16,14 @@ def main() -> None:
         action="store_true",
         help="Skip live ArXiv/RSS/Finnhub; use local JSONL + inbox only",
     )
+    parser.add_argument(
+        "--focus",
+        default="",
+        help="Domain / keywords that steer ArXiv queries and ranking (e.g. 'realized volatility, GARCH')",
+    )
     args = parser.parse_args()
     if args.once:
-        review = run_once(live=not args.offline)
+        review = run_once(live=not args.offline, focus_query=args.focus)
         print(
             json.dumps(
                 {
@@ -27,6 +32,7 @@ def main() -> None:
                     "delivery": "local-only",
                     "date": review["date"],
                     "mode": review.get("mode"),
+                    "focus": review.get("focus_query"),
                     "dropped": review["stats"]["claims_dropped"],
                     "topics": review["matched_topics"],
                     "stats": {

@@ -95,6 +95,7 @@ sources:
       kind: news
 
   fund_research:
+    # House / fund blogs that still expose public RSS (Man/AQR/SSRN no longer do).
     - name: jane-street-tech
       type: rss
       kind: fund_research
@@ -105,26 +106,31 @@ sources:
       kind: fund_research
       url: https://quantpedia.com/feed/
       max_results: 8
-    - name: man-institute
-      type: rss
-      kind: fund_research
-      url: https://www.man.com/maninstitute/rss.xml
-      max_results: 8
-    - name: aqr-insights
-      type: rss
-      kind: fund_research
-      url: https://www.aqr.com/Insights/Research?format=rss
-      max_results: 8
     - name: two-sigma-insights
       type: rss
       kind: fund_research
       url: https://www.twosigma.com/articles/feed/
       max_results: 8
-    - name: ssrn-qfin
+    - name: robot-wealth
       type: rss
       kind: fund_research
-      url: https://papers.ssrn.com/sol3/Jeljour_results.cfm?form_name=journalBrowse&journal_id=1504394&Network=no&lim=false&format=atom
-      max_results: 10
+      url: https://robotwealth.com/feed/
+      max_results: 8
+    - name: flirting-with-models
+      type: rss
+      kind: fund_research
+      url: https://blog.thinknewfound.com/feed/
+      max_results: 8
+    - name: alpha-architect
+      type: rss
+      kind: fund_research
+      url: https://alphaarchitect.com/feed/
+      max_results: 8
+    - name: quantinsti
+      type: rss
+      kind: fund_research
+      url: https://blog.quantinsti.com/rss/
+      max_results: 8
 
 rules:
   drop_unsupported_claims: true

@@ -1,7 +1,11 @@
 import { type AnchorHTMLAttributes, type ReactNode } from "react";
 
 /** Paths served by a child Multi Zone app (not the portfolio Next.js router). */
-const ZONE_PREFIXES = ["/demos/llm-lab", "/demos/agent-desk"] as const;
+const ZONE_PREFIXES = [
+  "/demos/llm-lab",
+  "/demos/agent-desk",
+  "/demos/research-digest",
+] as const;
 
 export function isZoneHref(href: string): boolean {
   if (!href.startsWith("/")) return false;
