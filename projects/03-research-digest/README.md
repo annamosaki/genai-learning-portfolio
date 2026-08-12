@@ -1,7 +1,7 @@
 # 03 — Research Digest
 
 Personalized **literature, news & fund research** desk focused on time series applied to finance.
-Free sources only: ArXiv API, curated RSS (AQR / Man / Two Sigma / Jane Street / Quantpedia / SSRN), optional Finnhub free tier. No newsletter.
+Free sources: ArXiv API, curated RSS, optional Finnhub. Optional Amazon SES newsletter for condensed digests.
 
 ## Demo
 
@@ -16,15 +16,26 @@ Free sources only: ArXiv API, curated RSS (AQR / Man / Two Sigma / Jane Street /
 
 ```
 ArXiv + RSS (+ Finnhub?) + local seed
-  → topic-weighted rank (topics.yaml)
+  → topic-weighted rank (topics.yaml + optional focus keywords)
   → Literature / News / Fund research / Watchlist
   → citation verify → artifact + SSE progress
+  → optional SES newsletter to confirmed subscribers
 ```
 
 1. Edit interests & feed URLs in [`topics.yaml`](topics.yaml)
 2. Optional: set `FINNHUB_API_KEY` for free-tier market news (skipped if unset)
 3. Enter a **Focus field / keywords** in the demo UI (or `--focus` on the CLI)
 4. Run CLI or hit **Regenerate** in the demo — ArXiv queries + ranking steer toward that field
+5. Optional: enter an email → **Subscribe** (confirm link) or **Email latest** for a one-shot condensed digest
+
+## Newsletter (Amazon SES)
+
+- From: `digest@annamosaki.com` (domain identity on `annamosaki.com`)
+- Endpoints: `POST /api/newsletter/subscribe`, `GET /api/newsletter/confirm`, `POST /api/newsletter/send`, `POST /api/newsletter/send-one`
+- After live regenerate, active subscribers receive the condensed HTML newsletter
+- Weekday cron also calls `/api/newsletter/send` after refreshing the artifact
+
+While SES is in sandbox, recipients must verify their address (Amazon sends a verification email) before delivery succeeds.
 
 ## Run
 
@@ -62,5 +73,6 @@ Nothing is required for a working local demo: ArXiv + RSS + local JSONL work wit
 |---|---|---|
 | `FINNHUB_API_KEY` | Optional (live market news) | [Finnhub — free API key](https://finnhub.io/register) |
 | `LANGFUSE_PUBLIC_KEY` / `LANGFUSE_SECRET_KEY` | Optional (trace runs) | [Langfuse cloud](https://cloud.langfuse.com) → project → Settings → API Keys |
+| `OPENAI_API_KEY` / etc. | Optional for other demos | Stored in AWS Secrets Manager `anna-portfolio/app-secrets` in production |
 
-Put them in the repo-root `.env` (copied from `.env.example` by `./start.sh`).
+Local: put keys in repo-root `.env`. Production Digest Lambda loads `anna-portfolio/app-secrets` at boot.

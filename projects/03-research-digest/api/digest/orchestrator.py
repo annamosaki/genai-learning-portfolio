@@ -16,7 +16,9 @@ class RunState:
     status: str = "running"
     live: bool = True
     focus_query: str = ""
+    notify_subscribers: bool = True
     review: Optional[Dict[str, Any]] = None
+    newsletter: Optional[Dict[str, Any]] = None
     error: Optional[str] = None
     started: bool = False
 
@@ -38,19 +40,28 @@ class DigestOrchestrator:
                 "run_id": state.run_id,
                 "live": state.live,
                 "focus_query": state.focus_query,
+                "notify_subscribers": state.notify_subscribers,
                 "status": state.status,
                 "started": state.started,
                 "error": state.error,
                 "review": state.review,
+                "newsletter": state.newsletter,
             },
         )
 
-    async def start_run(self, *, live: bool = True, focus_query: str = "") -> str:
+    async def start_run(
+        self,
+        *,
+        live: bool = True,
+        focus_query: str = "",
+        notify_subscribers: bool = True,
+    ) -> str:
         run_id = str(uuid.uuid4())
         state = RunState(
             run_id=run_id,
             live=live,
             focus_query=(focus_query or "").strip()[:400],
+            notify_subscribers=notify_subscribers,
             started=False,
         )
         self._runs[run_id] = state
@@ -89,17 +100,18 @@ class DigestOrchestrator:
             run_id=meta["run_id"],
             live=bool(meta.get("live", True)),
             focus_query=str(meta.get("focus_query") or ""),
+            notify_subscribers=bool(meta.get("notify_subscribers", True)),
             status=meta.get("status") or "running",
             started=bool(meta.get("started")),
             error=meta.get("error"),
             review=meta.get("review"),
+            newsletter=meta.get("newsletter"),
         )
         self._runs[run_id] = state
         return state
 
     async def _execute(self, run_id: str) -> None:
         state = self._runs[run_id]
-        # Import inside task so PYTHONPATH / cwd issues surface as run errors
         try:
             from signal_desk.pipeline import run_once_async
         except ImportError as exc:
@@ -120,6 +132,13 @@ class DigestOrchestrator:
                 on_progress=on_progress,
             )
             state.review = review
+            if state.notify_subscribers and state.live:
+                try:
+                    from .newsletter import dispatch_newsletter
+
+                    state.newsletter = await asyncio.to_thread(dispatch_newsletter, review)
+                except Exception as exc:  # noqa: BLE001
+                    state.newsletter = {"ok": False, "error": str(exc)[:300]}
             state.status = "finished"
             self._persist(state)
             await event_bus.emit(
@@ -129,6 +148,7 @@ class DigestOrchestrator:
                     "date": review.get("date"),
                     "mode": review.get("mode"),
                     "focus": review.get("focus_query"),
+                    "newsletter_sent": (state.newsletter or {}).get("sent"),
                     "ok": True,
                 },
             )

@@ -37,3 +37,10 @@ jobs:
             apps/web/public/artifacts/signal-desk/latest-issue.json
           git diff --staged --quiet || git commit -m "chore(signal-desk): refresh research digest"
           git push
+      - name: Email newsletter to subscribers
+        continue-on-error: true
+        run: |
+          curl -sf -X POST "${DIGEST_API_URL}/api/newsletter/send" \
+            -H "Content-Type: application/json" || true
+        env:
+          DIGEST_API_URL: https://digest-api.annamosaki.com

@@ -70,6 +70,18 @@ class RunRequest(BaseModel):
         max_length=400,
         description="Domain / keywords that steer ArXiv queries and ranking for this run",
     )
+    notify_subscribers: bool = Field(
+        default=True,
+        description="After a successful live run, email the condensed newsletter to active subscribers",
+    )
+
+
+class SubscribeRequest(BaseModel):
+    email: str = Field(..., max_length=254)
+
+
+class SendOneRequest(BaseModel):
+    email: str = Field(..., max_length=254)
 
 
 def _load_review() -> dict:
@@ -132,12 +144,16 @@ async def get_topics():
 async def start_run(request: Optional[RunRequest] = None) -> Dict[str, Any]:
     live = True if request is None else bool(request.live)
     focus_query = "" if request is None else (request.focus_query or "").strip()
-    run_id = await orchestrator.start_run(live=live, focus_query=focus_query)
+    notify = True if request is None else bool(request.notify_subscribers)
+    run_id = await orchestrator.start_run(
+        live=live, focus_query=focus_query, notify_subscribers=notify
+    )
     return {
         "run_id": run_id,
         "status": "started",
         "live": live,
         "focus_query": focus_query or None,
+        "notify_subscribers": notify,
     }
 
 
@@ -163,4 +179,57 @@ async def get_run(run_id: str):
         "focus_query": run_state.focus_query or None,
         "error": run_state.error,
         "review": run_state.review,
+        "newsletter": run_state.newsletter,
     }
+
+
+@app.post("/api/newsletter/subscribe")
+async def newsletter_subscribe(request: SubscribeRequest):
+    from .newsletter import subscribe
+
+    try:
+        return subscribe(request.email)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+
+
+@app.get("/api/newsletter/confirm")
+async def newsletter_confirm(email: str, token: str):
+    from .newsletter import confirm
+
+    try:
+        result = confirm(email, token)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    return result
+
+
+@app.get("/api/newsletter/unsubscribe")
+async def newsletter_unsubscribe(email: str, token: str):
+    from .newsletter import unsubscribe
+
+    try:
+        return unsubscribe(email, token)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+
+
+@app.post("/api/newsletter/send")
+async def newsletter_send():
+    """Send condensed newsletter of the latest review to all active subscribers."""
+    from .newsletter import dispatch_newsletter
+
+    review = _load_review()
+    return dispatch_newsletter(review)
+
+
+@app.post("/api/newsletter/send-one")
+async def newsletter_send_one(request: SendOneRequest):
+    """One-shot: email the latest condensed digest to a single address (also useful in SES sandbox)."""
+    from .newsletter import send_one_shot
+
+    review = _load_review()
+    try:
+        return send_one_shot(request.email, review)
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc

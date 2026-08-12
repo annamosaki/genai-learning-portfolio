@@ -9,7 +9,9 @@ import {
   fetchLatest,
   fetchRun,
   fetchTopics,
+  sendDigestOnce,
   startRun,
+  subscribeNewsletter,
   type DigestEvent,
   type Paragraph,
   type Review,
@@ -18,6 +20,7 @@ import {
 } from "@/lib/api";
 
 const FOCUS_STORAGE_KEY = "research-digest:focus-query";
+const EMAIL_STORAGE_KEY = "research-digest:subscriber-email";
 
 const SECTION_META: Record<
   string,
@@ -61,7 +64,11 @@ function formatEvent(ev: DigestEvent): string {
     case "synthesize.done":
       return `Sections: ${Array.isArray(d.sections) ? (d.sections as string[]).join(" · ") : "—"}`;
     case "run.finished":
-      return d.ok === false ? "Run finished with errors" : "Digest ready";
+      if (d.ok === false) return "Run finished with errors";
+      if (typeof d.newsletter_sent === "number") {
+        return `Digest ready · emailed ${d.newsletter_sent} subscriber(s)`;
+      }
+      return "Digest ready";
     case "error":
       return `Error: ${d.message || ev.message || "unknown"}`;
     case "keepalive":
@@ -146,6 +153,9 @@ export function DigestClient() {
   const [review, setReview] = useState<Review | null>(null);
   const [topics, setTopics] = useState<TopicsPayload | null>(null);
   const [focusQuery, setFocusQuery] = useState("");
+  const [email, setEmail] = useState("");
+  const [mailStatus, setMailStatus] = useState<string | null>(null);
+  const [mailBusy, setMailBusy] = useState(false);
   const [running, setRunning] = useState(false);
   const [events, setEvents] = useState<DigestEvent[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -155,6 +165,8 @@ export function DigestClient() {
     try {
       const saved = localStorage.getItem(FOCUS_STORAGE_KEY);
       if (saved) setFocusQuery(saved);
+      const savedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
+      if (savedEmail) setEmail(savedEmail);
     } catch {
       /* ignore */
     }
@@ -206,6 +218,49 @@ export function DigestClient() {
     }
   }, []);
 
+  const onEmailChange = useCallback((value: string) => {
+    setEmail(value);
+    try {
+      localStorage.setItem(EMAIL_STORAGE_KEY, value);
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
+  const subscribe = useCallback(async () => {
+    setMailStatus(null);
+    setMailBusy(true);
+    try {
+      const res = await subscribeNewsletter(email.trim());
+      const deliveryNote =
+        res.delivery && res.delivery.ok === false
+          ? ` (mail delivery: ${res.delivery.error || "failed — SES sandbox may require verifying this address"})`
+          : "";
+      setMailStatus(`${res.message || "Subscribed."}${deliveryNote}`);
+    } catch (e) {
+      setMailStatus(e instanceof Error ? e.message : String(e));
+    } finally {
+      setMailBusy(false);
+    }
+  }, [email]);
+
+  const emailLatest = useCallback(async () => {
+    setMailStatus(null);
+    setMailBusy(true);
+    try {
+      const res = await sendDigestOnce(email.trim());
+      setMailStatus(
+        res.delivery?.ok
+          ? `Sent condensed digest to ${res.email}.`
+          : `Could not send: ${res.delivery?.error || "unknown SES error"}`
+      );
+    } catch (e) {
+      setMailStatus(e instanceof Error ? e.message : String(e));
+    } finally {
+      setMailBusy(false);
+    }
+  }, [email]);
+
   const regenerate = useCallback(async () => {
     setError(null);
     setRunning(true);
@@ -213,7 +268,7 @@ export function DigestClient() {
     esRef.current?.close();
 
     try {
-      const { run_id } = await startRun(true, focusQuery);
+      const { run_id } = await startRun(true, focusQuery, true);
       const es = new EventSource(apiUrl(`/api/run/${run_id}/stream`));
       esRef.current = es;
 
@@ -329,6 +384,48 @@ export function DigestClient() {
                   </span>
                 ))}
               </div>
+            )}
+          </div>
+
+          <div className="rounded-xl border border-line bg-panel/70 p-4">
+            <label htmlFor="newsletter-email" className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
+              Newsletter (Amazon SES)
+            </label>
+            <div className="mt-2 flex flex-col gap-2 sm:flex-row">
+              <input
+                id="newsletter-email"
+                type="email"
+                className="focus-field min-h-0 py-2.5"
+                value={email}
+                onChange={(e) => onEmailChange(e.target.value)}
+                placeholder="you@example.com"
+                disabled={mailBusy || running}
+              />
+              <div className="flex shrink-0 gap-2">
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  disabled={mailBusy || running || !email.trim()}
+                  onClick={subscribe}
+                >
+                  Subscribe
+                </button>
+                <button
+                  type="button"
+                  className="btn"
+                  disabled={mailBusy || running || !email.trim()}
+                  onClick={emailLatest}
+                >
+                  Email latest
+                </button>
+              </div>
+            </div>
+            <p className="mt-2 text-xs text-muted">
+              Subscribe for recurring condensed digests, or email the latest run once. Confirmation link required for
+              subscriptions.
+            </p>
+            {mailStatus && (
+              <p className="mt-2 text-sm text-accent">{mailStatus}</p>
             )}
           </div>
 

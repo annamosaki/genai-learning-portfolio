@@ -5,8 +5,10 @@ import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
 import * as ecr_assets from "aws-cdk-lib/aws-ecr-assets";
 import * as iam from "aws-cdk-lib/aws-iam";
 import * as lambda from "aws-cdk-lib/aws-lambda";
+import * as route53 from "aws-cdk-lib/aws-route53";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import * as secretsmanager from "aws-cdk-lib/aws-secretsmanager";
+import * as ses from "aws-cdk-lib/aws-ses";
 import { Construct } from "constructs";
 import * as path from "path";
 
@@ -30,6 +32,21 @@ export class PortfolioServerlessStack extends cdk.Stack {
       "OpenAiSecret",
       "anna-portfolio/openai-api-key",
     );
+    const appSecrets = secretsmanager.Secret.fromSecretNameV2(
+      this,
+      "AppSecrets",
+      "anna-portfolio/app-secrets",
+    );
+
+    // Amazon SES — send Research Digest newsletters from the verified domain.
+    // Domain identity + DKIM are managed in Route53 for annamosaki.com.
+    const zone = route53.HostedZone.fromLookup(this, "RootZone", {
+      domainName: "annamosaki.com",
+    });
+    new ses.EmailIdentity(this, "SesDomain", {
+      identity: ses.Identity.publicHostedZone(zone),
+      mailFromDomain: "mail.annamosaki.com",
+    });
 
     const artifacts = new s3.Bucket(this, "Artifacts", {
       encryption: s3.BucketEncryption.S3_MANAGED,
@@ -160,6 +177,13 @@ export class PortfolioServerlessStack extends cdk.Stack {
         extraEnv.EDGAR_MCP_URL = customApi.EdgarMcp;
         extraEnv.EDGAR_IDENTITY = "Anna Mosaki mosakianna@gmail.com";
       }
+      if (api.id === "DigestApi") {
+        extraEnv.ARTIFACT_DIR = "/tmp/artifacts/signal-desk";
+        extraEnv.NEWSLETTER_FROM = "Research Digest <digest@annamosaki.com>";
+        extraEnv.DIGEST_PUBLIC_URL = "https://digest.annamosaki.com/demos/research-digest";
+        extraEnv.DIGEST_API_PUBLIC_URL = "https://digest-api.annamosaki.com";
+        extraEnv.SUBSCRIBERS_TABLE = runs.tableName;
+      }
 
       const fn = new lambda.DockerImageFunction(this, api.id, {
         code: lambda.DockerImageCode.fromImageAsset(REPO_ROOT, {
@@ -178,6 +202,7 @@ export class PortfolioServerlessStack extends cdk.Stack {
           RUNS_TABLE: runs.tableName,
           SERVERLESS: "1",
           OPENAI_SECRET_ARN: openaiSecret.secretArn,
+          APP_SECRETS_ARN: appSecrets.secretArn,
           CORS_ORIGINS: "*",
           AUTO_APPROVE_ON_TIMEOUT: "true",
           APPROVAL_TIMEOUT_SECONDS: "120",
@@ -188,6 +213,16 @@ export class PortfolioServerlessStack extends cdk.Stack {
       artifacts.grantReadWrite(fn);
       runs.grantReadWriteData(fn);
       openaiSecret.grantRead(fn);
+      appSecrets.grantRead(fn);
+
+      if (api.id === "DigestApi") {
+        fn.addToRolePolicy(
+          new iam.PolicyStatement({
+            actions: ["ses:SendEmail", "ses:SendRawEmail", "sesv2:SendEmail"],
+            resources: ["*"],
+          }),
+        );
+      }
 
       const fnUrl = fn.addFunctionUrl({
         authType: lambda.FunctionUrlAuthType.NONE,

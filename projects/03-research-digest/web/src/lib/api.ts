@@ -101,12 +101,17 @@ export async function fetchTopics(): Promise<TopicsPayload | null> {
 
 export async function startRun(
   live = true,
-  focusQuery = ""
+  focusQuery = "",
+  notifySubscribers = true
 ): Promise<{ run_id: string; focus_query?: string | null }> {
   const res = await fetch(apiUrl("/api/run"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ live, focus_query: focusQuery.trim() }),
+    body: JSON.stringify({
+      live,
+      focus_query: focusQuery.trim(),
+      notify_subscribers: notifySubscribers,
+    }),
   });
   if (!res.ok) {
     const detail = await res.text();
@@ -115,10 +120,44 @@ export async function startRun(
   return (await res.json()) as { run_id: string; focus_query?: string | null };
 }
 
+export async function subscribeNewsletter(email: string): Promise<{
+  status: string;
+  message?: string;
+  delivery?: { ok?: boolean; error?: string };
+}> {
+  const res = await fetch(apiUrl("/api/newsletter/subscribe"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email }),
+  });
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    throw new Error(body.detail || `Subscribe failed (${res.status})`);
+  }
+  return body;
+}
+
+export async function sendDigestOnce(email: string): Promise<{
+  email: string;
+  delivery: { ok?: boolean; error?: string };
+}> {
+  const res = await fetch(apiUrl("/api/newsletter/send-one"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email }),
+  });
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    throw new Error(body.detail || `Send failed (${res.status})`);
+  }
+  return body;
+}
+
 export async function fetchRun(runId: string): Promise<{
   status: string;
   review?: Review;
   error?: string;
+  newsletter?: { sent?: number; subscribers?: number; ok?: boolean; error?: string };
 }> {
   const res = await fetch(apiUrl(`/api/run/${runId}`), { cache: "no-store" });
   if (!res.ok) throw new Error(`Failed to load run ${runId}`);
