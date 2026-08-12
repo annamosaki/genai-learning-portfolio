@@ -38,8 +38,8 @@ export const cv = {
   name: "Anna Mosaki",
   title: "Quantitative Researcher · Data Scientist · AI Engineer",
   seeking:
-    "Seeking a full-time role in quantitative research, data science, trading, or finance. Available for immediate start. Open to opportunities in the United States and Europe.",
-  location: "Paris, France",
+    "Seeking a full-time role in quantitative research, data science, trading, or finance. Available for immediate start. Based in Lisbon; open to opportunities in London.",
+  location: "Lisbon, Portugal",
   email: "mosakianna@gmail.com",
   phone: "+33 7 64 69 59 33",
   links: {

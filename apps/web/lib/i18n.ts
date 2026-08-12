@@ -12,7 +12,7 @@ export const dictionaries = {
       cv: "Download CV",
     },
     hero: {
-      seeking: "Open to roles · US & Europe · Immediate start",
+      seeking: "Open to roles · London · Based in Lisbon · Immediate start",
       ctaWork: "View projects",
       ctaCv: "Download CV",
       ctaContact: "Contact",
@@ -40,7 +40,7 @@ export const dictionaries = {
       cv: "Télécharger le CV",
     },
     hero: {
-      seeking: "Ouverte aux opportunités · US & Europe · Disponible immédiatement",
+      seeking: "Ouverte aux opportunités · Londres · Basée à Lisbonne · Disponible immédiatement",
       ctaWork: "Voir les projets",
       ctaCv: "Télécharger le CV",
       ctaContact: "Contact",
