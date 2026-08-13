@@ -29,7 +29,6 @@ Profiles:
 | LLM Lab zone | http://localhost:3000/demos/llm-lab |
 | Agent Desk zone | http://localhost:3000/demos/agent-desk |
 | Research Digest | http://localhost:3000/demos/research-digest |
-| Status | http://localhost:3000/status |
 | Portfolio API | http://localhost:8000/docs |
 | Lab API | http://localhost:8100/docs |
 | Desk API | http://localhost:8200/docs |
@@ -37,7 +36,7 @@ Profiles:
 
 ## Content
 
-Single source of truth: `content/cv.ts` (experience, education, wins, planned / live projects).
+Single source of truth: `content/cv.ts` (experience, education, wins, live projects).
 
 ## Projects
 

@@ -81,21 +81,29 @@ export default function AskPage() {
     setMessages((m) => [...m, { role: "user", content: question }]);
     setLoading(true);
     try {
-      const res = await fetch(`${apiBase()}/api/ask`, {
+      const base = apiBase().replace(/\/$/, "");
+      const res = await fetch(`${base}/api/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question, history }),
       });
+      const data = (await res.json().catch(() => null)) as { answer?: string } | null;
+      if (data?.answer) {
+        setMessages((m) => [...m, { role: "assistant", content: data.answer! }]);
+        return;
+      }
       if (!res.ok) throw new Error("fail");
-      const data = await res.json();
-      setMessages((m) => [...m, { role: "assistant", content: data.answer }]);
+      setMessages((m) => [
+        ...m,
+        { role: "assistant", content: "No answer returned. Please try again." },
+      ]);
     } catch {
       setMessages((m) => [
         ...m,
         {
           role: "assistant",
           content:
-            "API offline. Anna is an ENSAE-trained quant (BNP Paribas CIB) building ML for markets — NLP, forecasting, and multi-agent systems.",
+            "Could not reach Ask Anna right now. Check that the portfolio API is up, then try again.",
         },
       ]);
     } finally {

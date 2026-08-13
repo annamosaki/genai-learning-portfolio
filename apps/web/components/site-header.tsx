@@ -90,9 +90,6 @@ export function SiteHeader() {
           >
             {locale.toUpperCase()}
           </button>
-          <Link href="/api/cv" className="btn btn-primary hidden text-sm sm:inline-flex">
-            {d.nav.cv}
-          </Link>
         </div>
       </div>
     </header>

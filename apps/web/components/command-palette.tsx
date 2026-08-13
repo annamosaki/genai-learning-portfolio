@@ -14,7 +14,6 @@ const links = [
   { label: "LLM Lab Demo", href: "/demos/llm-lab" },
   { label: "Agent Desk Demo", href: "/demos/agent-desk" },
   { label: "Research Digest Demo", href: "/demos/research-digest" },
-  { label: "Download CV", href: "/api/cv" },
   ...cv.projects.map((p) => ({
     label: `${p.number} ${p.title}`,
     href: `/projects/${p.slug}`,

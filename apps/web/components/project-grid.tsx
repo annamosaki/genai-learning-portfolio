@@ -29,14 +29,8 @@ export function ProjectGrid() {
             <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-[var(--color-accent)]/10 blur-2xl transition group-hover:bg-[var(--color-accent)]/20" />
             <div className="flex items-start justify-between gap-3">
               <span className="font-mono text-xs text-[var(--color-muted)]">{p.number}</span>
-              <span
-                className={
-                  p.status === "live"
-                    ? "chip border-[var(--color-accent)]/40 text-[var(--color-accent)]"
-                    : "chip text-[var(--color-accent)] border-[var(--color-accent)]/30"
-                }
-              >
-                {p.status === "live" ? d.projects.live : d.projects.planned}
+              <span className="chip border-[var(--color-accent)]/40 text-[var(--color-accent)]">
+                {d.projects.live}
               </span>
             </div>
             <h3 className="display mt-4 text-2xl sm:text-3xl">
@@ -54,7 +48,7 @@ export function ProjectGrid() {
               ))}
             </div>
 
-            {p.status === "live" && (p.demoUrl || p.repoUrl) ? (
+            {(p.demoUrl || p.repoUrl) && (
               <div className="mt-5 flex flex-wrap gap-2 border-t border-[var(--color-line)] pt-4">
                 {p.demoUrl && (
                   <ZoneLink href={p.demoUrl} className="btn btn-primary text-xs">
@@ -71,20 +65,6 @@ export function ProjectGrid() {
                     {d.projects.source}
                   </a>
                 )}
-              </div>
-            ) : (
-              <div className="mt-5 border-t border-[var(--color-line)] pt-4">
-                <p className="font-mono text-[10px] uppercase tracking-wider text-[var(--color-accent-2)]">
-                  What will be here
-                </p>
-                <ul className="mt-2 space-y-1.5 text-sm text-[var(--color-muted)]">
-                  {p.comingSoon.map((item) => (
-                    <li key={item} className="flex gap-2">
-                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[var(--color-accent)]" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             )}
           </article>

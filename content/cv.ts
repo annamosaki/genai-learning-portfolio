@@ -216,34 +216,6 @@ export const cv = {
       ],
       demoUrl: "/demos/research-digest",
     },
-    {
-      id: "04",
-      slug: "sentiment-bench",
-      number: "04",
-      title: "Sentiment Bench",
-      tagline: "Financial NLP benchmark: FinBERT vs LSTM vs local LLM — accuracy, latency, and alpha.",
-      status: "planned" as const,
-      stack: ["PyTorch", "FinBERT", "LLM", "backtest"],
-      comingSoon: [
-        "Accuracy, F1, calibration (ECE)",
-        "Latency and cost per 1k docs",
-        "Downstream long/short Sharpe comparison",
-      ],
-    },
-    {
-      id: "05",
-      slug: "forecast-bench",
-      number: "05",
-      title: "Forecast Bench",
-      tagline: "Time-series foundation models on returns and volatility — purged walk-forward.",
-      status: "planned" as const,
-      stack: ["TimesFM", "Chronos-2", "Moirai", "statsforecast"],
-      comingSoon: [
-        "Returns & vol targets (not price levels)",
-        "CRPS / MASE leaderboard",
-        "Contamination-aware evaluation windows",
-      ],
-    },
   ] satisfies ProjectMeta[],
 } as const;
 

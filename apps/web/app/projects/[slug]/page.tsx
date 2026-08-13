@@ -39,32 +39,20 @@ export default async function ProjectPage({ params }: Props) {
 
       <div className="grid gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          {project.status === "live" && project.demoUrl ? (
-            <DemoEmbed 
-              url={project.demoUrl} 
+          {project.demoUrl ? (
+            <DemoEmbed
+              url={project.demoUrl}
               title={project.title}
               className="mb-8"
             />
-          ) : (
-            <div className="mb-8 rounded-2xl border border-[var(--color-line)] bg-[var(--color-panel)] p-8 text-center">
-              <div className="mb-4 text-4xl opacity-50">🚧</div>
-              <h3 className="mb-2 text-lg font-medium">Coming Soon</h3>
-              <p className="text-[var(--color-muted)]">This demo is still in development.</p>
-            </div>
-          )}
+          ) : null}
         </div>
 
         <div className="space-y-6">
           <div>
             <h3 className="mb-3 font-medium">Status</h3>
-            <span
-              className={`chip ${
-                project.status === "live"
-                  ? "border-green-500/30 bg-green-500/10 text-green-400"
-                  : "border-amber-500/30 bg-amber-500/10 text-amber-400"
-              }`}
-            >
-              {project.status === "live" ? "Live" : "In Development"}
+            <span className="chip border-[var(--color-accent)]/40 text-[var(--color-accent)]">
+              Live
             </span>
           </div>
 
@@ -81,7 +69,7 @@ export default async function ProjectPage({ params }: Props) {
 
           {project.comingSoon.length > 0 && (
             <div>
-              <h3 className="mb-3 font-medium">Coming Soon</h3>
+              <h3 className="mb-3 font-medium">Highlights</h3>
               <ul className="space-y-1 text-sm text-[var(--color-muted)]">
                 {project.comingSoon.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2">
@@ -104,7 +92,7 @@ export default async function ProjectPage({ params }: Props) {
                 href={project.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-secondary"
+                className="btn btn-ghost"
               >
                 View Source →
               </Link>

@@ -5,7 +5,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function apiBase() {
-  return process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+  const base = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+  return base.replace(/\/$/, "");
 }
 
 export function formatMonth(iso: string) {

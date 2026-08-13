@@ -27,9 +27,6 @@ export function Hero() {
         <Link href="/#projects" className="btn btn-primary">
           {d.hero.ctaWork}
         </Link>
-        <Link href="/api/cv" className="btn btn-ghost">
-          {d.hero.ctaCv}
-        </Link>
         <a href={`mailto:${cv.email}`} className="btn btn-ghost">
           {d.hero.ctaContact}
         </a>

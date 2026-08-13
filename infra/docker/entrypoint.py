@@ -20,18 +20,31 @@ def _load_secret_string(arn: str) -> str:
     return resp.get("SecretString") or ""
 
 
+def _usable_secret(value: str | None) -> str | None:
+    """Return a stripped secret, or None if empty / placeholder."""
+    if value is None:
+        return None
+    val = str(value).strip().strip('"').strip("'")
+    if not val:
+        return None
+    upper = val.upper()
+    if upper.startswith("PLACEHOLDER") or upper in {"SET_ME", "TODO", "CHANGEME"}:
+        return None
+    return val
+
+
 def main() -> None:
     app_arn = os.environ.get("APP_SECRETS_ARN", "").strip()
     if app_arn:
         try:
-            raw = _load_secret_string(app_arn)
+            raw = _load_secret_string(app_arn).strip()
             data = json.loads(raw) if raw.startswith("{") else {}
             if isinstance(data, dict):
                 for key, value in data.items():
-                    if not key or value is None:
+                    if not key:
                         continue
-                    val = str(value).strip()
-                    if not val or val.startswith("PLACEHOLDER"):
+                    val = _usable_secret(None if value is None else str(value))
+                    if not val:
                         continue
                     # Do not overwrite an already-injected env var.
                     if not os.environ.get(key):
@@ -40,11 +53,13 @@ def main() -> None:
             print(f"warn: could not load APP_SECRETS_ARN: {exc}", file=sys.stderr)
 
     openai_arn = os.environ.get("OPENAI_SECRET_ARN", "").strip()
-    if openai_arn and not os.environ.get("OPENAI_API_KEY"):
+    if openai_arn and not _usable_secret(os.environ.get("OPENAI_API_KEY")):
         try:
-            secret = _load_secret_string(openai_arn)
-            if secret and not secret.startswith("PLACEHOLDER"):
+            secret = _usable_secret(_load_secret_string(openai_arn))
+            if secret:
                 os.environ["OPENAI_API_KEY"] = secret
+            else:
+                os.environ.pop("OPENAI_API_KEY", None)
         except Exception as exc:  # noqa: BLE001
             print(f"warn: could not load OPENAI_SECRET_ARN: {exc}", file=sys.stderr)
 

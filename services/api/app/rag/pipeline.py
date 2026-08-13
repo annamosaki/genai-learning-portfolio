@@ -58,8 +58,9 @@ def answer_question(question: str, history: list[ChatTurn] | None = None) -> dic
         return {
             **base,
             "answer": (
-                "Ask Anna needs an OPENAI_API_KEY in `.env` to answer from the CV. "
-                "Add a key, restart the API, then try again."
+                "Ask Anna is missing a valid OPENAI_API_KEY. "
+                "Set it in AWS Secrets Manager (`anna-portfolio/openai-api-key`) for production, "
+                "or in `.env` for local, then redeploy/restart the API."
             ),
         }
 
@@ -97,7 +98,10 @@ def answer_question(question: str, history: list[ChatTurn] | None = None) -> dic
                 "The CV is ready in context; only the LLM call is blocked."
             )
         elif name == "AuthenticationError":
-            msg = "OpenAI API key is invalid. Check OPENAI_API_KEY in `.env` and restart the API."
+            msg = (
+                "OpenAI API key is invalid. Update `anna-portfolio/openai-api-key` in "
+                "Secrets Manager (or OPENAI_API_KEY in `.env` locally), then redeploy/restart."
+            )
         else:
             msg = f"Could not reach the language model ({name}). Please try again in a moment."
         return {**base, "answer": msg, "mode": "cv-context-error"}

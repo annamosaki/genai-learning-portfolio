@@ -6,8 +6,21 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
-CORPUS_ROOT = Path(__file__).resolve().parents[4]
-CV_PATH = CORPUS_ROOT / "content" / "cv.ts"
+def _cv_path() -> Path:
+    """Resolve content/cv.ts for local repo layout and Lambda image (/var/task)."""
+    here = Path(__file__).resolve()
+    candidates = (
+        here.parents[4] / "content" / "cv.ts",  # repo: services/api/app/rag → root
+        here.parents[2] / "content" / "cv.ts",  # image: /var/task/app/rag → /var/task
+        Path("/var/task/content/cv.ts"),
+    )
+    for path in candidates:
+        if path.exists():
+            return path
+    return candidates[0]
+
+
+CV_PATH = _cv_path()
 
 
 @dataclass(frozen=True)
@@ -167,9 +180,10 @@ def build_chunks(raw: str) -> list[Chunk]:
 
 def get_chunks() -> tuple[Chunk, ...]:
     """Reload from disk each call so CV edits apply without restarting the API."""
-    if not CV_PATH.exists():
+    path = _cv_path()
+    if not path.exists():
         return tuple()
-    return tuple(build_chunks(CV_PATH.read_text(encoding="utf-8")))
+    return tuple(build_chunks(path.read_text(encoding="utf-8")))
 
 
 def full_cv_context() -> str:
