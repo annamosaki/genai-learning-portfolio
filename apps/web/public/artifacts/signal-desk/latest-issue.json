@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260813,
-  "date": "2026-08-13",
+  "number": 20260814,
+  "date": "2026-08-14",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-13",
+  "title": "Reading desk \u2014 2026-08-14",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -134,31 +134,10 @@
           }
         },
         {
-          "text": "Long-Horizon Forecasting of Complete Financial Statements with Forma \u2014 Specialist training beats generalist scale when forecasting financial statements. To our knowledge, no prior work jointly forecasts complete financial statements beyond one year, yet in a discounted-cash-flow valuation m\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2608.11327",
-              "title": "Long-Horizon Forecasting of Complete Financial Statements with Forma"
-            }
-          ],
-          "meta": {
-            "score": 2.732,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-11",
-            "authors": "Travis L. Johnson, Jiannan Jiang, Soumyabrata Chaudhuri, Yihao Chen, Lauren Falvey, Donal O'Cofaigh"
-          }
-        },
-        {
           "text": "Regime-Gated Residual Mixture-of-Experts for Cross-Sectional Volatility Forecasting \u2014 Financial volatility is regime dependent, yet incorporating regime information into neural networks can also destabilize training. This paper asks where such information should enter a neural cross-sectional volatility f\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "5",
               "url": "https://arxiv.org/abs/2608.12251",
               "title": "Regime-Gated Residual Mixture-of-Experts for Cross-Sectional Volatility Forecasting"
             }
@@ -173,6 +152,27 @@
             "source": "arxiv",
             "date": "2026-08-12",
             "authors": "Junyi Ye, Gargi Vijay Borde"
+          }
+        },
+        {
+          "text": "CoMedBench: A Multi-Source Benchmark of Synthetic Medical Data Fidelity and Downstream Utility \u2014 Access to clinical data is essential for developing reliable healthcare machine learning systems, but direct use of electronic health records is constrained by privacy regulation, institutional review, data-use agreement\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2608.12805",
+              "title": "CoMedBench: A Multi-Source Benchmark of Synthetic Medical Data Fidelity and Downstream Utility"
+            }
+          ],
+          "meta": {
+            "score": 2.608,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-13",
+            "authors": "Akanta Das, Al Amin Farhad, Mrinmoy Sarkar Anto, David Rehkopf, Ayin Vala, Tanmoy Sarkar Pias"
           }
         }
       ]
@@ -477,7 +477,7 @@
       }
     },
     "items_ingested": 82,
-    "items_ranked": 63,
+    "items_ranked": 64,
     "focus_keywords": []
   }
 }
