@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260814,
-  "date": "2026-08-14",
+  "number": 20260817,
+  "date": "2026-08-17",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-14",
+  "title": "Reading desk \u2014 2026-08-17",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -92,10 +92,54 @@
           }
         },
         {
-          "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
+          "text": "Forecast Collapse in Time-Series Foundation Models \u2014 When forecasting hourly returns for 1,000 US equities, we observe an unexpected phenomenon: predictions become nearly flat and show poor stock ranking, as measured by cross-sectional correlation. We call this forecast co\u2026",
           "citations": [
             {
               "id": "3",
+              "url": "https://arxiv.org/abs/2608.14106",
+              "title": "Forecast Collapse in Time-Series Foundation Models"
+            }
+          ],
+          "meta": {
+            "score": 3.299,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-14",
+            "authors": "Shu Wan, Miles Ma, Hank Zhu, Guangqi Liu, Stephen Wang, Qingsong Wen, Huan Liu"
+          }
+        },
+        {
+          "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
+          "citations": [
+            {
+              "id": "4",
+              "url": "https://arxiv.org/abs/2608.14171",
+              "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 3.299,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-14",
+            "authors": "Neha Gupta, Nishit Soni, Aditya Maheshwari"
+          }
+        },
+        {
+          "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
+          "citations": [
+            {
+              "id": "5",
               "url": "https://arxiv.org/abs/2607.22491",
               "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting"
             }
@@ -116,7 +160,7 @@
           "text": "How Fast Do Signatures Learn? Statistical Theory and Applications for Path Regression \u2014 Many prediction and decision-making problems in operations research involve path-valued covariates -- data that evolve over time -- for which path signatures have become a canonical feature representation. Their use is j\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "6",
               "url": "https://arxiv.org/abs/2607.17865",
               "title": "How Fast Do Signatures Learn? Statistical Theory and Applications for Path Regression"
             }
@@ -131,48 +175,6 @@
             "source": "arxiv",
             "date": "2026-07-20",
             "authors": "Blanka Horvath, Wen Su, Wu Su, Binnan Wang, Ruixun Zhang"
-          }
-        },
-        {
-          "text": "Regime-Gated Residual Mixture-of-Experts for Cross-Sectional Volatility Forecasting \u2014 Financial volatility is regime dependent, yet incorporating regime information into neural networks can also destabilize training. This paper asks where such information should enter a neural cross-sectional volatility f\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2608.12251",
-              "title": "Regime-Gated Residual Mixture-of-Experts for Cross-Sectional Volatility Forecasting"
-            }
-          ],
-          "meta": {
-            "score": 2.732,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-12",
-            "authors": "Junyi Ye, Gargi Vijay Borde"
-          }
-        },
-        {
-          "text": "CoMedBench: A Multi-Source Benchmark of Synthetic Medical Data Fidelity and Downstream Utility \u2014 Access to clinical data is essential for developing reliable healthcare machine learning systems, but direct use of electronic health records is constrained by privacy regulation, institutional review, data-use agreement\u2026",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/2608.12805",
-              "title": "CoMedBench: A Multi-Source Benchmark of Synthetic Medical Data Fidelity and Downstream Utility"
-            }
-          ],
-          "meta": {
-            "score": 2.608,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-13",
-            "authors": "Akanta Das, Al Amin Farhad, Mrinmoy Sarkar Anto, David Rehkopf, Ayin Vala, Tanmoy Sarkar Pias"
           }
         }
       ]
@@ -414,7 +416,7 @@
       },
       "arxiv": {
         "ok": true,
-        "count": 19,
+        "count": 20,
         "errors": [],
         "source": "arxiv"
       },
@@ -476,8 +478,8 @@
         "count": 0
       }
     },
-    "items_ingested": 82,
-    "items_ranked": 64,
+    "items_ingested": 83,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
