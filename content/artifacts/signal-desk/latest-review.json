@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260817,
-  "date": "2026-08-17",
+  "number": 20260818,
+  "date": "2026-08-18",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-17",
+  "title": "Reading desk \u2014 2026-08-18",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -136,45 +136,47 @@
           }
         },
         {
-          "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
+          "text": "Rough Volatility Across Assets \u2014 We measure volatility roughness across asset classes using a common data infrastructure and pipeline. Our data covers 3,926 United States equities, 34 CME futures roots, rates, FX, and commodities, and options on 44 unde\u2026",
           "citations": [
             {
               "id": "5",
-              "url": "https://arxiv.org/abs/2607.22491",
-              "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting"
+              "url": "https://arxiv.org/abs/2608.16749",
+              "title": "Rough Volatility Across Assets"
             }
           ],
           "meta": {
-            "score": 2.795,
+            "score": 3.232,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "llm-agents"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-07-24",
-            "authors": "Aliaksei Kaliutau"
+            "date": "2026-08-17",
+            "authors": "Saad Mouti"
           }
         },
         {
-          "text": "How Fast Do Signatures Learn? Statistical Theory and Applications for Path Regression \u2014 Many prediction and decision-making problems in operations research involve path-valued covariates -- data that evolve over time -- for which path signatures have become a canonical feature representation. Their use is j\u2026",
+          "text": "FirstDiff: One-Step Diffusion-Based Anomaly Detection for Multivariate Time Series via Initial Noise Prediction \u2014 Diffusion models have recently shown strong potential for multivariate time-series anomaly detection by learning the distribution of normal data through iterative denoising. Existing diffusion-based approaches, however,\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2607.17865",
-              "title": "How Fast Do Signatures Learn? Statistical Theory and Applications for Path Regression"
+              "url": "https://arxiv.org/abs/2608.15727",
+              "title": "FirstDiff: One-Step Diffusion-Based Anomaly Detection for Multivariate Time Series via Initial Noise Prediction"
             }
           ],
           "meta": {
-            "score": 2.794,
+            "score": 3.175,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "financial-nlp"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-07-20",
-            "authors": "Blanka Horvath, Wen Su, Wu Su, Binnan Wang, Ruixun Zhang"
+            "date": "2026-08-16",
+            "authors": "Ali Boudaghi, Alireza Nemati, Hadi Zare"
           }
         }
       ]
@@ -253,10 +255,32 @@
       "heading": "Fund research",
       "paragraphs": [
         {
-          "text": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks \u2014 Financial markets are often viewed primarily through lens of equity index movements, as they attract most of the attention. However, commodities represent an important component of the global economy, and shocks in commo\u2026",
+          "text": "Sectoral Intramonth Momentum Cycle: Exploiting Turn-of-the-Month Patterns in Sector ETF Strategies \u2014 We document a persistent intramonth momentum cycle in U.S. sector ETFs that yields meaningful risk-adjusted returns when properly sequenced. Using the nine original Select Sector SPDR ETFs and SPY as the market benchmark\u2026",
           "citations": [
             {
               "id": "f1",
+              "url": "https://quantpedia.com/sectoral-intramonth-momentum-cycle/",
+              "title": "Sectoral Intramonth Momentum Cycle: Exploiting Turn-of-the-Month Patterns in Sector ETF Strategies"
+            }
+          ],
+          "meta": {
+            "score": 3.17,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Mon, 17 Au",
+            "authors": null
+          }
+        },
+        {
+          "text": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks \u2014 Financial markets are often viewed primarily through lens of equity index movements, as they attract most of the attention. However, commodities represent an important component of the global economy, and shocks in commo\u2026",
+          "citations": [
+            {
+              "id": "f2",
               "url": "https://quantpedia.com/commodity-crisis-analysis-how-portfolios-react-to-commodity-shocks/",
               "title": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks"
             }
@@ -278,7 +302,7 @@
           "text": "Getting the Target Right in Return Prediction \u2014 Recent interesting research from Cakici and Zaremba, highlights an often-overlooked aspect of machine learning for equity return prediction: the choice of prediction target. Rather than focusing on increasingly sophistic\u2026",
           "citations": [
             {
-              "id": "f2",
+              "id": "f3",
               "url": "https://quantpedia.com/getting-the-target-right-in-return-prediction/",
               "title": "Getting the Target Right in Return Prediction"
             }
@@ -300,7 +324,7 @@
           "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
           "citations": [
             {
-              "id": "f3",
+              "id": "f4",
               "url": "https://blog.quantinsti.com/cointegrated-pairs-trading-indian-equity-market-epat-project/",
               "title": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project"
             }
@@ -322,7 +346,7 @@
           "text": "Is Managed Futures Value-able? \u2014 In Return StackingTM: Strategies for Overcoming a Low Return Environment, we advocated for the addition of managed futures to traditionally allocated portfolios. We argued that managed futures\u2019 low empirical correlation\u2026",
           "citations": [
             {
-              "id": "f4",
+              "id": "f5",
               "url": "https://blog.thinknewfound.com/2023/06/is-managed-futures-value-able/",
               "title": "Is Managed Futures Value-able?"
             }
@@ -344,7 +368,7 @@
           "text": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following \u2014 Trend following was one of the most persistent anomalies in finance for nearly two centuries, yet its performance deteriorated sharply after the 2008 financial crisis. An analysis of approximately 100 liquid futures cont\u2026",
           "citations": [
             {
-              "id": "f5",
+              "id": "f6",
               "url": "https://quantpedia.com/is-trend-still-your-friend-a-microstructural-account-of-the-demise-of-short-term-trend-following/",
               "title": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following"
             }
@@ -358,27 +382,6 @@
             "kind": "fund_research",
             "source": "quantpedia",
             "date": "Wed, 29 Ju",
-            "authors": null
-          }
-        },
-        {
-          "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
-          "citations": [
-            {
-              "id": "f6",
-              "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
-              "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
-            }
-          ],
-          "meta": {
-            "score": 2.53,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "fund_research",
-            "source": "quantinsti",
-            "date": "Wed, 01 Ju",
             "authors": null
           }
         }
@@ -479,7 +482,7 @@
       }
     },
     "items_ingested": 83,
-    "items_ranked": 65,
+    "items_ranked": 66,
     "focus_keywords": []
   }
 }
