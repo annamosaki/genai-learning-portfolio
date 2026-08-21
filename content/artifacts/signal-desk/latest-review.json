@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260820,
-  "date": "2026-08-20",
+  "number": 20260821,
+  "date": "2026-08-21",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-20",
+  "title": "Reading desk \u2014 2026-08-21",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -114,68 +114,69 @@
           }
         },
         {
-          "text": "Rough Volatility Across Assets \u2014 We measure volatility roughness across asset classes using a common data infrastructure and pipeline. Our data covers 3,926 United States equities, 34 CME futures roots, rates, FX, and commodities, and options on 44 unde\u2026",
+          "text": "Systematic Evaluation of TabPFN-TS for Zero-Shot Probabilistic Heat Load Forecasting in District Heating Networks \u2014 District heating energy hubs require reliable heat load forecasts for efficient operational scheduling. Conventional forecasting workflows train system-specific models on historical data, which can become burdensome when\u2026",
           "citations": [
             {
               "id": "4",
-              "url": "https://arxiv.org/abs/2608.16749",
-              "title": "Rough Volatility Across Assets"
+              "url": "https://arxiv.org/abs/2608.20024",
+              "title": "Systematic Evaluation of TabPFN-TS for Zero-Shot Probabilistic Heat Load Forecasting in District Heating Networks"
             }
           ],
           "meta": {
-            "score": 3.232,
+            "score": 3.299,
             "topics": [
               "time-series",
               "quant-research",
-              "llm-agents"
+              "financial-nlp"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-08-17",
-            "authors": "Saad Mouti"
+            "date": "2026-08-20",
+            "authors": "Ben Spoek, Karim K. Ben Hicham, Kai Derzsi, Philipp Althaus, Alexander Mitsos, Dirk M\u00fcller"
           }
         },
         {
-          "text": "SPACE: Sample-cloud Predictive Adaptive Conformal Ellipsoids for Multivariate Time-Series Forecasting \u2014 Modern probabilistic time-series forecasters often express uncertainty through forecast samples. While typically converted into nominal prediction regions using empirical quantiles, these model-implied sets lack formal c\u2026",
+          "text": "Quantifying Event Impacts on Time Series via Multiscale Contrastive Learning \u2014 Shocks that spread through the web, such as cybersecurity breach disclosures, can abruptly disrupt financial time series and cause substantial abnormal losses. While these events are disclosed as discrete records through\u2026",
           "citations": [
             {
               "id": "5",
-              "url": "https://arxiv.org/abs/2608.17333",
-              "title": "SPACE: Sample-cloud Predictive Adaptive Conformal Ellipsoids for Multivariate Time-Series Forecasting"
+              "url": "https://arxiv.org/abs/2608.19447",
+              "title": "Quantifying Event Impacts on Time Series via Multiscale Contrastive Learning"
             }
           ],
           "meta": {
-            "score": 3.232,
+            "score": 3.264,
             "topics": [
               "time-series",
               "quant-research",
-              "llm-agents"
+              "financial-nlp"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-08-18",
-            "authors": "Baishi Li, Kelvin J. L. Koa, Ke-Wei Huang"
+            "date": "2026-08-19",
+            "authors": "Yiming Sun, Shengyu Chen, Zhengzhang Chen, Haoyu Wang, Xiaowei Jia, Haifeng Chen"
           }
         },
         {
-          "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
+          "text": "Deep-MKV-TS: Path-Dependent McKean--Vlasov Control for Financial Time Series Generation \u2014 We introduce Deep-MKV-TS, a path-dependent McKean-Vlasov framework for financial scenario generation. The stochastic dynamics are chosen by matching selected path and volatility features of generated scenarios to those o\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2607.22491",
-              "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting"
+              "url": "https://arxiv.org/abs/2608.19394",
+              "title": "Deep-MKV-TS: Path-Dependent McKean--Vlasov Control for Financial Time Series Generation"
             }
           ],
           "meta": {
-            "score": 2.795,
+            "score": 3.237,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "financial-nlp"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-07-24",
-            "authors": "Aliaksei Kaliutau"
+            "date": "2026-08-19",
+            "authors": "Samer El Boustany, Th\u00e9o Basseras, Samy Mekkaoui, Alexandre Alouadi, Yadh Hafsi, Huy\u00ean Pham"
           }
         }
       ]
