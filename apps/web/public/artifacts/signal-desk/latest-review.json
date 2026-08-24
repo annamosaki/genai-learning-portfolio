@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260821,
-  "date": "2026-08-21",
+  "number": 20260824,
+  "date": "2026-08-24",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-21",
+  "title": "Reading desk \u2014 2026-08-24",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -136,47 +136,46 @@
           }
         },
         {
-          "text": "Quantifying Event Impacts on Time Series via Multiscale Contrastive Learning \u2014 Shocks that spread through the web, such as cybersecurity breach disclosures, can abruptly disrupt financial time series and cause substantial abnormal losses. While these events are disclosed as discrete records through\u2026",
+          "text": "Rough Volatility Across Assets \u2014 We measure volatility roughness across asset classes using a common data infrastructure and pipeline. Our data covers 3,926 United States equities, 34 CME futures roots, rates, FX, and commodities, and options on 44 unde\u2026",
           "citations": [
             {
               "id": "5",
-              "url": "https://arxiv.org/abs/2608.19447",
-              "title": "Quantifying Event Impacts on Time Series via Multiscale Contrastive Learning"
+              "url": "https://arxiv.org/abs/2608.16749",
+              "title": "Rough Volatility Across Assets"
             }
           ],
           "meta": {
-            "score": 3.264,
+            "score": 3.232,
             "topics": [
               "time-series",
               "quant-research",
-              "financial-nlp"
+              "llm-agents"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-08-19",
-            "authors": "Yiming Sun, Shengyu Chen, Zhengzhang Chen, Haoyu Wang, Xiaowei Jia, Haifeng Chen"
+            "date": "2026-08-17",
+            "authors": "Saad Mouti"
           }
         },
         {
-          "text": "Deep-MKV-TS: Path-Dependent McKean--Vlasov Control for Financial Time Series Generation \u2014 We introduce Deep-MKV-TS, a path-dependent McKean-Vlasov framework for financial scenario generation. The stochastic dynamics are chosen by matching selected path and volatility features of generated scenarios to those o\u2026",
+          "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2608.19394",
-              "title": "Deep-MKV-TS: Path-Dependent McKean--Vlasov Control for Financial Time Series Generation"
+              "url": "https://arxiv.org/abs/2607.22491",
+              "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting"
             }
           ],
           "meta": {
-            "score": 3.237,
+            "score": 2.795,
             "topics": [
               "time-series",
-              "quant-research",
-              "financial-nlp"
+              "quant-research"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-08-19",
-            "authors": "Samer El Boustany, Th\u00e9o Basseras, Samy Mekkaoui, Alexandre Alouadi, Yadh Hafsi, Huy\u00ean Pham"
+            "date": "2026-07-24",
+            "authors": "Aliaksei Kaliutau"
           }
         }
       ]
