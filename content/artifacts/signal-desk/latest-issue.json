@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260824,
-  "date": "2026-08-24",
+  "number": 20260825,
+  "date": "2026-08-25",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-24",
+  "title": "Reading desk \u2014 2026-08-25",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -70,10 +70,32 @@
           }
         },
         {
-          "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
+          "text": "Do Time-Series Foundation Models Pay Off for Industrial Monitoring? A Cost-Aware Empirical Study \u2014 Industrial monitoring models must detect operationally relevant deviations while satisfying target-specific data, calibration, and resource constraints. Time-series foundation models (TSFMs) promise reusable representati\u2026",
           "citations": [
             {
               "id": "2",
+              "url": "https://arxiv.org/abs/2608.22968",
+              "title": "Do Time-Series Foundation Models Pay Off for Industrial Monitoring? A Cost-Aware Empirical Study"
+            }
+          ],
+          "meta": {
+            "score": 3.361,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-24",
+            "authors": "Guan-Hua Wen, Kuan-Yu Chen"
+          }
+        },
+        {
+          "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
+          "citations": [
+            {
+              "id": "3",
               "url": "https://arxiv.org/abs/2608.01599",
               "title": "Latent-Regime Bias Auditing for Volatility Forecasting"
             }
@@ -95,7 +117,7 @@
           "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "4",
               "url": "https://arxiv.org/abs/2608.14171",
               "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
             }
@@ -111,28 +133,6 @@
             "source": "arxiv",
             "date": "2026-08-14",
             "authors": "Neha Gupta, Nishit Soni, Aditya Maheshwari"
-          }
-        },
-        {
-          "text": "Systematic Evaluation of TabPFN-TS for Zero-Shot Probabilistic Heat Load Forecasting in District Heating Networks \u2014 District heating energy hubs require reliable heat load forecasts for efficient operational scheduling. Conventional forecasting workflows train system-specific models on historical data, which can become burdensome when\u2026",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2608.20024",
-              "title": "Systematic Evaluation of TabPFN-TS for Zero-Shot Probabilistic Heat Load Forecasting in District Heating Networks"
-            }
-          ],
-          "meta": {
-            "score": 3.299,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-20",
-            "authors": "Ben Spoek, Karim K. Ben Hicham, Kai Derzsi, Philipp Althaus, Alexander Mitsos, Dirk M\u00fcller"
           }
         },
         {
@@ -254,76 +254,10 @@
       "heading": "Fund research",
       "paragraphs": [
         {
-          "text": "Sectoral Intramonth Momentum Cycle: Exploiting Turn-of-the-Month Patterns in Sector ETF Strategies \u2014 We document a persistent intramonth momentum cycle in U.S. sector ETFs that yields meaningful risk-adjusted returns when properly sequenced. Using the nine original Select Sector SPDR ETFs and SPY as the market benchmark\u2026",
-          "citations": [
-            {
-              "id": "f1",
-              "url": "https://quantpedia.com/sectoral-intramonth-momentum-cycle/",
-              "title": "Sectoral Intramonth Momentum Cycle: Exploiting Turn-of-the-Month Patterns in Sector ETF Strategies"
-            }
-          ],
-          "meta": {
-            "score": 3.17,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Mon, 17 Au",
-            "authors": null
-          }
-        },
-        {
-          "text": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks \u2014 Financial markets are often viewed primarily through lens of equity index movements, as they attract most of the attention. However, commodities represent an important component of the global economy, and shocks in commo\u2026",
-          "citations": [
-            {
-              "id": "f2",
-              "url": "https://quantpedia.com/commodity-crisis-analysis-how-portfolios-react-to-commodity-shocks/",
-              "title": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks"
-            }
-          ],
-          "meta": {
-            "score": 3.112,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Sat, 18 Ju",
-            "authors": null
-          }
-        },
-        {
-          "text": "Getting the Target Right in Return Prediction \u2014 Recent interesting research from Cakici and Zaremba, highlights an often-overlooked aspect of machine learning for equity return prediction: the choice of prediction target. Rather than focusing on increasingly sophistic\u2026",
-          "citations": [
-            {
-              "id": "f3",
-              "url": "https://quantpedia.com/getting-the-target-right-in-return-prediction/",
-              "title": "Getting the Target Right in Return Prediction"
-            }
-          ],
-          "meta": {
-            "score": 3.112,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Thu, 23 Ju",
-            "authors": null
-          }
-        },
-        {
           "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
           "citations": [
             {
-              "id": "f4",
+              "id": "f1",
               "url": "https://blog.quantinsti.com/cointegrated-pairs-trading-indian-equity-market-epat-project/",
               "title": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project"
             }
@@ -345,7 +279,7 @@
           "text": "Is Managed Futures Value-able? \u2014 In Return StackingTM: Strategies for Overcoming a Low Return Environment, we advocated for the addition of managed futures to traditionally allocated portfolios. We argued that managed futures\u2019 low empirical correlation\u2026",
           "citations": [
             {
-              "id": "f5",
+              "id": "f2",
               "url": "https://blog.thinknewfound.com/2023/06/is-managed-futures-value-able/",
               "title": "Is Managed Futures Value-able?"
             }
@@ -364,23 +298,86 @@
           }
         },
         {
-          "text": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following \u2014 Trend following was one of the most persistent anomalies in finance for nearly two centuries, yet its performance deteriorated sharply after the 2008 financial crisis. An analysis of approximately 100 liquid futures cont\u2026",
+          "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
           "citations": [
             {
-              "id": "f6",
-              "url": "https://quantpedia.com/is-trend-still-your-friend-a-microstructural-account-of-the-demise-of-short-term-trend-following/",
-              "title": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following"
+              "id": "f3",
+              "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
+              "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
             }
           ],
           "meta": {
-            "score": 2.587,
+            "score": 2.53,
             "topics": [
               "time-series",
               "quant-research"
             ],
             "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Wed, 29 Ju",
+            "source": "quantinsti",
+            "date": "Wed, 01 Ju",
+            "authors": null
+          }
+        },
+        {
+          "text": "Liquidity Cascades: The Coordinated Risk of Uncoordinated Market Participants \u2014 This paper is unlike any research we&#8217;ve shared in the past. Within we dive into the circumstantial evidence surrounding the &#8220;weird&#8221; behavior many investors believe markets are exhibiting. We tackle narr\u2026",
+          "citations": [
+            {
+              "id": "f4",
+              "url": "https://blog.thinknewfound.com/2020/09/liquidity-cascades-the-coordinated-risk-of-uncoordinated-market-participants/",
+              "title": "Liquidity Cascades: The Coordinated Risk of Uncoordinated Market Participants"
+            }
+          ],
+          "meta": {
+            "score": 2.415,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "flirting-with-models",
+            "date": "Fri, 11 Se",
+            "authors": null
+          }
+        },
+        {
+          "text": "Skewness as a Hidden Driver of Anomaly Returns \u2014 Behavioral finance research has established that investors dislike negative skewness because it exposes them to rare but severe losses, while they embrace positive skewness because it offers the chance of occasional outs\u2026",
+          "citations": [
+            {
+              "id": "f5",
+              "url": "https://alphaarchitect.com/anomaly-returns/",
+              "title": "Skewness as a Hidden Driver of Anomaly Returns"
+            }
+          ],
+          "meta": {
+            "score": 2.415,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "alpha-architect",
+            "date": "Fri, 07 Au",
+            "authors": null
+          }
+        },
+        {
+          "text": "QuantInsti in 2026: A Summary of our Contributions, Collaborations, Events & Updates \u2014 Catch up on QuantInsti\u2019s 2026 highlights: the launch of Agentic AI for Trading, the AI AlgoTrader Bootcamp, new EPAT curriculum and placement updates, an alumni meet-up in Singapore, academic sessions with SGX and leadin\u2026",
+          "citations": [
+            {
+              "id": "f6",
+              "url": "https://blog.quantinsti.com/algo-trading-webinars-2026/",
+              "title": "QuantInsti in 2026: A Summary of our Contributions, Collaborations, Events & Updates"
+            }
+          ],
+          "meta": {
+            "score": 1.843,
+            "topics": [
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "fund_research",
+            "source": "quantinsti",
+            "date": "Mon, 09 Fe",
             "authors": null
           }
         }
@@ -424,7 +421,7 @@
       },
       "rss": {
         "ok": true,
-        "count": 53,
+        "count": 45,
         "source": "rss",
         "feeds": [
           {
@@ -434,8 +431,9 @@
           },
           {
             "name": "quantpedia",
-            "ok": true,
-            "count": 8
+            "ok": false,
+            "reason": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)",
+            "count": 0
           },
           {
             "name": "two-sigma-insights",
@@ -480,8 +478,8 @@
         "count": 0
       }
     },
-    "items_ingested": 83,
-    "items_ranked": 66,
+    "items_ingested": 75,
+    "items_ranked": 56,
     "focus_keywords": []
   }
 }
