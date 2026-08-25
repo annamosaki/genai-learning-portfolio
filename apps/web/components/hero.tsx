@@ -12,10 +12,6 @@ export function Hero() {
   return (
     <section className="relative mx-auto max-w-6xl overflow-hidden px-4 pb-16 pt-14 sm:px-6 sm:pt-20">
       <div className="mesh-grid pointer-events-none absolute inset-0 -z-10 opacity-60" />
-      <div className="chip mb-5">
-        <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
-        {d.hero.seeking}
-      </div>
       <h1 className="display max-w-4xl text-5xl leading-[0.95] text-[var(--color-text)] sm:text-6xl md:text-7xl">
         {cv.name}
       </h1>
