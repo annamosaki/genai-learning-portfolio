@@ -10,7 +10,7 @@ export const dictionaries = {
       demos: "Demos",
     },
     hero: {
-      seeking: "Open to roles · London · Based in Lisbon · Immediate start",
+      seeking: "Open to roles · Based in Lisbon · Immediate start",
       ctaWork: "View projects",
       ctaContact: "Contact",
     },
@@ -34,7 +34,7 @@ export const dictionaries = {
       demos: "Démos",
     },
     hero: {
-      seeking: "Ouverte aux opportunités · Londres · Basée à Lisbonne · Disponible immédiatement",
+      seeking: "Ouverte aux opportunités · Basée à Lisbonne · Disponible immédiatement",
       ctaWork: "Voir les projets",
       ctaContact: "Contact",
     },
