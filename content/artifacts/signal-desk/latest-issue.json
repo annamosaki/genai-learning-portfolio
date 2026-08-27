@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260826,
-  "date": "2026-08-26",
+  "number": 20260827,
+  "date": "2026-08-27",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-26",
+  "title": "Reading desk \u2014 2026-08-27",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -70,32 +70,10 @@
           }
         },
         {
-          "text": "Do Time-Series Foundation Models Pay Off for Industrial Monitoring? A Cost-Aware Empirical Study \u2014 Industrial monitoring models must detect operationally relevant deviations while satisfying target-specific data, calibration, and resource constraints. Time-series foundation models (TSFMs) promise reusable representati\u2026",
-          "citations": [
-            {
-              "id": "2",
-              "url": "https://arxiv.org/abs/2608.22968",
-              "title": "Do Time-Series Foundation Models Pay Off for Industrial Monitoring? A Cost-Aware Empirical Study"
-            }
-          ],
-          "meta": {
-            "score": 3.361,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-24",
-            "authors": "Guan-Hua Wen, Kuan-Yu Chen"
-          }
-        },
-        {
           "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "2",
               "url": "https://arxiv.org/abs/2608.01599",
               "title": "Latent-Regime Bias Auditing for Volatility Forecasting"
             }
@@ -117,7 +95,7 @@
           "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "3",
               "url": "https://arxiv.org/abs/2608.14171",
               "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
             }
@@ -139,7 +117,7 @@
           "text": "Rough Volatility Across Assets \u2014 We measure volatility roughness across asset classes using a common data infrastructure and pipeline. Our data covers 3,926 United States equities, 34 CME futures roots, rates, FX, and commodities, and options on 44 unde\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "4",
               "url": "https://arxiv.org/abs/2608.16749",
               "title": "Rough Volatility Across Assets"
             }
@@ -161,7 +139,7 @@
           "text": "Causal Analysis for Time Series Foundation Models \u2014 Transitioning from bespoke time series models towards time series foundation models changes the relationship of model and application from one-to-one to one-to-many. This shift introduces concentration risk as many, pote\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "5",
               "url": "https://arxiv.org/abs/2608.24303",
               "title": "Causal Analysis for Time Series Foundation Models"
             }
@@ -177,6 +155,27 @@
             "source": "arxiv",
             "date": "2026-08-25",
             "authors": "Mathis Jander, Wouter van Heeswijk, Martijn Mes"
+          }
+        },
+        {
+          "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2607.22491",
+              "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 2.795,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-07-24",
+            "authors": "Aliaksei Kaliutau"
           }
         }
       ]
@@ -425,7 +424,7 @@
       },
       "rss": {
         "ok": true,
-        "count": 45,
+        "count": 53,
         "source": "rss",
         "feeds": [
           {
@@ -445,9 +444,8 @@
           },
           {
             "name": "robot-wealth",
-            "ok": false,
-            "reason": "Server error '522 <none>' for url 'https://robotwealth.com/feed/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/522",
-            "count": 0
+            "ok": true,
+            "count": 8
           },
           {
             "name": "flirting-with-models",
@@ -482,8 +480,8 @@
         "count": 0
       }
     },
-    "items_ingested": 75,
-    "items_ranked": 57,
+    "items_ingested": 83,
+    "items_ranked": 66,
     "focus_keywords": []
   }
 }
