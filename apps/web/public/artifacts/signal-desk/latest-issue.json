@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260827,
-  "date": "2026-08-27",
+  "number": 20260828,
+  "date": "2026-08-28",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-27",
+  "title": "Reading desk \u2014 2026-08-28",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -136,32 +136,10 @@
           }
         },
         {
-          "text": "Causal Analysis for Time Series Foundation Models \u2014 Transitioning from bespoke time series models towards time series foundation models changes the relationship of model and application from one-to-one to one-to-many. This shift introduces concentration risk as many, pote\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2608.24303",
-              "title": "Causal Analysis for Time Series Foundation Models"
-            }
-          ],
-          "meta": {
-            "score": 3.191,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "green-finance"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-25",
-            "authors": "Mathis Jander, Wouter van Heeswijk, Martijn Mes"
-          }
-        },
-        {
           "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "5",
               "url": "https://arxiv.org/abs/2607.22491",
               "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting"
             }
@@ -176,6 +154,27 @@
             "source": "arxiv",
             "date": "2026-07-24",
             "authors": "Aliaksei Kaliutau"
+          }
+        },
+        {
+          "text": "Forecasting Global Volatility Across Asynchronous Markets: Incremental Accuracy from Constrained Cross-Market Attention \u2014 Multivariate volatility forecasting across international equity markets presents a fundamental information-set problem: asynchronous exchange closures dictate which market observations belong to the information filtratio\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2608.25369",
+              "title": "Forecasting Global Volatility Across Asynchronous Markets: Incremental Accuracy from Constrained Cross-Market Attention"
+            }
+          ],
+          "meta": {
+            "score": 2.732,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-26",
+            "authors": "Xinlin Zhao, Haotian Qiao, Ziyao Lin"
           }
         }
       ]
@@ -276,12 +275,12 @@
           }
         },
         {
-          "text": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks \u2014 Financial markets are often viewed primarily through lens of equity index movements, as they attract most of the attention. However, commodities represent an important component of the global economy, and shocks in commo\u2026",
+          "text": "Boundaries of Time Series Momentum \u2014 Time-series momentum stands as one of the most reliable and heavily backtested anomalies in quantitative finance, serving as a foundational alpha source for modern managed futures and trend-following strategies. However,\u2026",
           "citations": [
             {
               "id": "f2",
-              "url": "https://quantpedia.com/commodity-crisis-analysis-how-portfolios-react-to-commodity-shocks/",
-              "title": "Commodity Crisis Analysis \u2013 How Portfolios React to Commodity Shocks"
+              "url": "https://quantpedia.com/boundaries-of-time-series-momentum/",
+              "title": "Boundaries of Time Series Momentum"
             }
           ],
           "meta": {
@@ -293,7 +292,7 @@
             ],
             "kind": "fund_research",
             "source": "quantpedia",
-            "date": "Sat, 18 Ju",
+            "date": "Fri, 28 Au",
             "authors": null
           }
         },
@@ -481,7 +480,7 @@
       }
     },
     "items_ingested": 83,
-    "items_ranked": 66,
+    "items_ranked": 64,
     "focus_keywords": []
   }
 }
