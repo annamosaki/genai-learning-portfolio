@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260831,
-  "date": "2026-08-31",
+  "number": 20260901,
+  "date": "2026-09-01",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-08-31",
+  "title": "Reading desk \u2014 2026-09-01",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -297,32 +297,10 @@
           }
         },
         {
-          "text": "Getting the Target Right in Return Prediction \u2014 Recent interesting research from Cakici and Zaremba, highlights an often-overlooked aspect of machine learning for equity return prediction: the choice of prediction target. Rather than focusing on increasingly sophistic\u2026",
-          "citations": [
-            {
-              "id": "f3",
-              "url": "https://quantpedia.com/getting-the-target-right-in-return-prediction/",
-              "title": "Getting the Target Right in Return Prediction"
-            }
-          ],
-          "meta": {
-            "score": 3.112,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Thu, 23 Ju",
-            "authors": null
-          }
-        },
-        {
           "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
           "citations": [
             {
-              "id": "f4",
+              "id": "f3",
               "url": "https://blog.quantinsti.com/cointegrated-pairs-trading-indian-equity-market-epat-project/",
               "title": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project"
             }
@@ -344,7 +322,7 @@
           "text": "Is Managed Futures Value-able? \u2014 In Return StackingTM: Strategies for Overcoming a Low Return Environment, we advocated for the addition of managed futures to traditionally allocated portfolios. We argued that managed futures\u2019 low empirical correlation\u2026",
           "citations": [
             {
-              "id": "f5",
+              "id": "f4",
               "url": "https://blog.thinknewfound.com/2023/06/is-managed-futures-value-able/",
               "title": "Is Managed Futures Value-able?"
             }
@@ -366,7 +344,7 @@
           "text": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following \u2014 Trend following was one of the most persistent anomalies in finance for nearly two centuries, yet its performance deteriorated sharply after the 2008 financial crisis. An analysis of approximately 100 liquid futures cont\u2026",
           "citations": [
             {
-              "id": "f6",
+              "id": "f5",
               "url": "https://quantpedia.com/is-trend-still-your-friend-a-microstructural-account-of-the-demise-of-short-term-trend-following/",
               "title": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following"
             }
@@ -380,6 +358,27 @@
             "kind": "fund_research",
             "source": "quantpedia",
             "date": "Wed, 29 Ju",
+            "authors": null
+          }
+        },
+        {
+          "text": "Quantpedia API for Peer Group Strategy Analysis \u2014 A single backtest can show that strategy was profitable, but it does not always show whether the strategy was competitive. This is especially true for systematic futures strategies. A trend-following strategy can have a\u2026",
+          "citations": [
+            {
+              "id": "f6",
+              "url": "https://quantpedia.com/quantpedia-api-for-peer-group-strategy-analysis/",
+              "title": "Quantpedia API for Peer Group Strategy Analysis"
+            }
+          ],
+          "meta": {
+            "score": 2.587,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Wed, 26 Au",
             "authors": null
           }
         }
@@ -480,7 +479,7 @@
       }
     },
     "items_ingested": 83,
-    "items_ranked": 64,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
