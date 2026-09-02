@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260901,
-  "date": "2026-09-01",
+  "number": 20260902,
+  "date": "2026-09-02",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-01",
+  "title": "Reading desk \u2014 2026-09-02",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,10 +48,54 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting \u2014 Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables s\u2026",
+          "text": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy \u2014 We study whether nuclear and energy-adjacent equity options exhibit a harvestable variance risk premium. Using CRSP and OptionMetrics data for 2000-2024, we construct a systematic cash-secured short-put strategy on a cur\u2026",
           "citations": [
             {
               "id": "1",
+              "url": "https://arxiv.org/abs/2609.01183",
+              "title": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy"
+            }
+          ],
+          "meta": {
+            "score": 3.542,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-01",
+            "authors": "Jilang Miao, Nonna Sorokina"
+          }
+        },
+        {
+          "text": "Illiquidity at Risk \u2014 Market efficiency relies fundamentally on stable liquidity. Consequently, forecasting liquidity dynamics is a priority for both investors and regulators. We introduce a new tail-risk metric, Illiquidity-at-Risk (IlliQaR)\u2026",
+          "citations": [
+            {
+              "id": "2",
+              "url": "https://arxiv.org/abs/2609.00943",
+              "title": "Illiquidity at Risk"
+            }
+          ],
+          "meta": {
+            "score": 3.48,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-01",
+            "authors": "Demetrio Lacava, Paolo Santucci de Magistris"
+          }
+        },
+        {
+          "text": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting \u2014 Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables s\u2026",
+          "citations": [
+            {
+              "id": "3",
               "url": "https://arxiv.org/abs/2608.12259",
               "title": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting"
             }
@@ -73,7 +117,7 @@
           "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
           "citations": [
             {
-              "id": "2",
+              "id": "4",
               "url": "https://arxiv.org/abs/2608.01599",
               "title": "Latent-Regime Bias Auditing for Volatility Forecasting"
             }
@@ -95,7 +139,7 @@
           "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "5",
               "url": "https://arxiv.org/abs/2608.14171",
               "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
             }
@@ -117,7 +161,7 @@
           "text": "Rough Volatility Across Assets \u2014 We measure volatility roughness across asset classes using a common data infrastructure and pipeline. Our data covers 3,926 United States equities, 34 CME futures roots, rates, FX, and commodities, and options on 44 unde\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "6",
               "url": "https://arxiv.org/abs/2608.16749",
               "title": "Rough Volatility Across Assets"
             }
@@ -133,48 +177,6 @@
             "source": "arxiv",
             "date": "2026-08-17",
             "authors": "Saad Mouti"
-          }
-        },
-        {
-          "text": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting \u2014 Volatility forecasting is dominated by persistence and measurement noise, leaving limited residual structure for nonlinear models to exploit. We introduce Susceptible Architectures (SUSA), a reservoir-design principle fo\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2607.22491",
-              "title": "Susceptible Reservoir Architectures for Regime-Conditional Volatility Forecasting"
-            }
-          ],
-          "meta": {
-            "score": 2.795,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-07-24",
-            "authors": "Aliaksei Kaliutau"
-          }
-        },
-        {
-          "text": "Forecasting Global Volatility Across Asynchronous Markets: Incremental Accuracy from Constrained Cross-Market Attention \u2014 Multivariate volatility forecasting across international equity markets presents a fundamental information-set problem: asynchronous exchange closures dictate which market observations belong to the information filtratio\u2026",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/2608.25369",
-              "title": "Forecasting Global Volatility Across Asynchronous Markets: Incremental Accuracy from Constrained Cross-Market Attention"
-            }
-          ],
-          "meta": {
-            "score": 2.732,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-26",
-            "authors": "Xinlin Zhao, Haotian Qiao, Ziyao Lin"
           }
         }
       ]
