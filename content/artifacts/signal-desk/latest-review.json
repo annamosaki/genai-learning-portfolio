@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260904,
-  "date": "2026-09-04",
+  "number": 20260907,
+  "date": "2026-09-07",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-04",
+  "title": "Reading desk \u2014 2026-09-07",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -343,23 +343,24 @@
           }
         },
         {
-          "text": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following \u2014 Trend following was one of the most persistent anomalies in finance for nearly two centuries, yet its performance deteriorated sharply after the 2008 financial crisis. An analysis of approximately 100 liquid futures cont\u2026",
+          "text": "What Daily Stock Returns Tell Us About the Economy \u2014 One of the most enduring puzzles in finance is the apparent disconnect between Wall Street and Main Street\u2014markets sometimes soar while the underlying economy stumbles, and vice versa. Paul Samuelson famously quipped tha\u2026",
           "citations": [
             {
               "id": "f5",
-              "url": "https://quantpedia.com/is-trend-still-your-friend-a-microstructural-account-of-the-demise-of-short-term-trend-following/",
-              "title": "Is Trend Still Your Friend?: A Microstructural Account of the Demise of Short-Term Trend-Following"
+              "url": "https://alphaarchitect.com/daily-stock-returns-2/",
+              "title": "What Daily Stock Returns Tell Us About the Economy"
             }
           ],
           "meta": {
-            "score": 2.587,
+            "score": 2.94,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "financial-nlp"
             ],
             "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Wed, 29 Ju",
+            "source": "alpha-architect",
+            "date": "Fri, 04 Se",
             "authors": null
           }
         },
@@ -418,7 +419,7 @@
       },
       "arxiv": {
         "ok": true,
-        "count": 20,
+        "count": 19,
         "errors": [],
         "source": "arxiv"
       },
@@ -480,8 +481,8 @@
         "count": 0
       }
     },
-    "items_ingested": 83,
-    "items_ranked": 66,
+    "items_ingested": 82,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
