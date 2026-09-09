@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260908,
-  "date": "2026-09-08",
+  "number": 20260909,
+  "date": "2026-09-09",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-08",
+  "title": "Reading desk \u2014 2026-09-09",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -114,10 +114,32 @@
           }
         },
         {
-          "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
+          "text": "Filtering without recursion and some of its uses in financial economics \u2014 We develop a filter for time series, defined at each time $t$ as the minimizer of a discounted convex combination of observed and expected losses. The filter can be estimated by simulation to an arbitrary level of accura\u2026",
           "citations": [
             {
               "id": "4",
+              "url": "https://arxiv.org/abs/2609.07207",
+              "title": "Filtering without recursion and some of its uses in financial economics"
+            }
+          ],
+          "meta": {
+            "score": 3.356,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-07",
+            "authors": "Simon Donker van Heel, Neil Shephard"
+          }
+        },
+        {
+          "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
+          "citations": [
+            {
+              "id": "5",
               "url": "https://arxiv.org/abs/2608.01599",
               "title": "Latent-Regime Bias Auditing for Volatility Forecasting"
             }
@@ -139,7 +161,7 @@
           "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "6",
               "url": "https://arxiv.org/abs/2608.14171",
               "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
             }
@@ -155,28 +177,6 @@
             "source": "arxiv",
             "date": "2026-08-14",
             "authors": "Neha Gupta, Nishit Soni, Aditya Maheshwari"
-          }
-        },
-        {
-          "text": "Rough Volatility Across Assets \u2014 We measure volatility roughness across asset classes using a common data infrastructure and pipeline. Our data covers 3,926 United States equities, 34 CME futures roots, rates, FX, and commodities, and options on 44 unde\u2026",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/2608.16749",
-              "title": "Rough Volatility Across Assets"
-            }
-          ],
-          "meta": {
-            "score": 3.232,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-17",
-            "authors": "Saad Mouti"
           }
         }
       ]
@@ -419,7 +419,7 @@
       },
       "arxiv": {
         "ok": true,
-        "count": 19,
+        "count": 20,
         "errors": [],
         "source": "arxiv"
       },
@@ -481,8 +481,8 @@
         "count": 0
       }
     },
-    "items_ingested": 82,
-    "items_ranked": 65,
+    "items_ingested": 83,
+    "items_ranked": 64,
     "focus_keywords": []
   }
 }
