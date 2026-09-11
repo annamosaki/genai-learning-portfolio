@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260910,
-  "date": "2026-09-10",
+  "number": 20260911,
+  "date": "2026-09-11",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-10",
+  "title": "Reading desk \u2014 2026-09-11",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,10 +48,33 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy \u2014 We study whether nuclear and energy-adjacent equity options exhibit a harvestable variance risk premium. Using CRSP and OptionMetrics data for 2000-2024, we construct a systematic cash-secured short-put strategy on a cur\u2026",
+          "text": "LoaDiff: Conditional Generation of Electricity Consumption Time Series for Energy Analytics \u2014 The energy transition is reshaping residential electricity consumption through the increasing adoption of distributed generation, electrified appliances, and demand-response programs. Understanding these evolving behavio\u2026",
           "citations": [
             {
               "id": "1",
+              "url": "https://arxiv.org/abs/2609.11639",
+              "title": "LoaDiff: Conditional Generation of Electricity Consumption Time Series for Energy Analytics"
+            }
+          ],
+          "meta": {
+            "score": 3.634,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp",
+              "green-finance"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-10",
+            "authors": "Mariia Baranova, Adrien Petralia, Etienne Le Naour, Nathan Etourneau, Guillaume Hofmann, Themis Palpanas"
+          }
+        },
+        {
+          "text": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy \u2014 We study whether nuclear and energy-adjacent equity options exhibit a harvestable variance risk premium. Using CRSP and OptionMetrics data for 2000-2024, we construct a systematic cash-secured short-put strategy on a cur\u2026",
+          "citations": [
+            {
+              "id": "2",
               "url": "https://arxiv.org/abs/2609.01183",
               "title": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy"
             }
@@ -73,7 +96,7 @@
           "text": "Illiquidity at Risk \u2014 Market efficiency relies fundamentally on stable liquidity. Consequently, forecasting liquidity dynamics is a priority for both investors and regulators. We introduce a new tail-risk metric, Illiquidity-at-Risk (IlliQaR)\u2026",
           "citations": [
             {
-              "id": "2",
+              "id": "3",
               "url": "https://arxiv.org/abs/2609.00943",
               "title": "Illiquidity at Risk"
             }
@@ -95,7 +118,7 @@
           "text": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting \u2014 Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables s\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "4",
               "url": "https://arxiv.org/abs/2608.12259",
               "title": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting"
             }
@@ -117,7 +140,7 @@
           "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "5",
               "url": "https://arxiv.org/abs/2608.01599",
               "title": "Latent-Regime Bias Auditing for Volatility Forecasting"
             }
@@ -139,7 +162,7 @@
           "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "6",
               "url": "https://arxiv.org/abs/2608.14171",
               "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
             }
@@ -155,28 +178,6 @@
             "source": "arxiv",
             "date": "2026-08-14",
             "authors": "Neha Gupta, Nishit Soni, Aditya Maheshwari"
-          }
-        },
-        {
-          "text": "Not All Variables Agree: Reliability-Aware Variable-Wise Gradient Surgery for Multivariate Time-Series Forecasting \u2014 In data-driven training, multivariate time-series forecasting is usually optimized with a scalar loss averaged over samples, variables, and horizons. This averaging is convenient, but the optimizer sees only the aggregat\u2026",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/2609.08554",
-              "title": "Not All Variables Agree: Reliability-Aware Variable-Wise Gradient Surgery for Multivariate Time-Series Forecasting"
-            }
-          ],
-          "meta": {
-            "score": 3.294,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-08",
-            "authors": "Jinwoo Park, Hyeongwon Kang, Pilsung Kang"
           }
         }
       ]
@@ -482,7 +483,7 @@
       }
     },
     "items_ingested": 83,
-    "items_ranked": 64,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
