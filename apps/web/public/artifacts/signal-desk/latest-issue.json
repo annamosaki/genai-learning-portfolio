@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260911,
-  "date": "2026-09-11",
+  "number": 20260914,
+  "date": "2026-09-14",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-11",
+  "title": "Reading desk \u2014 2026-09-14",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,136 +48,126 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "LoaDiff: Conditional Generation of Electricity Consumption Time Series for Energy Analytics \u2014 The energy transition is reshaping residential electricity consumption through the increasing adoption of distributed generation, electrified appliances, and demand-response programs. Understanding these evolving behavio\u2026",
+          "text": "Advances in Financial Machine Learning \u2014 purged CV notes \u2014 Purging and embargo when labeling financial time series to reduce leakage in walk-forward evaluation.",
           "citations": [
             {
               "id": "1",
-              "url": "https://arxiv.org/abs/2609.11639",
-              "title": "LoaDiff: Conditional Generation of Electricity Consumption Time Series for Energy Analytics"
+              "url": "https://www.wiley.com/",
+              "title": "Advances in Financial Machine Learning \u2014 purged CV notes"
             }
           ],
           "meta": {
-            "score": 3.634,
+            "score": 2.415,
             "topics": [
               "time-series",
-              "quant-research",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "local-jsonl",
+            "date": null,
+            "authors": "Lopez de Prado (method)"
+          }
+        },
+        {
+          "text": "A decoder-only foundation model for time-series forecasting \u2014 TimesFM introduces a patched decoder-only transformer pretrained for zero-shot forecasting across domains.",
+          "citations": [
+            {
+              "id": "2",
+              "url": "https://arxiv.org/abs/2310.10688",
+              "title": "A decoder-only foundation model for time-series forecasting"
+            }
+          ],
+          "meta": {
+            "score": 1.93,
+            "topics": [
+              "time-series",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "local-jsonl",
+            "date": null,
+            "authors": "Das et al."
+          }
+        },
+        {
+          "text": "Chronos-2: Learning the Language of Time Series \u2014 Chronos-2 adds multivariate and covariate-informed zero-shot forecasting with flexible model sizes.",
+          "citations": [
+            {
+              "id": "3",
+              "url": "https://huggingface.co/amazon/chronos-2",
+              "title": "Chronos-2: Learning the Language of Time Series"
+            }
+          ],
+          "meta": {
+            "score": 1.322,
+            "topics": [
+              "time-series"
+            ],
+            "kind": "literature",
+            "source": "local-jsonl",
+            "date": null,
+            "authors": "Amazon Science"
+          }
+        },
+        {
+          "text": "Detecting greenwashing in corporate communications \u2014 NLP + regression measuring how ESG language shifts investor behavior \u2014 related to Anna's ENSAE greenwashing work.",
+          "citations": [
+            {
+              "id": "4",
+              "url": "https://www.ensae.fr/",
+              "title": "Detecting greenwashing in corporate communications"
+            }
+          ],
+          "meta": {
+            "score": 0.867,
+            "topics": [
               "financial-nlp",
               "green-finance"
             ],
             "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-10",
-            "authors": "Mariia Baranova, Adrien Petralia, Etienne Le Naour, Nathan Etourneau, Guillaume Hofmann, Themis Palpanas"
+            "source": "local-jsonl",
+            "date": null,
+            "authors": "ENSAE project corpus"
           }
         },
         {
-          "text": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy \u2014 We study whether nuclear and energy-adjacent equity options exhibit a harvestable variance risk premium. Using CRSP and OptionMetrics data for 2000-2024, we construct a systematic cash-secured short-put strategy on a cur\u2026",
-          "citations": [
-            {
-              "id": "2",
-              "url": "https://arxiv.org/abs/2609.01183",
-              "title": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy"
-            }
-          ],
-          "meta": {
-            "score": 3.542,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-01",
-            "authors": "Jilang Miao, Nonna Sorokina"
-          }
-        },
-        {
-          "text": "Illiquidity at Risk \u2014 Market efficiency relies fundamentally on stable liquidity. Consequently, forecasting liquidity dynamics is a priority for both investors and regulators. We introduce a new tail-risk metric, Illiquidity-at-Risk (IlliQaR)\u2026",
-          "citations": [
-            {
-              "id": "3",
-              "url": "https://arxiv.org/abs/2609.00943",
-              "title": "Illiquidity at Risk"
-            }
-          ],
-          "meta": {
-            "score": 3.48,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-01",
-            "authors": "Demetrio Lacava, Paolo Santucci de Magistris"
-          }
-        },
-        {
-          "text": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting \u2014 Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables s\u2026",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2608.12259",
-              "title": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting"
-            }
-          ],
-          "meta": {
-            "score": 3.424,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-12",
-            "authors": "Junyi Ye, Ivy Gateri Wanjiku"
-          }
-        },
-        {
-          "text": "Latent-Regime Bias Auditing for Volatility Forecasting \u2014 Volatility forecasts are commonly evaluated with aggregate accuracy metrics such as RMSE and MAE, but these metrics can hide conditional failures that matter for risk management. This paper proposes a model-agnostic audi\u2026",
+          "text": "Agent2Agent (A2A) Protocol Specification \u2014 Open protocol for opaque agents to discover, communicate, and transact across frameworks; complements MCP.",
           "citations": [
             {
               "id": "5",
-              "url": "https://arxiv.org/abs/2608.01599",
-              "title": "Latent-Regime Bias Auditing for Volatility Forecasting"
+              "url": "https://a2a-protocol.org/",
+              "title": "Agent2Agent (A2A) Protocol Specification"
             }
           ],
           "meta": {
-            "score": 3.356,
+            "score": 0.605,
             "topics": [
-              "time-series",
-              "quant-research",
               "llm-agents"
             ],
             "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-03",
-            "authors": "Arthur Chagas, Pedro Bento, Yan Aquino, Arthur Buzelin, Wagner Meira, Cristiano Arbex Valle"
+            "source": "local-jsonl",
+            "date": null,
+            "authors": "Linux Foundation A2A"
           }
         },
         {
-          "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
+          "text": "FinBERT: Financial Sentiment Analysis with Pre-trained Language Models \u2014 Domain-adapted BERT for financial sentiment; still a strong specialist baseline versus generalist LLMs.",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2608.14171",
-              "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
+              "url": "https://arxiv.org/abs/1908.10063",
+              "title": "FinBERT: Financial Sentiment Analysis with Pre-trained Language Models"
             }
           ],
           "meta": {
-            "score": 3.299,
+            "score": 0.55,
             "topics": [
-              "time-series",
-              "quant-research",
               "financial-nlp"
             ],
             "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-14",
-            "authors": "Neha Gupta, Nishit Soni, Aditya Maheshwari"
+            "source": "local-jsonl",
+            "date": null,
+            "authors": "Araci"
           }
         }
       ]
@@ -419,9 +409,12 @@
         "count": 0
       },
       "arxiv": {
-        "ok": true,
-        "count": 20,
-        "errors": [],
+        "ok": false,
+        "count": 0,
+        "errors": [
+          "rate limited: all:\"time series\" AND (cat:q-fin.ST OR cat:q-fin.CP OR cat:c",
+          "rate limited: all:\"volatility forecasting\" OR all:\"realized volatility\" OR"
+        ],
         "source": "arxiv"
       },
       "rss": {
@@ -482,8 +475,8 @@
         "count": 0
       }
     },
-    "items_ingested": 83,
-    "items_ranked": 65,
+    "items_ingested": 63,
+    "items_ranked": 46,
     "focus_keywords": []
   }
 }
