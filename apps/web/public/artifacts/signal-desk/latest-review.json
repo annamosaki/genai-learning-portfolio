@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260915,
-  "date": "2026-09-15",
+  "number": 20260916,
+  "date": "2026-09-16",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-15",
+  "title": "Reading desk \u2014 2026-09-16",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -246,32 +246,10 @@
       "heading": "Fund research",
       "paragraphs": [
         {
-          "text": "Sectoral Intramonth Momentum Cycle: Exploiting Turn-of-the-Month Patterns in Sector ETF Strategies \u2014 We document a persistent intramonth momentum cycle in U.S. sector ETFs that yields meaningful risk-adjusted returns when properly sequenced. Using the nine original Select Sector SPDR ETFs and SPY as the market benchmark\u2026",
-          "citations": [
-            {
-              "id": "f1",
-              "url": "https://quantpedia.com/sectoral-intramonth-momentum-cycle/",
-              "title": "Sectoral Intramonth Momentum Cycle: Exploiting Turn-of-the-Month Patterns in Sector ETF Strategies"
-            }
-          ],
-          "meta": {
-            "score": 3.17,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Mon, 17 Au",
-            "authors": null
-          }
-        },
-        {
           "text": "Boundaries of Time Series Momentum \u2014 Time-series momentum stands as one of the most reliable and heavily backtested anomalies in quantitative finance, serving as a foundational alpha source for modern managed futures and trend-following strategies. However,\u2026",
           "citations": [
             {
-              "id": "f2",
+              "id": "f1",
               "url": "https://quantpedia.com/boundaries-of-time-series-momentum/",
               "title": "Boundaries of Time Series Momentum"
             }
@@ -293,7 +271,7 @@
           "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
           "citations": [
             {
-              "id": "f3",
+              "id": "f2",
               "url": "https://blog.quantinsti.com/cointegrated-pairs-trading-indian-equity-market-epat-project/",
               "title": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project"
             }
@@ -315,7 +293,7 @@
           "text": "Is Managed Futures Value-able? \u2014 In Return StackingTM: Strategies for Overcoming a Low Return Environment, we advocated for the addition of managed futures to traditionally allocated portfolios. We argued that managed futures\u2019 low empirical correlation\u2026",
           "citations": [
             {
-              "id": "f4",
+              "id": "f3",
               "url": "https://blog.thinknewfound.com/2023/06/is-managed-futures-value-able/",
               "title": "Is Managed Futures Value-able?"
             }
@@ -337,7 +315,7 @@
           "text": "What Daily Stock Returns Tell Us About the Economy \u2014 One of the most enduring puzzles in finance is the apparent disconnect between Wall Street and Main Street\u2014markets sometimes soar while the underlying economy stumbles, and vice versa. Paul Samuelson famously quipped tha\u2026",
           "citations": [
             {
-              "id": "f5",
+              "id": "f4",
               "url": "https://alphaarchitect.com/daily-stock-returns-2/",
               "title": "What Daily Stock Returns Tell Us About the Economy"
             }
@@ -359,7 +337,7 @@
           "text": "Quantpedia API for Peer Group Strategy Analysis \u2014 A single backtest can show that strategy was profitable, but it does not always show whether the strategy was competitive. This is especially true for systematic futures strategies. A trend-following strategy can have a\u2026",
           "citations": [
             {
-              "id": "f6",
+              "id": "f5",
               "url": "https://quantpedia.com/quantpedia-api-for-peer-group-strategy-analysis/",
               "title": "Quantpedia API for Peer Group Strategy Analysis"
             }
@@ -373,6 +351,27 @@
             "kind": "fund_research",
             "source": "quantpedia",
             "date": "Wed, 26 Au",
+            "authors": null
+          }
+        },
+        {
+          "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
+          "citations": [
+            {
+              "id": "f6",
+              "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
+              "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
+            }
+          ],
+          "meta": {
+            "score": 2.53,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantinsti",
+            "date": "Wed, 01 Ju",
             "authors": null
           }
         }
@@ -413,7 +412,7 @@
         "count": 0,
         "errors": [
           "rate limited: all:\"time series\" AND (cat:q-fin.ST OR cat:q-fin.CP OR cat:c",
-          "all:\"volatility forecasting\" OR all:\"realized volatility\" OR: "
+          "rate limited: all:\"volatility forecasting\" OR all:\"realized volatility\" OR"
         ],
         "source": "arxiv"
       },
