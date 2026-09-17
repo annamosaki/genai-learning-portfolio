@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260916,
-  "date": "2026-09-16",
+  "number": 20260917,
+  "date": "2026-09-17",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-16",
+  "title": "Reading desk \u2014 2026-09-17",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,126 +48,135 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Advances in Financial Machine Learning \u2014 purged CV notes \u2014 Purging and embargo when labeling financial time series to reduce leakage in walk-forward evaluation.",
+          "text": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy \u2014 We study whether nuclear and energy-adjacent equity options exhibit a harvestable variance risk premium. Using CRSP and OptionMetrics data for 2000-2024, we construct a systematic cash-secured short-put strategy on a cur\u2026",
           "citations": [
             {
               "id": "1",
-              "url": "https://www.wiley.com/",
-              "title": "Advances in Financial Machine Learning \u2014 purged CV notes"
+              "url": "https://arxiv.org/abs/2609.01183",
+              "title": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy"
             }
           ],
           "meta": {
-            "score": 2.415,
+            "score": 3.542,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "llm-agents"
             ],
             "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Lopez de Prado (method)"
+            "source": "arxiv",
+            "date": "2026-09-01",
+            "authors": "Jilang Miao, Nonna Sorokina"
           }
         },
         {
-          "text": "A decoder-only foundation model for time-series forecasting \u2014 TimesFM introduces a patched decoder-only transformer pretrained for zero-shot forecasting across domains.",
+          "text": "Illiquidity at Risk \u2014 Market efficiency relies fundamentally on stable liquidity. Consequently, forecasting liquidity dynamics is a priority for both investors and regulators. We introduce a new tail-risk metric, Illiquidity-at-Risk (IlliQaR)\u2026",
           "citations": [
             {
               "id": "2",
-              "url": "https://arxiv.org/abs/2310.10688",
-              "title": "A decoder-only foundation model for time-series forecasting"
+              "url": "https://arxiv.org/abs/2609.00943",
+              "title": "Illiquidity at Risk"
             }
           ],
           "meta": {
-            "score": 1.93,
+            "score": 3.48,
             "topics": [
               "time-series",
+              "quant-research",
               "llm-agents"
             ],
             "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Das et al."
+            "source": "arxiv",
+            "date": "2026-09-01",
+            "authors": "Demetrio Lacava, Paolo Santucci de Magistris"
           }
         },
         {
-          "text": "Chronos-2: Learning the Language of Time Series \u2014 Chronos-2 adds multivariate and covariate-informed zero-shot forecasting with flexible model sizes.",
+          "text": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting \u2014 Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables s\u2026",
           "citations": [
             {
               "id": "3",
-              "url": "https://huggingface.co/amazon/chronos-2",
-              "title": "Chronos-2: Learning the Language of Time Series"
+              "url": "https://arxiv.org/abs/2608.12259",
+              "title": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting"
             }
           ],
           "meta": {
-            "score": 1.322,
+            "score": 3.424,
             "topics": [
-              "time-series"
-            ],
-            "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Amazon Science"
-          }
-        },
-        {
-          "text": "Detecting greenwashing in corporate communications \u2014 NLP + regression measuring how ESG language shifts investor behavior \u2014 related to Anna's ENSAE greenwashing work.",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://www.ensae.fr/",
-              "title": "Detecting greenwashing in corporate communications"
-            }
-          ],
-          "meta": {
-            "score": 0.867,
-            "topics": [
-              "financial-nlp",
-              "green-finance"
-            ],
-            "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "ENSAE project corpus"
-          }
-        },
-        {
-          "text": "Agent2Agent (A2A) Protocol Specification \u2014 Open protocol for opaque agents to discover, communicate, and transact across frameworks; complements MCP.",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://a2a-protocol.org/",
-              "title": "Agent2Agent (A2A) Protocol Specification"
-            }
-          ],
-          "meta": {
-            "score": 0.605,
-            "topics": [
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Linux Foundation A2A"
-          }
-        },
-        {
-          "text": "FinBERT: Financial Sentiment Analysis with Pre-trained Language Models \u2014 Domain-adapted BERT for financial sentiment; still a strong specialist baseline versus generalist LLMs.",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/1908.10063",
-              "title": "FinBERT: Financial Sentiment Analysis with Pre-trained Language Models"
-            }
-          ],
-          "meta": {
-            "score": 0.55,
-            "topics": [
+              "time-series",
+              "quant-research",
               "financial-nlp"
             ],
             "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Araci"
+            "source": "arxiv",
+            "date": "2026-08-12",
+            "authors": "Junyi Ye, Ivy Gateri Wanjiku"
+          }
+        },
+        {
+          "text": "How Good Are Time-Series Foundation Models for Pedestrian Crowd Count Forecasting? A Cross-Dataset Comparative Study \u2014 Pedestrian-count forecasting supports pedestrian-oriented Intelligent Transportation Systems (ITS), including crowd monitoring, pedestrian-traffic staffing and routing, and proactive risk mitigation during surges. Recent\u2026",
+          "citations": [
+            {
+              "id": "4",
+              "url": "https://arxiv.org/abs/2609.16415",
+              "title": "How Good Are Time-Series Foundation Models for Pedestrian Crowd Count Forecasting? A Cross-Dataset Comparative Study"
+            }
+          ],
+          "meta": {
+            "score": 3.361,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-14",
+            "authors": "Theivaprakasham Hari, Ziteng Li, Yanan Xin, Winnie Daamen, Serge Hoogendoorn"
+          }
+        },
+        {
+          "text": "Peak-Aware Short-Term Load Forecasting Across Distribution Grid Aggregation Levels \u2014 For distribution system operators, short-term load forecasting (STLF) supports congestion management, voltage control, and asset protection. Most existing approaches focus on overall accuracy across all time steps and ne\u2026",
+          "citations": [
+            {
+              "id": "5",
+              "url": "https://arxiv.org/abs/2609.18588",
+              "title": "Peak-Aware Short-Term Load Forecasting Across Distribution Grid Aggregation Levels"
+            }
+          ],
+          "meta": {
+            "score": 3.361,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-16",
+            "authors": "Souhardya Chattopadhyay, Julian Oelhaf, Antonia Schoening, Jessica Deuschel, Bitan Bhattacharyya, Christian Bergler, Andreas Maier, Siming Bayer"
+          }
+        },
+        {
+          "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2608.14171",
+              "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 3.299,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-14",
+            "authors": "Neha Gupta, Nishit Soni, Aditya Maheshwari"
           }
         }
       ]
@@ -408,12 +417,9 @@
         "count": 0
       },
       "arxiv": {
-        "ok": false,
-        "count": 0,
-        "errors": [
-          "rate limited: all:\"time series\" AND (cat:q-fin.ST OR cat:q-fin.CP OR cat:c",
-          "rate limited: all:\"volatility forecasting\" OR all:\"realized volatility\" OR"
-        ],
+        "ok": true,
+        "count": 20,
+        "errors": [],
         "source": "arxiv"
       },
       "rss": {
@@ -474,8 +480,8 @@
         "count": 0
       }
     },
-    "items_ingested": 63,
-    "items_ranked": 46,
+    "items_ingested": 83,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
