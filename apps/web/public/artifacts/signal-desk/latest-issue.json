@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260917,
-  "date": "2026-09-17",
+  "number": 20260918,
+  "date": "2026-09-18",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-17",
+  "title": "Reading desk \u2014 2026-09-18",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -114,32 +114,10 @@
           }
         },
         {
-          "text": "How Good Are Time-Series Foundation Models for Pedestrian Crowd Count Forecasting? A Cross-Dataset Comparative Study \u2014 Pedestrian-count forecasting supports pedestrian-oriented Intelligent Transportation Systems (ITS), including crowd monitoring, pedestrian-traffic staffing and routing, and proactive risk mitigation during surges. Recent\u2026",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2609.16415",
-              "title": "How Good Are Time-Series Foundation Models for Pedestrian Crowd Count Forecasting? A Cross-Dataset Comparative Study"
-            }
-          ],
-          "meta": {
-            "score": 3.361,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-14",
-            "authors": "Theivaprakasham Hari, Ziteng Li, Yanan Xin, Winnie Daamen, Serge Hoogendoorn"
-          }
-        },
-        {
           "text": "Peak-Aware Short-Term Load Forecasting Across Distribution Grid Aggregation Levels \u2014 For distribution system operators, short-term load forecasting (STLF) supports congestion management, voltage control, and asset protection. Most existing approaches focus on overall accuracy across all time steps and ne\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "4",
               "url": "https://arxiv.org/abs/2609.18588",
               "title": "Peak-Aware Short-Term Load Forecasting Across Distribution Grid Aggregation Levels"
             }
@@ -155,6 +133,28 @@
             "source": "arxiv",
             "date": "2026-09-16",
             "authors": "Souhardya Chattopadhyay, Julian Oelhaf, Antonia Schoening, Jessica Deuschel, Bitan Bhattacharyya, Christian Bergler, Andreas Maier, Siming Bayer"
+          }
+        },
+        {
+          "text": "QUALS: Corpus Equilibrium for Universal Forecasting via Pattern Quantization and Learnability Synchronization \u2014 Ubiquitous time series data across diverse domains enables critical applications in areas such as transportation systems and power grids. Recently, training foundation models on massive datasets to achieve accurate zero-\u2026",
+          "citations": [
+            {
+              "id": "5",
+              "url": "https://arxiv.org/abs/2609.20156",
+              "title": "QUALS: Corpus Equilibrium for Universal Forecasting via Pattern Quantization and Learnability Synchronization"
+            }
+          ],
+          "meta": {
+            "score": 3.361,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-17",
+            "authors": "Yujie Li, Zezhi Shao, Chengqing Yu, Yisong Fu, Weijie Zhu, Yifan Du, Jilin Hu, Bin Yang, Yongjun Xu, Fei Wang"
           }
         },
         {
