@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260918,
-  "date": "2026-09-18",
+  "number": 20260921,
+  "date": "2026-09-21",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-18",
+  "title": "Reading desk \u2014 2026-09-21",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -92,54 +92,10 @@
           }
         },
         {
-          "text": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting \u2014 Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables s\u2026",
-          "citations": [
-            {
-              "id": "3",
-              "url": "https://arxiv.org/abs/2608.12259",
-              "title": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting"
-            }
-          ],
-          "meta": {
-            "score": 3.424,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-12",
-            "authors": "Junyi Ye, Ivy Gateri Wanjiku"
-          }
-        },
-        {
-          "text": "Peak-Aware Short-Term Load Forecasting Across Distribution Grid Aggregation Levels \u2014 For distribution system operators, short-term load forecasting (STLF) supports congestion management, voltage control, and asset protection. Most existing approaches focus on overall accuracy across all time steps and ne\u2026",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2609.18588",
-              "title": "Peak-Aware Short-Term Load Forecasting Across Distribution Grid Aggregation Levels"
-            }
-          ],
-          "meta": {
-            "score": 3.361,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-16",
-            "authors": "Souhardya Chattopadhyay, Julian Oelhaf, Antonia Schoening, Jessica Deuschel, Bitan Bhattacharyya, Christian Bergler, Andreas Maier, Siming Bayer"
-          }
-        },
-        {
           "text": "QUALS: Corpus Equilibrium for Universal Forecasting via Pattern Quantization and Learnability Synchronization \u2014 Ubiquitous time series data across diverse domains enables critical applications in areas such as transportation systems and power grids. Recently, training foundation models on massive datasets to achieve accurate zero-\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "3",
               "url": "https://arxiv.org/abs/2609.20156",
               "title": "QUALS: Corpus Equilibrium for Universal Forecasting via Pattern Quantization and Learnability Synchronization"
             }
@@ -161,7 +117,7 @@
           "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "4",
               "url": "https://arxiv.org/abs/2608.14171",
               "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
             }
@@ -177,6 +133,50 @@
             "source": "arxiv",
             "date": "2026-08-14",
             "authors": "Neha Gupta, Nishit Soni, Aditya Maheshwari"
+          }
+        },
+        {
+          "text": "A Lightweight Plug-in Gate for Transformer-Based Time-Series Forecasters \u2014 Covariate-rich time-series forecasting requires deciding how external variables enter the target forecasting path. Existing Transformer-based forecasters usually build a covariate representation and pass it to the encode\u2026",
+          "citations": [
+            {
+              "id": "5",
+              "url": "https://arxiv.org/abs/2609.21044",
+              "title": "A Lightweight Plug-in Gate for Transformer-Based Time-Series Forecasters"
+            }
+          ],
+          "meta": {
+            "score": 3.294,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-17",
+            "authors": "Hongkai Zhuang, Tao Huang, Chen Hou"
+          }
+        },
+        {
+          "text": "SETTer: Sparse-Encoder Transformer for Long-term Multivariate Time Series Forecasting \u2014 Long-term multivariate time series plays a significant role in many application areas such as power systems, trading, etc. However, their accurate prediction is quite difficult for conventional forecasting methods as the\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2609.20086",
+              "title": "SETTer: Sparse-Encoder Transformer for Long-term Multivariate Time Series Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 3.237,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-17",
+            "authors": "Abraham Ezema, Chijioke Eze, Ferdinanda Ponci, Antonello Monti"
           }
         }
       ]
@@ -343,31 +343,10 @@
           }
         },
         {
-          "text": "Quantpedia API for Peer Group Strategy Analysis \u2014 A single backtest can show that strategy was profitable, but it does not always show whether the strategy was competitive. This is especially true for systematic futures strategies. A trend-following strategy can have a\u2026",
-          "citations": [
-            {
-              "id": "f5",
-              "url": "https://quantpedia.com/quantpedia-api-for-peer-group-strategy-analysis/",
-              "title": "Quantpedia API for Peer Group Strategy Analysis"
-            }
-          ],
-          "meta": {
-            "score": 2.587,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Wed, 26 Au",
-            "authors": null
-          }
-        },
-        {
           "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
           "citations": [
             {
-              "id": "f6",
+              "id": "f5",
               "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
               "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
             }
@@ -381,6 +360,27 @@
             "kind": "fund_research",
             "source": "quantinsti",
             "date": "Wed, 01 Ju",
+            "authors": null
+          }
+        },
+        {
+          "text": "Do Airline Stocks Take Off Around U.S. Holidays? \u2014 Holidays put people in motion. In the days surrounding major U.S. holidays, airports become busier as travelers visit their families or take advantage of extended weekends. Financial markets themselves are known to displ\u2026",
+          "citations": [
+            {
+              "id": "f6",
+              "url": "https://quantpedia.com/do-airline-stocks-take-off-around-u-s-holidays/",
+              "title": "Do Airline Stocks Take Off Around U.S. Holidays?"
+            }
+          ],
+          "meta": {
+            "score": 2.473,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Fri, 18 Se",
             "authors": null
           }
         }
@@ -418,7 +418,7 @@
       },
       "arxiv": {
         "ok": true,
-        "count": 20,
+        "count": 19,
         "errors": [],
         "source": "arxiv"
       },
@@ -480,8 +480,8 @@
         "count": 0
       }
     },
-    "items_ingested": 83,
-    "items_ranked": 65,
+    "items_ingested": 82,
+    "items_ranked": 64,
     "focus_keywords": []
   }
 }
