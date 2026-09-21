@@ -181,7 +181,8 @@ export const cv = {
         "Evals, tools, and dual MCP (EDGAR + Yahoo Finance)",
       ],
       demoUrl: "/demos/llm-lab",
-      repoUrl: "https://github.com/annamosaki/llm-lab",
+      repoUrl:
+        "https://github.com/annamosaki/genai-learning-portfolio/tree/main/projects/01-llm-lab",
     },
     {
       id: "02",
@@ -198,7 +199,8 @@ export const cv = {
         "EdgarTools + yfinance MCP split across specialists",
       ],
       demoUrl: "/demos/agent-desk",
-      repoUrl: "https://github.com/annamosaki/agent-desk",
+      repoUrl:
+        "https://github.com/annamosaki/genai-learning-portfolio/tree/main/projects/02-agent-desk",
     },
     {
       id: "03",
@@ -215,6 +217,8 @@ export const cv = {
         "SSE progress + one-click regenerate",
       ],
       demoUrl: "/demos/research-digest",
+      repoUrl:
+        "https://github.com/annamosaki/genai-learning-portfolio/tree/main/projects/03-research-digest",
     },
   ] satisfies ProjectMeta[],
 } as const;
