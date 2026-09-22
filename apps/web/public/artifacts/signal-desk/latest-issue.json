@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260921,
-  "date": "2026-09-21",
+  "number": 20260922,
+  "date": "2026-09-22",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-21",
+  "title": "Reading desk \u2014 2026-09-22",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -92,16 +92,38 @@
           }
         },
         {
-          "text": "QUALS: Corpus Equilibrium for Universal Forecasting via Pattern Quantization and Learnability Synchronization \u2014 Ubiquitous time series data across diverse domains enables critical applications in areas such as transportation systems and power grids. Recently, training foundation models on massive datasets to achieve accurate zero-\u2026",
+          "text": "Q-DEQ: Discrete Solving and Quantization for Deep Equilibrium Models in Time Series Forecasting under Edge Deployment Coding Constraints \u2014 Edge deployment motivates forecasting models with compact parameter storage and low-bit representations. Deep equilibrium models (DEQs) obtain implicit depth by repeatedly applying a shared layer, reducing the parameter\u2026",
           "citations": [
             {
               "id": "3",
-              "url": "https://arxiv.org/abs/2609.20156",
-              "title": "QUALS: Corpus Equilibrium for Universal Forecasting via Pattern Quantization and Learnability Synchronization"
+              "url": "https://arxiv.org/abs/2609.24042",
+              "title": "Q-DEQ: Discrete Solving and Quantization for Deep Equilibrium Models in Time Series Forecasting under Edge Deployment Coding Constraints"
             }
           ],
           "meta": {
-            "score": 3.361,
+            "score": 3.356,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-21",
+            "authors": "Ruotong Yang, Hongdong Zhu, Qi Gao, Yin Ma, Hai Wei, Kai Wen"
+          }
+        },
+        {
+          "text": "$t_0$: A Time-Series Foundation Model for Forecasting with Context \u2014 We present $t_0$, a family of open-weights foundation models for forecasting with multivariate context. We release its first two members: $\\texttt{t0-alpha}$ and $\\texttt{t0-beta}$, respectively 102M and 256M parameters.\u2026",
+          "citations": [
+            {
+              "id": "4",
+              "url": "https://arxiv.org/abs/2609.24559",
+              "title": "$t_0$: A Time-Series Foundation Model for Forecasting with Context"
+            }
+          ],
+          "meta": {
+            "score": 3.299,
             "topics": [
               "time-series",
               "quant-research",
@@ -109,15 +131,15 @@
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-09-17",
-            "authors": "Yujie Li, Zezhi Shao, Chengqing Yu, Yisong Fu, Weijie Zhu, Yifan Du, Jilin Hu, Bin Yang, Yongjun Xu, Fei Wang"
+            "date": "2026-09-21",
+            "authors": "Lucas Meyer, Claudio Sole, Huikan Xiang, Nicolas Li, Lucas Franceschino, Arnau Quera-Bofarull, Maarten P. Scholl, Joachim Fainberg, Geoffrey N\u00e9giar"
           }
         },
         {
           "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "5",
               "url": "https://arxiv.org/abs/2608.14171",
               "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
             }
@@ -136,38 +158,16 @@
           }
         },
         {
-          "text": "A Lightweight Plug-in Gate for Transformer-Based Time-Series Forecasters \u2014 Covariate-rich time-series forecasting requires deciding how external variables enter the target forecasting path. Existing Transformer-based forecasters usually build a covariate representation and pass it to the encode\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2609.21044",
-              "title": "A Lightweight Plug-in Gate for Transformer-Based Time-Series Forecasters"
-            }
-          ],
-          "meta": {
-            "score": 3.294,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-17",
-            "authors": "Hongkai Zhuang, Tao Huang, Chen Hou"
-          }
-        },
-        {
-          "text": "SETTer: Sparse-Encoder Transformer for Long-term Multivariate Time Series Forecasting \u2014 Long-term multivariate time series plays a significant role in many application areas such as power systems, trading, etc. However, their accurate prediction is quite difficult for conventional forecasting methods as the\u2026",
+          "text": "TAC-Time: Texts as Channels For Multimodal Time Series Forecasting \u2014 Most existing time series forecasting methods rely solely on numerical observations, overlooking rich contextual information from auxiliary texts. Recent multimodal approaches attempt to incorporate textual signals, but\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2609.20086",
-              "title": "SETTer: Sparse-Encoder Transformer for Long-term Multivariate Time Series Forecasting"
+              "url": "https://arxiv.org/abs/2609.24156",
+              "title": "TAC-Time: Texts as Channels For Multimodal Time Series Forecasting"
             }
           ],
           "meta": {
-            "score": 3.237,
+            "score": 3.299,
             "topics": [
               "time-series",
               "quant-research",
@@ -175,8 +175,8 @@
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-09-17",
-            "authors": "Abraham Ezema, Chijioke Eze, Ferdinanda Ponci, Antonello Monti"
+            "date": "2026-09-21",
+            "authors": "Jiayi Liang, Xiaotian Gu, Xinyu Xie, Yuanbin Wu, Xiaoling Wang"
           }
         }
       ]
@@ -321,32 +321,10 @@
           }
         },
         {
-          "text": "What Daily Stock Returns Tell Us About the Economy \u2014 One of the most enduring puzzles in finance is the apparent disconnect between Wall Street and Main Street\u2014markets sometimes soar while the underlying economy stumbles, and vice versa. Paul Samuelson famously quipped tha\u2026",
-          "citations": [
-            {
-              "id": "f4",
-              "url": "https://alphaarchitect.com/daily-stock-returns-2/",
-              "title": "What Daily Stock Returns Tell Us About the Economy"
-            }
-          ],
-          "meta": {
-            "score": 2.94,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "alpha-architect",
-            "date": "Fri, 04 Se",
-            "authors": null
-          }
-        },
-        {
           "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
           "citations": [
             {
-              "id": "f5",
+              "id": "f4",
               "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
               "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
             }
@@ -367,7 +345,7 @@
           "text": "Do Airline Stocks Take Off Around U.S. Holidays? \u2014 Holidays put people in motion. In the days surrounding major U.S. holidays, airports become busier as travelers visit their families or take advantage of extended weekends. Financial markets themselves are known to displ\u2026",
           "citations": [
             {
-              "id": "f6",
+              "id": "f5",
               "url": "https://quantpedia.com/do-airline-stocks-take-off-around-u-s-holidays/",
               "title": "Do Airline Stocks Take Off Around U.S. Holidays?"
             }
@@ -381,6 +359,27 @@
             "kind": "fund_research",
             "source": "quantpedia",
             "date": "Fri, 18 Se",
+            "authors": null
+          }
+        },
+        {
+          "text": "SEC Form 4 Insider Purchases in Python: A Filing-Date Event Study with Free EDGAR Data \u2014 Build a Form 4 insider trading event study in Python with free EDGAR data. Covers SPY-adjusted CARs, clustered inference, cumulative abnormal returns and fully reproducible code.",
+          "citations": [
+            {
+              "id": "f6",
+              "url": "https://blog.quantinsti.com/sec-form-4-insider-trading-python-event-study/",
+              "title": "SEC Form 4 Insider Purchases in Python: A Filing-Date Event Study with Free EDGAR Data"
+            }
+          ],
+          "meta": {
+            "score": 2.473,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantinsti",
+            "date": "Tue, 25 Au",
             "authors": null
           }
         }
@@ -418,7 +417,7 @@
       },
       "arxiv": {
         "ok": true,
-        "count": 19,
+        "count": 20,
         "errors": [],
         "source": "arxiv"
       },
@@ -480,8 +479,8 @@
         "count": 0
       }
     },
-    "items_ingested": 82,
-    "items_ranked": 64,
+    "items_ingested": 83,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
