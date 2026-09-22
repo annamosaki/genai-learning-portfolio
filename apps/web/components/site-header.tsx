@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useApp } from "./providers";
-import { t } from "@/lib/i18n";
+import { copy as d } from "@/lib/i18n";
 import { ZoneLink } from "./zone-link";
 
 function SunIcon() {
@@ -33,8 +33,7 @@ function MoonIcon() {
 }
 
 export function SiteHeader() {
-  const { locale, setLocale, theme, toggleTheme } = useApp();
-  const d = t(locale);
+  const { theme, toggleTheme } = useApp();
 
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--color-line)] bg-[color-mix(in_oklab,var(--color-void)_78%,transparent)] backdrop-blur-xl">
@@ -81,14 +80,6 @@ export function SiteHeader() {
             title={theme === "dark" ? "Light mode" : "Dark mode"}
           >
             {theme === "dark" ? <SunIcon /> : <MoonIcon />}
-          </button>
-          <button
-            type="button"
-            onClick={() => setLocale(locale === "en" ? "fr" : "en")}
-            className="chip hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
-            aria-label="Toggle language"
-          >
-            {locale.toUpperCase()}
           </button>
         </div>
       </div>

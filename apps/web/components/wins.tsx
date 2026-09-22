@@ -1,13 +1,9 @@
 "use client";
 
 import { cv } from "@content/cv";
-import { useApp } from "./providers";
-import { t } from "@/lib/i18n";
+import { copy as d } from "@/lib/i18n";
 
 export function Wins() {
-  const { locale } = useApp();
-  const d = t(locale);
-
   return (
     <section id="wins" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 sm:px-6">
       <h2 className="display text-4xl sm:text-5xl">{d.wins.title}</h2>

@@ -2,14 +2,10 @@
 
 import Link from "next/link";
 import { cv } from "@content/cv";
-import { useApp } from "./providers";
-import { t } from "@/lib/i18n";
+import { copy as d } from "@/lib/i18n";
 import { ZoneLink } from "./zone-link";
 
 export function ProjectGrid() {
-  const { locale } = useApp();
-  const d = t(locale);
-
   return (
     <section id="projects" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 sm:px-6">
       <div className="mb-8 max-w-2xl">

@@ -1,13 +1,9 @@
 "use client";
 
 import { cv } from "@content/cv";
-import { useApp } from "./providers";
-import { t } from "@/lib/i18n";
+import { copy as d } from "@/lib/i18n";
 
 export function About() {
-  const { locale } = useApp();
-  const d = t(locale);
-
   return (
     <section id="experience" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16 sm:px-6">
       <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
@@ -44,7 +40,7 @@ export function About() {
 
           {cv.priorProjects.length > 0 && (
             <div className="mt-10">
-              <h3 className="display text-2xl">Selected academic projects</h3>
+              <h3 className="display text-2xl">Selected Projects &amp; GenAI Training</h3>
               <ul className="mt-4 space-y-3 text-sm text-[var(--color-muted)]">
                 {cv.priorProjects.map((p) => (
                   <li

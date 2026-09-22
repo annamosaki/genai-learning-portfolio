@@ -2,13 +2,9 @@
 
 import Link from "next/link";
 import { cv } from "@content/cv";
-import { useApp } from "./providers";
-import { t } from "@/lib/i18n";
+import { copy as d } from "@/lib/i18n";
 
 export function Hero() {
-  const { locale } = useApp();
-  const d = t(locale);
-
   return (
     <section className="relative mx-auto max-w-6xl overflow-hidden px-4 pb-16 pt-14 sm:px-6 sm:pt-20">
       <div className="mesh-grid pointer-events-none absolute inset-0 -z-10 opacity-60" />

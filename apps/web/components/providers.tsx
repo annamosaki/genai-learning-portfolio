@@ -9,13 +9,10 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import type { Locale } from "@/lib/i18n";
 
 export type Theme = "light" | "dark";
 
 type AppState = {
-  locale: Locale;
-  setLocale: (l: Locale) => void;
   theme: Theme;
   setTheme: (t: Theme) => void;
   toggleTheme: () => void;
@@ -44,7 +41,6 @@ function applyTheme(theme: Theme) {
 }
 
 export function Providers({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>("en");
   const [theme, setThemeState] = useState<Theme>("dark");
 
   useEffect(() => {
@@ -78,8 +74,8 @@ export function Providers({ children }: { children: ReactNode }) {
   }, [setTheme, theme]);
 
   const value = useMemo(
-    () => ({ locale, setLocale, theme, setTheme, toggleTheme }),
-    [locale, theme, setTheme, toggleTheme],
+    () => ({ theme, setTheme, toggleTheme }),
+    [theme, setTheme, toggleTheme],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

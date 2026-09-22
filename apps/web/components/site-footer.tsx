@@ -1,12 +1,9 @@
 "use client";
 
 import { cv } from "@content/cv";
-import { useApp } from "./providers";
-import { t } from "@/lib/i18n";
+import { copy as d } from "@/lib/i18n";
 
 export function SiteFooter() {
-  const { locale } = useApp();
-  const d = t(locale);
   return (
     <footer className="mt-20 border-t border-[var(--color-line)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 text-sm text-[var(--color-muted)] sm:flex-row sm:items-center sm:justify-between sm:px-6">

@@ -38,7 +38,7 @@ export const cv = {
   name: "Anna Mosaki",
   title: "Quantitative Researcher · Data Scientist · AI Engineer",
   seeking:
-    "Seeking a full-time role in quantitative research, data science, trading, or finance. Available for immediate start. Based in Lisbon.",
+    "Seeking quantitative research, data science and AI engineering roles. Available for immediate start. Based in Lisbon.",
   location: "Lisbon, Portugal",
   email: "mosakianna@gmail.com",
   phone: "+33 7 64 69 59 33",
@@ -48,7 +48,7 @@ export const cv = {
     site: "https://annamosaki.com",
   },
   summary:
-    "ENSAE-trained quantitative researcher with hands-on experience at BNP Paribas CIB. I build ML systems for markets — NLP, time series, and multi-agent AI — and ship them with clear methodology.",
+    "Quantitative researcher and data scientist, graduated from ENSAE Paris, with 16 months at BNP Paribas CIB building machine-learning models for trading-desk risk monitoring and NLP analysis of trader communications. Over the past year I built GenAI systems covering RAG/GraphRAG, multi-agent orchestration, MCP and LLM evals.",
   languages: [
     { code: "fr", label: "French", level: "native" },
     { code: "ru", label: "Russian", level: "native" },
@@ -59,40 +59,39 @@ export const cv = {
     { code: "de", label: "German", level: "limited" },
   ],
   skills: {
-    languages: ["Python", "SQL", "C++", "R", "VBA", "TypeScript"],
-    ml: ["scikit-learn", "TensorFlow", "PyTorch", "NLP", "Time Series", "LangChain", "LangGraph"],
+    languages: ["Python", "SQL", "VBA", "C++", "R"],
+    ml: ["scikit-learn", "TensorFlow", "PyTorch", "NLP", "Time Series", "pandas", "RAG/GraphRAG", "LLM agents"],
     finance: [
       "Anomaly detection",
-      "PnL monitoring",
+      "Trading-desk risk monitoring",
+      "Market-conduct surveillance",
       "ALM / Vega",
-      "Derivatives",
+      "Derivatives pricing & hedging",
       "Risk management",
-      "Algorithmic trading",
     ],
-    tools: ["FastAPI", "Next.js", "MCP", "A2A", "Excel", "LaTeX", "Streamlit"],
+    tools: ["pydantic-ai", "MCP", "A2A", "FastAPI", "Next.js", "Cursor", "Claude Code"],
   },
   experience: [
     {
       company: "BNP Paribas CIB",
-      role: "Quantitative Researcher – Data Scientist, GM Quantitative Research & Engineering (PnL)",
+      role: "Quantitative Researcher – Data Scientist",
       location: "Paris, France",
       start: "Oct 2024",
       end: "Sep 2025",
       bullets: [
-        "Built anomaly-detection models on financial time series, improving signal quality and monitoring for front-office trading desks.",
-        "Partnered with quantitative and risk teams to translate model outputs into actionable risk-reduction recommendations.",
-        "Contributed to an NLP pipeline analyzing trader communications, supporting compliance and market-intelligence workflows.",
+        "Research and production of ML/DL time-series anomaly-detection models with streaming inference across product families.",
+        "Collaborated with traders to source data and iterate on the product; NLP analysis of trader communications for market-conduct surveillance; two-week training in the London office.",
+        "Selected for the BNP Paribas CIB Graduate Programme in Quantitative Research.",
       ],
     },
     {
       company: "BNP Paribas CIB",
-      role: "Summer Intern, Quantitative Researcher – Data Scientist",
+      role: "Quantitative Researcher – Data Scientist, Summer Intern",
       location: "Paris, France",
       start: "Jun 2024",
       end: "Sep 2024",
       bullets: [
-        "Developed and evaluated deep learning models for cross-asset pattern detection; improved accuracy of internal risk dashboards.",
-        "Presented technical results to senior stakeholders through structured memos and executive-ready presentations.",
+        "Built and benchmarked deep-learning time-series anomaly-detection models on trading data.",
       ],
     },
     {
@@ -102,67 +101,66 @@ export const cv = {
       start: "Jun 2023",
       end: "Aug 2023",
       bullets: [
-        "Quantified portfolio Vega sensitivities to inform asset allocation and asset-liability management strategy.",
-        "Built Excel and VBA tools to automate financial simulations for the investment team.",
+        "Modeled portfolio Vega sensitivities in VBA; automated recurring financial simulations for the investment team.",
       ],
     },
   ] satisfies Experience[],
   education: [
     {
       school: "ENSAE Paris – Institut Polytechnique de Paris",
-      degree: "Engineer's Degree – Master's Degree, Finance, Risk & Data",
+      degree: "Engineer's Degree (Diplôme d'Ingénieur) – Master's Degree, Finance and Data Science",
       location: "France",
       years: "2023 – 2025",
       notes: [
-        "Award: Best Internship Prize.",
-        "Courses: Machine Learning for Finance, Time Series Forecasting, NLP, Stochastic Calculus, Risk Management, Derivatives Pricing and Hedging, Algorithmic Trading, Green Finance, Parallel Programming.",
+        "Coursework: Stochastic Calculus, Time Series, Advanced Machine Learning, ML for NLP, ML for Finance, Derivatives Pricing & Hedging, Risk Management, Green Finance, Banking Law.",
       ],
     },
     {
       school: "Université Paris-Saclay",
-      degree: "Bachelor's Degree, Mathematics & Economics",
+      degree: "Bachelor's Degree in Mathematics and Economics (Double Degree) – Graduated with Honors",
       location: "France",
       years: "2020 – 2023",
     },
     {
       school: "École Polytechnique Fédérale de Lausanne (EPFL)",
-      degree: "Undergraduate studies in Mathematics (2 years)",
+      degree: "Undergraduate studies in Mathematics",
       location: "Switzerland",
       years: "2018 – 2020",
-      notes: [
-        "Studied mathematics for two years at EPFL; did not complete a bachelor's degree there. Bachelor's degree later earned at Université Paris-Saclay.",
-      ],
     },
   ] satisfies Education[],
   wins: [
     {
       title: "1st Place",
-      org: "GenAI Hackathon — AWS, Mistral, Sia Partners, Gide",
-      detail: "RAG system to automate legal document completion.",
+      org: "GenAI Hackathon — AWS × Sia Partners × Mistral × Gide",
+      detail: "RAG system for legal-document drafting.",
     },
     {
       title: "1st Place",
-      org: "H-W3B Hackathon — Sia Partners, Tezos",
-      detail: "Blockchain-secured digital car passport in Solidity.",
+      org: "H-W3B Hackathon — Sia Partners × Tezos",
+      detail: "Blockchain-secured digital passport for vehicles.",
     },
     {
-      title: "Best Internship Prize",
+      title: "Best End-of-Studies Finance Internship Prize",
       org: "ENSAE Paris",
-      detail: "Recognized for quantitative research internship impact.",
+      detail: "Awarded for the BNP Paribas CIB quantitative research internship.",
     },
   ] satisfies Win[],
   priorProjects: [
-    "Hi!ckathon (Hi! Paris, VINCI, L'Oréal, Schneider Electric, Capgemini, TotalEnergies): groundwater-level forecasting model.",
-    "Greenwashing Detection (ENSAE): NLP + regression measuring impact of corporate communications on investor behavior.",
-    "Energy Demand Forecasting (ENSAE): national electricity consumption forecasting for energy planning.",
-    "Chat-Doc (ENSAE): RAG web app to extract insights from user-uploaded documents (Python, Chainlit).",
+    "LLM Foundations: 12-level GenAI system — prompts → GraphRAG → evals, agents, MCP (Python, pydantic-ai).",
+    "Agent Desk: multi-agent investment desk (research/macro/quant/risk/scribe) with FastA2A, HITL gates and dual MCP.",
+    "Research Digest: ArXiv + fund/quant RSS desk for time-series × finance research.",
   ],
   activities: [
     {
       title: "Forum ENSAE — Communication Manager",
       period: "Sep 2023 – Mar 2024",
       detail:
-        "Led professional events with executives from Société Générale, Crédit Agricole, Citadel, and INSEE. Managed partnerships, alumni engagement, and external communications.",
+        "Conferences with executives from Citadel, Société Générale, Crédit Agricole and INSEE.",
+    },
+    {
+      title: "Georgian Caucasian Dance",
+      period: "10 years",
+      detail: "Competition dancer; diploma as official trainer.",
     },
   ],
   projects: [
