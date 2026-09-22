@@ -33,3 +33,5 @@ data/raw/
 infra/cdk/cdk.out/
 infra/cdk/dist/
 infra/cdk/node_modules/
+
+content/Anna_Mosaki_Resume.pdf
