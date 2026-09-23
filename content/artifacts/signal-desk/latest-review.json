@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260922,
-  "date": "2026-09-22",
+  "number": 20260923,
+  "date": "2026-09-23",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-22",
+  "title": "Reading desk \u2014 2026-09-23",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -92,32 +92,10 @@
           }
         },
         {
-          "text": "Q-DEQ: Discrete Solving and Quantization for Deep Equilibrium Models in Time Series Forecasting under Edge Deployment Coding Constraints \u2014 Edge deployment motivates forecasting models with compact parameter storage and low-bit representations. Deep equilibrium models (DEQs) obtain implicit depth by repeatedly applying a shared layer, reducing the parameter\u2026",
-          "citations": [
-            {
-              "id": "3",
-              "url": "https://arxiv.org/abs/2609.24042",
-              "title": "Q-DEQ: Discrete Solving and Quantization for Deep Equilibrium Models in Time Series Forecasting under Edge Deployment Coding Constraints"
-            }
-          ],
-          "meta": {
-            "score": 3.356,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-21",
-            "authors": "Ruotong Yang, Hongdong Zhu, Qi Gao, Yin Ma, Hai Wei, Kai Wen"
-          }
-        },
-        {
           "text": "$t_0$: A Time-Series Foundation Model for Forecasting with Context \u2014 We present $t_0$, a family of open-weights foundation models for forecasting with multivariate context. We release its first two members: $\\texttt{t0-alpha}$ and $\\texttt{t0-beta}$, respectively 102M and 256M parameters.\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "3",
               "url": "https://arxiv.org/abs/2609.24559",
               "title": "$t_0$: A Time-Series Foundation Model for Forecasting with Context"
             }
@@ -133,6 +111,28 @@
             "source": "arxiv",
             "date": "2026-09-21",
             "authors": "Lucas Meyer, Claudio Sole, Huikan Xiang, Nicolas Li, Lucas Franceschino, Arnau Quera-Bofarull, Maarten P. Scholl, Joachim Fainberg, Geoffrey N\u00e9giar"
+          }
+        },
+        {
+          "text": "Evaluating Accuracy and Probabilistic Reliability of Zero-Shot Time Series Foundation Models \u2014 Time Series Foundation Models (TSFMs) promise a paradigm shift toward zero-shot forecasting by eliminating task-specific training. However, existing works often overlook trade-offs between predictive accuracy and probabi\u2026",
+          "citations": [
+            {
+              "id": "4",
+              "url": "https://arxiv.org/abs/2609.25788",
+              "title": "Evaluating Accuracy and Probabilistic Reliability of Zero-Shot Time Series Foundation Models"
+            }
+          ],
+          "meta": {
+            "score": 3.299,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-22",
+            "authors": "Panagiotis Michael, Moysis Symeonides, Demetris Trihinas"
           }
         },
         {
@@ -158,25 +158,25 @@
           }
         },
         {
-          "text": "TAC-Time: Texts as Channels For Multimodal Time Series Forecasting \u2014 Most existing time series forecasting methods rely solely on numerical observations, overlooking rich contextual information from auxiliary texts. Recent multimodal approaches attempt to incorporate textual signals, but\u2026",
+          "text": "Rough Volatility Across Assets \u2014 We measure volatility roughness across asset classes using a common data infrastructure and pipeline. Our data covers 3,926 United States equities, 34 CME futures roots, rates, FX, and commodities, and options on 44 unde\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2609.24156",
-              "title": "TAC-Time: Texts as Channels For Multimodal Time Series Forecasting"
+              "url": "https://arxiv.org/abs/2608.16749",
+              "title": "Rough Volatility Across Assets"
             }
           ],
           "meta": {
-            "score": 3.299,
+            "score": 3.232,
             "topics": [
               "time-series",
               "quant-research",
-              "financial-nlp"
+              "llm-agents"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-09-21",
-            "authors": "Jiayi Liang, Xiaotian Gu, Xinyu Xie, Yuanbin Wu, Xiaoling Wang"
+            "date": "2026-08-17",
+            "authors": "Saad Mouti"
           }
         }
       ]
@@ -255,32 +255,10 @@
       "heading": "Fund research",
       "paragraphs": [
         {
-          "text": "Boundaries of Time Series Momentum \u2014 Time-series momentum stands as one of the most reliable and heavily backtested anomalies in quantitative finance, serving as a foundational alpha source for modern managed futures and trend-following strategies. However,\u2026",
-          "citations": [
-            {
-              "id": "f1",
-              "url": "https://quantpedia.com/boundaries-of-time-series-momentum/",
-              "title": "Boundaries of Time Series Momentum"
-            }
-          ],
-          "meta": {
-            "score": 3.112,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Fri, 28 Au",
-            "authors": null
-          }
-        },
-        {
           "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
           "citations": [
             {
-              "id": "f2",
+              "id": "f1",
               "url": "https://blog.quantinsti.com/cointegrated-pairs-trading-indian-equity-market-epat-project/",
               "title": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project"
             }
@@ -302,7 +280,7 @@
           "text": "Is Managed Futures Value-able? \u2014 In Return StackingTM: Strategies for Overcoming a Low Return Environment, we advocated for the addition of managed futures to traditionally allocated portfolios. We argued that managed futures\u2019 low empirical correlation\u2026",
           "citations": [
             {
-              "id": "f3",
+              "id": "f2",
               "url": "https://blog.thinknewfound.com/2023/06/is-managed-futures-value-able/",
               "title": "Is Managed Futures Value-able?"
             }
@@ -324,7 +302,7 @@
           "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
           "citations": [
             {
-              "id": "f4",
+              "id": "f3",
               "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
               "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
             }
@@ -345,7 +323,7 @@
           "text": "Do Airline Stocks Take Off Around U.S. Holidays? \u2014 Holidays put people in motion. In the days surrounding major U.S. holidays, airports become busier as travelers visit their families or take advantage of extended weekends. Financial markets themselves are known to displ\u2026",
           "citations": [
             {
-              "id": "f5",
+              "id": "f4",
               "url": "https://quantpedia.com/do-airline-stocks-take-off-around-u-s-holidays/",
               "title": "Do Airline Stocks Take Off Around U.S. Holidays?"
             }
@@ -366,7 +344,7 @@
           "text": "SEC Form 4 Insider Purchases in Python: A Filing-Date Event Study with Free EDGAR Data \u2014 Build a Form 4 insider trading event study in Python with free EDGAR data. Covers SPY-adjusted CARs, clustered inference, cumulative abnormal returns and fully reproducible code.",
           "citations": [
             {
-              "id": "f6",
+              "id": "f5",
               "url": "https://blog.quantinsti.com/sec-form-4-insider-trading-python-event-study/",
               "title": "SEC Form 4 Insider Purchases in Python: A Filing-Date Event Study with Free EDGAR Data"
             }
@@ -380,6 +358,27 @@
             "kind": "fund_research",
             "source": "quantinsti",
             "date": "Tue, 25 Au",
+            "authors": null
+          }
+        },
+        {
+          "text": "Liquidity Cascades: The Coordinated Risk of Uncoordinated Market Participants \u2014 This paper is unlike any research we&#8217;ve shared in the past. Within we dive into the circumstantial evidence surrounding the &#8220;weird&#8221; behavior many investors believe markets are exhibiting. We tackle narr\u2026",
+          "citations": [
+            {
+              "id": "f6",
+              "url": "https://blog.thinknewfound.com/2020/09/liquidity-cascades-the-coordinated-risk-of-uncoordinated-market-participants/",
+              "title": "Liquidity Cascades: The Coordinated Risk of Uncoordinated Market Participants"
+            }
+          ],
+          "meta": {
+            "score": 2.415,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "flirting-with-models",
+            "date": "Fri, 11 Se",
             "authors": null
           }
         }
