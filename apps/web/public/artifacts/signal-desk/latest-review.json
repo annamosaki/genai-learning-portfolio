@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260923,
-  "date": "2026-09-23",
+  "number": 20260924,
+  "date": "2026-09-24",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-23",
+  "title": "Reading desk \u2014 2026-09-24",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -92,32 +92,10 @@
           }
         },
         {
-          "text": "$t_0$: A Time-Series Foundation Model for Forecasting with Context \u2014 We present $t_0$, a family of open-weights foundation models for forecasting with multivariate context. We release its first two members: $\\texttt{t0-alpha}$ and $\\texttt{t0-beta}$, respectively 102M and 256M parameters.\u2026",
-          "citations": [
-            {
-              "id": "3",
-              "url": "https://arxiv.org/abs/2609.24559",
-              "title": "$t_0$: A Time-Series Foundation Model for Forecasting with Context"
-            }
-          ],
-          "meta": {
-            "score": 3.299,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-21",
-            "authors": "Lucas Meyer, Claudio Sole, Huikan Xiang, Nicolas Li, Lucas Franceschino, Arnau Quera-Bofarull, Maarten P. Scholl, Joachim Fainberg, Geoffrey N\u00e9giar"
-          }
-        },
-        {
           "text": "Evaluating Accuracy and Probabilistic Reliability of Zero-Shot Time Series Foundation Models \u2014 Time Series Foundation Models (TSFMs) promise a paradigm shift toward zero-shot forecasting by eliminating task-specific training. However, existing works often overlook trade-offs between predictive accuracy and probabi\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "3",
               "url": "https://arxiv.org/abs/2609.25788",
               "title": "Evaluating Accuracy and Probabilistic Reliability of Zero-Shot Time Series Foundation Models"
             }
@@ -136,32 +114,10 @@
           }
         },
         {
-          "text": "Spillover-Informed Network Architecture for Global Volatility Forecasting \u2014 Spillover of volatility shocks across borders during turbulent periods makes accurate equity market volatility forecasts especially critical for risk management, derivatives pricing, and regulatory capital. In this paper\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2608.14171",
-              "title": "Spillover-Informed Network Architecture for Global Volatility Forecasting"
-            }
-          ],
-          "meta": {
-            "score": 3.299,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-14",
-            "authors": "Neha Gupta, Nishit Soni, Aditya Maheshwari"
-          }
-        },
-        {
           "text": "Rough Volatility Across Assets \u2014 We measure volatility roughness across asset classes using a common data infrastructure and pipeline. Our data covers 3,926 United States equities, 34 CME futures roots, rates, FX, and commodities, and options on 44 unde\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "4",
               "url": "https://arxiv.org/abs/2608.16749",
               "title": "Rough Volatility Across Assets"
             }
@@ -177,6 +133,48 @@
             "source": "arxiv",
             "date": "2026-08-17",
             "authors": "Saad Mouti"
+          }
+        },
+        {
+          "text": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series \u2014 Herein, we propose a quantum circuit learning framework for modeling the realized volatility (RV) of Bitcoin and investigate the statistical properties of the predicted time series through multifractal analysis. Unlike c\u2026",
+          "citations": [
+            {
+              "id": "5",
+              "url": "https://arxiv.org/abs/2609.04569",
+              "title": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series"
+            }
+          ],
+          "meta": {
+            "score": 2.794,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-03",
+            "authors": "Tetsuya Takaishi"
+          }
+        },
+        {
+          "text": "Forecasting Global Volatility with Predictive Spillover Networks: A Neuro-Econometric Spatio-Temporal Transformer for Asynchronous Financial Markets \u2014 Forecasting global realized volatility requires a model that can learn from interconnected markets without treating zero-coded exchange closures as observed zero volatility. We develop PGA-Trans-HAR, a neuro-econometric\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2608.25369",
+              "title": "Forecasting Global Volatility with Predictive Spillover Networks: A Neuro-Econometric Spatio-Temporal Transformer for Asynchronous Financial Markets"
+            }
+          ],
+          "meta": {
+            "score": 2.732,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-26",
+            "authors": "Xinlin Zhao, Haotian Qiao"
           }
         }
       ]
