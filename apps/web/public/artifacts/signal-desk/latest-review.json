@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260928,
-  "date": "2026-09-28",
+  "number": 20260929,
+  "date": "2026-09-29",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-28",
+  "title": "Reading desk \u2014 2026-09-29",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -114,54 +114,10 @@
           }
         },
         {
-          "text": "WorldTS: World Modeling for Multimodal Covariate-aware Time Series Forecasting \u2014 Time series forecasting is typically framed as learning a direct mapping from historical to future observations in the observation space. However, sequences of observations generally provide only a partial view of the dy\u2026",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2609.31162",
-              "title": "WorldTS: World Modeling for Multimodal Covariate-aware Time Series Forecasting"
-            }
-          ],
-          "meta": {
-            "score": 3.237,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-25",
-            "authors": "Yuhan Zhu, Xiangfei Qiu, Hanyin Cheng, Wangmeng Shen, Chenjuan Guo, Bin Yang, Jilin Hu, Christian S. Jensen"
-          }
-        },
-        {
-          "text": "Bayesian Tensor Autoencoder with Physics-informed Predictive Prior for Multi-dimensional Time Series Anomaly Detection \u2014 Multi-dimensional time series, inherently tensorial, are common in practice. Despite great progress in time series anomaly detection, most existing methods are confined to uni-/multi-variate time series. When handling mu\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2609.31157",
-              "title": "Bayesian Tensor Autoencoder with Physics-informed Predictive Prior for Multi-dimensional Time Series Anomaly Detection"
-            }
-          ],
-          "meta": {
-            "score": 3.232,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-25",
-            "authors": "Jianan Liu, Chunguang Li"
-          }
-        },
-        {
           "text": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series \u2014 Herein, we propose a quantum circuit learning framework for modeling the realized volatility (RV) of Bitcoin and investigate the statistical properties of the predicted time series through multifractal analysis. Unlike c\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "4",
               "url": "https://arxiv.org/abs/2609.04569",
               "title": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series"
             }
@@ -176,6 +132,48 @@
             "source": "arxiv",
             "date": "2026-09-03",
             "authors": "Tetsuya Takaishi"
+          }
+        },
+        {
+          "text": "Forecasting Global Volatility with Predictive Spillover Networks: A Neuro-Econometric Spatio-Temporal Transformer for Asynchronous Financial Markets \u2014 Forecasting global realized volatility requires a model that can learn from interconnected markets without treating zero-coded exchange closures as observed zero volatility. We develop PGA-Trans-HAR, a neuro-econometric\u2026",
+          "citations": [
+            {
+              "id": "5",
+              "url": "https://arxiv.org/abs/2608.25369",
+              "title": "Forecasting Global Volatility with Predictive Spillover Networks: A Neuro-Econometric Spatio-Temporal Transformer for Asynchronous Financial Markets"
+            }
+          ],
+          "meta": {
+            "score": 2.732,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-08-26",
+            "authors": "Xinlin Zhao, Haotian Qiao"
+          }
+        },
+        {
+          "text": "Loss Choice or Model Choice? The Role of Forecast Level in Cryptocurrency Volatility Forecasting \u2014 Volatility forecasts play a central role in financial risk management because their overall level and day-to-day movements affect downstream decisions. Most studies compare forecasting models while keeping the training l\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2609.27024",
+              "title": "Loss Choice or Model Choice? The Role of Forecast Level in Cryptocurrency Volatility Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 2.732,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-09-22",
+            "authors": "Andrzej Tokajuk, Jaros\u0142aw A. Chudziak"
           }
         }
       ]
