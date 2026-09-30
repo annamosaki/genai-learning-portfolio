@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20260929,
-  "date": "2026-09-29",
+  "number": 20260930,
+  "date": "2026-09-30",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-09-29",
+  "title": "Reading desk \u2014 2026-09-30",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -114,66 +114,68 @@
           }
         },
         {
-          "text": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series \u2014 Herein, we propose a quantum circuit learning framework for modeling the realized volatility (RV) of Bitcoin and investigate the statistical properties of the predicted time series through multifractal analysis. Unlike c\u2026",
+          "text": "Variational Augmented Invertible Koopman Autoencoder for probabilistic time series forecasting \u2014 Neural Koopman autoencoder models have been shown to successfully build a latent embedding with linear dynamics for arbitrary dynamical systems, enabling strong performance in long-term time series forecasting. However,\u2026",
           "citations": [
             {
               "id": "4",
-              "url": "https://arxiv.org/abs/2609.04569",
-              "title": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series"
+              "url": "https://arxiv.org/abs/2609.37435",
+              "title": "Variational Augmented Invertible Koopman Autoencoder for probabilistic time series forecasting"
             }
           ],
           "meta": {
-            "score": 2.794,
+            "score": 3.294,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "llm-agents"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-09-03",
-            "authors": "Tetsuya Takaishi"
+            "date": "2026-09-29",
+            "authors": "Anthony Frion, Lucas Drumetz, Guillaume Tochon, Mauro Dalla Mura, Ali Can Bekar, Abdeldjalil A\u00efssa El Bey"
           }
         },
         {
-          "text": "Forecasting Global Volatility with Predictive Spillover Networks: A Neuro-Econometric Spatio-Temporal Transformer for Asynchronous Financial Markets \u2014 Forecasting global realized volatility requires a model that can learn from interconnected markets without treating zero-coded exchange closures as observed zero volatility. We develop PGA-Trans-HAR, a neuro-econometric\u2026",
+          "text": "High-Dimensional Simulation-Based Inference in Latent Spaces \u2014 Neural simulation-based inference (SBI) has been widely successful in inferring a relatively small number of interpretable parameters from potentially high-dimensional observations, such as images or time series. Accordi\u2026",
           "citations": [
             {
               "id": "5",
-              "url": "https://arxiv.org/abs/2608.25369",
-              "title": "Forecasting Global Volatility with Predictive Spillover Networks: A Neuro-Econometric Spatio-Temporal Transformer for Asynchronous Financial Markets"
+              "url": "https://arxiv.org/abs/2609.37381",
+              "title": "High-Dimensional Simulation-Based Inference in Latent Spaces"
             }
           ],
           "meta": {
-            "score": 2.732,
+            "score": 3.237,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "financial-nlp"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-08-26",
-            "authors": "Xinlin Zhao, Haotian Qiao"
+            "date": "2026-09-29",
+            "authors": "Lars K\u00fchmichel, Stefan T. Radev, Bhanu Prasanna Koppolu, Masoumeh Davoudi, Jerry M. Huang, Paul-Christian B\u00fcrkner"
           }
         },
         {
-          "text": "Loss Choice or Model Choice? The Role of Forecast Level in Cryptocurrency Volatility Forecasting \u2014 Volatility forecasts play a central role in financial risk management because their overall level and day-to-day movements affect downstream decisions. Most studies compare forecasting models while keeping the training l\u2026",
+          "text": "Volatility-Clustering Adaptation for Financial Time Series \u2014 Time-series foundation models are increasingly adapted to new domains through fine-tuning on target data, under the implicit assumption that more target data yields better forecasts. We show that this assumption can fail\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2609.27024",
-              "title": "Loss Choice or Model Choice? The Role of Forecast Level in Cryptocurrency Volatility Forecasting"
+              "url": "https://arxiv.org/abs/2609.37715",
+              "title": "Volatility-Clustering Adaptation for Financial Time Series"
             }
           ],
           "meta": {
-            "score": 2.732,
+            "score": 2.795,
             "topics": [
               "time-series",
               "quant-research"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-09-22",
-            "authors": "Andrzej Tokajuk, Jaros\u0142aw A. Chudziak"
+            "date": "2026-09-29",
+            "authors": "Manh Nguyen, Minh Hoang Nguyen, Huu Hiep Nguyen, Van Dai Do, Hung Le"
           }
         }
       ]
