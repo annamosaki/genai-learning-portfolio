@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261001,
-  "date": "2026-10-01",
+  "number": 20261002,
+  "date": "2026-10-02",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-01",
+  "title": "Reading desk \u2014 2026-10-02",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,10 +48,56 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy \u2014 We study whether nuclear and energy-adjacent equity options exhibit a harvestable variance risk premium. Using CRSP and OptionMetrics data for 2000-2024, we construct a systematic cash-secured short-put strategy on a cur\u2026",
+          "text": "Detect, Explain, Interpret: An End-to-End Benchmark for Time Series Anomaly Detection, Explainability and Interpretability \u2014 Time Series Anomaly Detection has received increasing attention, driven by the growing availability of complex time series data. This surge has led to the development of numerous detection methods, as well as a variety o\u2026",
           "citations": [
             {
               "id": "1",
+              "url": "https://arxiv.org/abs/2610.01168",
+              "title": "Detect, Explain, Interpret: An End-to-End Benchmark for Time Series Anomaly Detection, Explainability and Interpretability"
+            }
+          ],
+          "meta": {
+            "score": 3.799,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-01",
+            "authors": "Roberto Stanzione, Jules Barbe, Magali Parrino, J\u00e9r\u00e9mie Fourmann, Paul Boniol"
+          }
+        },
+        {
+          "text": "From Redundancy to Minimality: Fixed-Point-Guided Hierarchical Reduction of Learned Piecewise-Linear Dynamics \u2014 Understanding a nonlinear dynamical system from time series requires not only reproducing its trajectories, but also identifying a simple representation that preserves its essential dynamical structure. Almost-linear rec\u2026",
+          "citations": [
+            {
+              "id": "2",
+              "url": "https://arxiv.org/abs/2610.01369",
+              "title": "From Redundancy to Minimality: Fixed-Point-Guided Hierarchical Reduction of Learned Piecewise-Linear Dynamics"
+            }
+          ],
+          "meta": {
+            "score": 3.572,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp",
+              "green-finance"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-01",
+            "authors": "Hiroto Tamura, Gouhei Tanaka"
+          }
+        },
+        {
+          "text": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy \u2014 We study whether nuclear and energy-adjacent equity options exhibit a harvestable variance risk premium. Using CRSP and OptionMetrics data for 2000-2024, we construct a systematic cash-secured short-put strategy on a cur\u2026",
+          "citations": [
+            {
+              "id": "3",
               "url": "https://arxiv.org/abs/2609.01183",
               "title": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy"
             }
@@ -73,7 +119,7 @@
           "text": "Illiquidity at Risk \u2014 Market efficiency relies fundamentally on stable liquidity. Consequently, forecasting liquidity dynamics is a priority for both investors and regulators. We introduce a new tail-risk metric, Illiquidity-at-Risk (IlliQaR)\u2026",
           "citations": [
             {
-              "id": "2",
+              "id": "4",
               "url": "https://arxiv.org/abs/2609.00943",
               "title": "Illiquidity at Risk"
             }
@@ -89,50 +135,6 @@
             "source": "arxiv",
             "date": "2026-09-01",
             "authors": "Demetrio Lacava, Paolo Santucci de Magistris"
-          }
-        },
-        {
-          "text": "Network Realized GARCH--It\u00f4 Models: Volatility Spillovers with High-Frequency Identification \u2014 We introduce a network realized GARCH-It\u00f4 model in which volatility transmission is a dynamic relation among the latent daily integrated volatilities of multiple assets. An unknown directed and signed network is embedded\u2026",
-          "citations": [
-            {
-              "id": "3",
-              "url": "https://arxiv.org/abs/2609.29515",
-              "title": "Network Realized GARCH--It\u00f4 Models: Volatility Spillovers with High-Frequency Identification"
-            }
-          ],
-          "meta": {
-            "score": 3.48,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-08-25",
-            "authors": "Xinyu Song"
-          }
-        },
-        {
-          "text": "When, Not How Much: Evaluating Time-Series Foundation Models on Sparse Events \u2014 Pretrained time-series foundation models (TSFMs) are evaluated as forecasters of future values, yet for sparse series many decisions depend only on which future periods contain activity. Standard benchmarks do not assess\u2026",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2609.39386",
-              "title": "When, Not How Much: Evaluating Time-Series Foundation Models on Sparse Events"
-            }
-          ],
-          "meta": {
-            "score": 3.232,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-30",
-            "authors": "Daniel Schoess, Florian von Wangenheim"
           }
         },
         {
