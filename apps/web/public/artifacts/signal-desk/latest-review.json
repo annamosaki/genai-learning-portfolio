@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261002,
-  "date": "2026-10-02",
+  "number": 20261005,
+  "date": "2026-10-05",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-02",
+  "title": "Reading desk \u2014 2026-10-05",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,56 +48,10 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Detect, Explain, Interpret: An End-to-End Benchmark for Time Series Anomaly Detection, Explainability and Interpretability \u2014 Time Series Anomaly Detection has received increasing attention, driven by the growing availability of complex time series data. This surge has led to the development of numerous detection methods, as well as a variety o\u2026",
-          "citations": [
-            {
-              "id": "1",
-              "url": "https://arxiv.org/abs/2610.01168",
-              "title": "Detect, Explain, Interpret: An End-to-End Benchmark for Time Series Anomaly Detection, Explainability and Interpretability"
-            }
-          ],
-          "meta": {
-            "score": 3.799,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-01",
-            "authors": "Roberto Stanzione, Jules Barbe, Magali Parrino, J\u00e9r\u00e9mie Fourmann, Paul Boniol"
-          }
-        },
-        {
-          "text": "From Redundancy to Minimality: Fixed-Point-Guided Hierarchical Reduction of Learned Piecewise-Linear Dynamics \u2014 Understanding a nonlinear dynamical system from time series requires not only reproducing its trajectories, but also identifying a simple representation that preserves its essential dynamical structure. Almost-linear rec\u2026",
-          "citations": [
-            {
-              "id": "2",
-              "url": "https://arxiv.org/abs/2610.01369",
-              "title": "From Redundancy to Minimality: Fixed-Point-Guided Hierarchical Reduction of Learned Piecewise-Linear Dynamics"
-            }
-          ],
-          "meta": {
-            "score": 3.572,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp",
-              "green-finance"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-01",
-            "authors": "Hiroto Tamura, Gouhei Tanaka"
-          }
-        },
-        {
           "text": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy \u2014 We study whether nuclear and energy-adjacent equity options exhibit a harvestable variance risk premium. Using CRSP and OptionMetrics data for 2000-2024, we construct a systematic cash-secured short-put strategy on a cur\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "1",
               "url": "https://arxiv.org/abs/2609.01183",
               "title": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy"
             }
@@ -119,7 +73,7 @@
           "text": "Illiquidity at Risk \u2014 Market efficiency relies fundamentally on stable liquidity. Consequently, forecasting liquidity dynamics is a priority for both investors and regulators. We introduce a new tail-risk metric, Illiquidity-at-Risk (IlliQaR)\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "2",
               "url": "https://arxiv.org/abs/2609.00943",
               "title": "Illiquidity at Risk"
             }
@@ -135,6 +89,50 @@
             "source": "arxiv",
             "date": "2026-09-01",
             "authors": "Demetrio Lacava, Paolo Santucci de Magistris"
+          }
+        },
+        {
+          "text": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility \u2014 Hybrid statistical-neural pipelines often assume that a successful statistical first stage leaves a cleaner and more learnable residual target. We examine that assumption in short-horizon volatility forecasting through a\u2026",
+          "citations": [
+            {
+              "id": "3",
+              "url": "https://arxiv.org/abs/2610.03019",
+              "title": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility"
+            }
+          ],
+          "meta": {
+            "score": 3.356,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-02",
+            "authors": "Bingqi Lian, Linfeng Cheng, Mei Lu, Jerry Wu"
+          }
+        },
+        {
+          "text": "DIVINE: Simple Cross-Market Stock Pretraining via Diverse Indicator Reconstruction \u2014 Financial time-series pretraining typically learns from masked observations, contrastive relations, or future outcomes---yet existing objectives struggle to simultaneously avoid future-supervision uncertainty and maintai\u2026",
+          "citations": [
+            {
+              "id": "4",
+              "url": "https://arxiv.org/abs/2610.02866",
+              "title": "DIVINE: Simple Cross-Market Stock Pretraining via Diverse Indicator Reconstruction"
+            }
+          ],
+          "meta": {
+            "score": 3.294,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-02",
+            "authors": "Kuan-Yu Chen, Shu-Cheng Zheng, Yu-Chen Den, Wei-Cheng Liao, Tien-Hao Chang"
           }
         },
         {
@@ -159,12 +157,12 @@
           }
         },
         {
-          "text": "Forecasting Global Volatility with Predictive Spillover Networks: A Neuro-Econometric Spatio-Temporal Transformer for Asynchronous Financial Markets \u2014 Forecasting global realized volatility requires a model that can learn from interconnected markets without treating zero-coded exchange closures as observed zero volatility. We develop PGA-Trans-HAR, a neuro-econometric\u2026",
+          "text": "Loss Choice or Model Choice? The Role of Forecast Level in Cryptocurrency Volatility Forecasting \u2014 Volatility forecasts play a central role in financial risk management because their overall level and day-to-day movements affect downstream decisions. Most studies compare forecasting models while keeping the training l\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2608.25369",
-              "title": "Forecasting Global Volatility with Predictive Spillover Networks: A Neuro-Econometric Spatio-Temporal Transformer for Asynchronous Financial Markets"
+              "url": "https://arxiv.org/abs/2609.27024",
+              "title": "Loss Choice or Model Choice? The Role of Forecast Level in Cryptocurrency Volatility Forecasting"
             }
           ],
           "meta": {
@@ -175,8 +173,8 @@
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-08-26",
-            "authors": "Xinlin Zhao, Haotian Qiao"
+            "date": "2026-09-22",
+            "authors": "Andrzej Tokajuk, Jaros\u0142aw A. Chudziak"
           }
         }
       ]
