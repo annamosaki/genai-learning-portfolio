@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261005,
-  "date": "2026-10-05",
+  "number": 20261006,
+  "date": "2026-10-06",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-05",
+  "title": "Reading desk \u2014 2026-10-06",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,54 +48,10 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy \u2014 We study whether nuclear and energy-adjacent equity options exhibit a harvestable variance risk premium. Using CRSP and OptionMetrics data for 2000-2024, we construct a systematic cash-secured short-put strategy on a cur\u2026",
-          "citations": [
-            {
-              "id": "1",
-              "url": "https://arxiv.org/abs/2609.01183",
-              "title": "Harvesting the Variance Risk Premium in Nuclear and Energy Equities: A Short-Put Portfolio Derisking Strategy"
-            }
-          ],
-          "meta": {
-            "score": 3.542,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-01",
-            "authors": "Jilang Miao, Nonna Sorokina"
-          }
-        },
-        {
-          "text": "Illiquidity at Risk \u2014 Market efficiency relies fundamentally on stable liquidity. Consequently, forecasting liquidity dynamics is a priority for both investors and regulators. We introduce a new tail-risk metric, Illiquidity-at-Risk (IlliQaR)\u2026",
-          "citations": [
-            {
-              "id": "2",
-              "url": "https://arxiv.org/abs/2609.00943",
-              "title": "Illiquidity at Risk"
-            }
-          ],
-          "meta": {
-            "score": 3.48,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-01",
-            "authors": "Demetrio Lacava, Paolo Santucci de Magistris"
-          }
-        },
-        {
           "text": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility \u2014 Hybrid statistical-neural pipelines often assume that a successful statistical first stage leaves a cleaner and more learnable residual target. We examine that assumption in short-horizon volatility forecasting through a\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "1",
               "url": "https://arxiv.org/abs/2610.03019",
               "title": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility"
             }
@@ -114,16 +70,16 @@
           }
         },
         {
-          "text": "DIVINE: Simple Cross-Market Stock Pretraining via Diverse Indicator Reconstruction \u2014 Financial time-series pretraining typically learns from masked observations, contrastive relations, or future outcomes---yet existing objectives struggle to simultaneously avoid future-supervision uncertainty and maintai\u2026",
+          "text": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence \u2014 Multi-step forecasting systems, including modern artificial intelligence (AI) models, often issue overlapping predictions for the same future time from different forecast origins. These predictions can disagree even when\u2026",
           "citations": [
             {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2610.02866",
-              "title": "DIVINE: Simple Cross-Market Stock Pretraining via Diverse Indicator Reconstruction"
+              "id": "2",
+              "url": "https://arxiv.org/abs/2610.05340",
+              "title": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence"
             }
           ],
           "meta": {
-            "score": 3.294,
+            "score": 3.232,
             "topics": [
               "time-series",
               "quant-research",
@@ -131,15 +87,15 @@
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-10-02",
-            "authors": "Kuan-Yu Chen, Shu-Cheng Zheng, Yu-Chen Den, Wei-Cheng Liao, Tien-Hao Chang"
+            "date": "2026-10-04",
+            "authors": "Oluwatosin Bamidele Fajana, Ricardo S. Ehlers, Marinho G. Andrade"
           }
         },
         {
           "text": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series \u2014 Herein, we propose a quantum circuit learning framework for modeling the realized volatility (RV) of Bitcoin and investigate the statistical properties of the predicted time series through multifractal analysis. Unlike c\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "3",
               "url": "https://arxiv.org/abs/2609.04569",
               "title": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series"
             }
@@ -154,6 +110,48 @@
             "source": "arxiv",
             "date": "2026-09-03",
             "authors": "Tetsuya Takaishi"
+          }
+        },
+        {
+          "text": "Scale or speed? When do path signatures improve volatility-regime forecasts? \u2014 We study when path signatures, increasingly used as model-free features of return paths, improve out-of-sample forecasts of volatility regimes. In daily United States and developed-market equity returns from 2005 to 2025\u2026",
+          "citations": [
+            {
+              "id": "4",
+              "url": "https://arxiv.org/abs/2610.06690",
+              "title": "Scale or speed? When do path signatures improve volatility-regime forecasts?"
+            }
+          ],
+          "meta": {
+            "score": 2.794,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-05",
+            "authors": "Yang Lyu, Kiseop Lee"
+          }
+        },
+        {
+          "text": "EMG-FM-Bench: A Comprehensive Benchmark for Foundation Model Transfer and Adaptation on Electromyography \u2014 Foundation models (FMs) are increasingly being developed for general time series and physiological signals, yet their transferability to downstream physiological tasks remains poorly understood. This question is particul\u2026",
+          "citations": [
+            {
+              "id": "5",
+              "url": "https://arxiv.org/abs/2610.06450",
+              "title": "EMG-FM-Bench: A Comprehensive Benchmark for Foundation Model Transfer and Adaptation on Electromyography"
+            }
+          ],
+          "meta": {
+            "score": 2.732,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-05",
+            "authors": "Tianhao Wu, Xu Wu, Amirmohammad Radmehr, Jiawei Yu, Yi Wu, Phuc Nguyen, Jian Liu"
           }
         },
         {
@@ -253,10 +251,33 @@
       "heading": "Fund research",
       "paragraphs": [
         {
-          "text": "Can Weakening Morning Order Flow Predict SPY Reversals? \u2014 In a previous article Building and Testing Trend-Following Strategies on One-Minute SPY Data, we investigated whether retail activity indicators derived from one-minute SPY data could be used to construct profitable tren\u2026",
+          "text": "Buying Complex Retail Investment Products May Not be a Great Idea \u2014 Issuers may deliberately redesign investment products when competitive pressure increases, shifting toward structures that are harder for investors to evaluate and compare.The result is a subtle but important mechanism.\u2026",
           "citations": [
             {
               "id": "f1",
+              "url": "https://alphaarchitect.com/financial-complexity/",
+              "title": "Buying Complex Retail Investment Products May Not be a Great Idea"
+            }
+          ],
+          "meta": {
+            "score": 3.575,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents",
+              "financial-nlp"
+            ],
+            "kind": "fund_research",
+            "source": "alpha-architect",
+            "date": "Mon, 05 Oc",
+            "authors": null
+          }
+        },
+        {
+          "text": "Can Weakening Morning Order Flow Predict SPY Reversals? \u2014 In a previous article Building and Testing Trend-Following Strategies on One-Minute SPY Data, we investigated whether retail activity indicators derived from one-minute SPY data could be used to construct profitable tren\u2026",
+          "citations": [
+            {
+              "id": "f2",
               "url": "https://quantpedia.com/can-weakening-morning-order-flow-predict-spy-reversals/",
               "title": "Can Weakening Morning Order Flow Predict SPY Reversals?"
             }
@@ -278,7 +299,7 @@
           "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
           "citations": [
             {
-              "id": "f2",
+              "id": "f3",
               "url": "https://blog.quantinsti.com/cointegrated-pairs-trading-indian-equity-market-epat-project/",
               "title": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project"
             }
@@ -300,7 +321,7 @@
           "text": "Is Managed Futures Value-able? \u2014 In Return StackingTM: Strategies for Overcoming a Low Return Environment, we advocated for the addition of managed futures to traditionally allocated portfolios. We argued that managed futures\u2019 low empirical correlation\u2026",
           "citations": [
             {
-              "id": "f3",
+              "id": "f4",
               "url": "https://blog.thinknewfound.com/2023/06/is-managed-futures-value-able/",
               "title": "Is Managed Futures Value-able?"
             }
@@ -322,7 +343,7 @@
           "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
           "citations": [
             {
-              "id": "f4",
+              "id": "f5",
               "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
               "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
             }
@@ -343,7 +364,7 @@
           "text": "Do Airline Stocks Take Off Around U.S. Holidays? \u2014 Holidays put people in motion. In the days surrounding major U.S. holidays, airports become busier as travelers visit their families or take advantage of extended weekends. Financial markets themselves are known to displ\u2026",
           "citations": [
             {
-              "id": "f5",
+              "id": "f6",
               "url": "https://quantpedia.com/do-airline-stocks-take-off-around-u-s-holidays/",
               "title": "Do Airline Stocks Take Off Around U.S. Holidays?"
             }
@@ -357,27 +378,6 @@
             "kind": "fund_research",
             "source": "quantpedia",
             "date": "Fri, 18 Se",
-            "authors": null
-          }
-        },
-        {
-          "text": "SEC Form 4 Insider Purchases in Python: A Filing-Date Event Study with Free EDGAR Data \u2014 Build a Form 4 insider trading event study in Python with free EDGAR data. Covers SPY-adjusted CARs, clustered inference, cumulative abnormal returns and fully reproducible code.",
-          "citations": [
-            {
-              "id": "f6",
-              "url": "https://blog.quantinsti.com/sec-form-4-insider-trading-python-event-study/",
-              "title": "SEC Form 4 Insider Purchases in Python: A Filing-Date Event Study with Free EDGAR Data"
-            }
-          ],
-          "meta": {
-            "score": 2.473,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "fund_research",
-            "source": "quantinsti",
-            "date": "Tue, 25 Au",
             "authors": null
           }
         }
