@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261006,
-  "date": "2026-10-06",
+  "number": 20261007,
+  "date": "2026-10-07",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-06",
+  "title": "Reading desk \u2014 2026-10-07",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,10 +48,54 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility \u2014 Hybrid statistical-neural pipelines often assume that a successful statistical first stage leaves a cleaner and more learnable residual target. We examine that assumption in short-horizon volatility forecasting through a\u2026",
+          "text": "StaFIR: Convex Learning of Stationarity-Aware Causal Filters \u2014 Reducing nonstationarity in a persistent time series entails deciding how much of its temporal dependence to remove. In finance, fractional differencing is often tuned using the Augmented Dickey--Fuller (ADF) test, limit\u2026",
           "citations": [
             {
               "id": "1",
+              "url": "https://arxiv.org/abs/2610.07430",
+              "title": "StaFIR: Convex Learning of Stationarity-Aware Causal Filters"
+            }
+          ],
+          "meta": {
+            "score": 3.361,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-05",
+            "authors": "Lorena Egger, Mathis Linger"
+          }
+        },
+        {
+          "text": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series \u2014 The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system\u2026",
+          "citations": [
+            {
+              "id": "2",
+              "url": "https://arxiv.org/abs/2610.08443",
+              "title": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series"
+            }
+          ],
+          "meta": {
+            "score": 3.356,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-06",
+            "authors": "Rohan Hemant Chhatre, Chiranjit Dutta, Nalini Ravishanker, Sumanta Basu"
+          }
+        },
+        {
+          "text": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility \u2014 Hybrid statistical-neural pipelines often assume that a successful statistical first stage leaves a cleaner and more learnable residual target. We examine that assumption in short-horizon volatility forecasting through a\u2026",
+          "citations": [
+            {
+              "id": "3",
               "url": "https://arxiv.org/abs/2610.03019",
               "title": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility"
             }
@@ -73,7 +117,7 @@
           "text": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence \u2014 Multi-step forecasting systems, including modern artificial intelligence (AI) models, often issue overlapping predictions for the same future time from different forecast origins. These predictions can disagree even when\u2026",
           "citations": [
             {
-              "id": "2",
+              "id": "4",
               "url": "https://arxiv.org/abs/2610.05340",
               "title": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence"
             }
@@ -92,12 +136,12 @@
           }
         },
         {
-          "text": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series \u2014 Herein, we propose a quantum circuit learning framework for modeling the realized volatility (RV) of Bitcoin and investigate the statistical properties of the predicted time series through multifractal analysis. Unlike c\u2026",
+          "text": "Forecast Accuracy Is Not Trading Profit: Evolving Small Recurrent Networks for Stock Return Prediction \u2014 Time series forecasting models are typically compared on pointwise error, which scores a prediction in isolation from the decision it is produced for, and a lower forecast error does not imply a better decision downstrea\u2026",
           "citations": [
             {
-              "id": "3",
-              "url": "https://arxiv.org/abs/2609.04569",
-              "title": "Quantum Circuit Learning for Volatility Modeling: Multifractal Analysis of Realized Volatility Time Series"
+              "id": "5",
+              "url": "https://arxiv.org/abs/2610.07825",
+              "title": "Forecast Accuracy Is Not Trading Profit: Evolving Small Recurrent Networks for Stock Return Prediction"
             }
           ],
           "meta": {
@@ -108,15 +152,15 @@
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-09-03",
-            "authors": "Tetsuya Takaishi"
+            "date": "2026-10-06",
+            "authors": "Jonathan Chang, Zimeng Lyu"
           }
         },
         {
           "text": "Scale or speed? When do path signatures improve volatility-regime forecasts? \u2014 We study when path signatures, increasingly used as model-free features of return paths, improve out-of-sample forecasts of volatility regimes. In daily United States and developed-market equity returns from 2005 to 2025\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "6",
               "url": "https://arxiv.org/abs/2610.06690",
               "title": "Scale or speed? When do path signatures improve volatility-regime forecasts?"
             }
@@ -131,48 +175,6 @@
             "source": "arxiv",
             "date": "2026-10-05",
             "authors": "Yang Lyu, Kiseop Lee"
-          }
-        },
-        {
-          "text": "EMG-FM-Bench: A Comprehensive Benchmark for Foundation Model Transfer and Adaptation on Electromyography \u2014 Foundation models (FMs) are increasingly being developed for general time series and physiological signals, yet their transferability to downstream physiological tasks remains poorly understood. This question is particul\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2610.06450",
-              "title": "EMG-FM-Bench: A Comprehensive Benchmark for Foundation Model Transfer and Adaptation on Electromyography"
-            }
-          ],
-          "meta": {
-            "score": 2.732,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-05",
-            "authors": "Tianhao Wu, Xu Wu, Amirmohammad Radmehr, Jiawei Yu, Yi Wu, Phuc Nguyen, Jian Liu"
-          }
-        },
-        {
-          "text": "Loss Choice or Model Choice? The Role of Forecast Level in Cryptocurrency Volatility Forecasting \u2014 Volatility forecasts play a central role in financial risk management because their overall level and day-to-day movements affect downstream decisions. Most studies compare forecasting models while keeping the training l\u2026",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/2609.27024",
-              "title": "Loss Choice or Model Choice? The Role of Forecast Level in Cryptocurrency Volatility Forecasting"
-            }
-          ],
-          "meta": {
-            "score": 2.732,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-09-22",
-            "authors": "Andrzej Tokajuk, Jaros\u0142aw A. Chudziak"
           }
         }
       ]
@@ -415,7 +417,7 @@
       },
       "arxiv": {
         "ok": true,
-        "count": 20,
+        "count": 19,
         "errors": [],
         "source": "arxiv"
       },
@@ -477,8 +479,8 @@
         "count": 0
       }
     },
-    "items_ingested": 83,
-    "items_ranked": 66,
+    "items_ingested": 82,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
