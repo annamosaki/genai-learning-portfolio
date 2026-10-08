@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261007,
-  "date": "2026-10-07",
+  "number": 20261008,
+  "date": "2026-10-08",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-07",
+  "title": "Reading desk \u2014 2026-10-08",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -70,10 +70,32 @@
           }
         },
         {
-          "text": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series \u2014 The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system\u2026",
+          "text": "Matching of signal, noise and hardware timescales for filtering and forecasting of correlated noise signals \u2014 Physical reservoir computing exploits the nonlinear dynamics of physical systems to process time-dependent data with greater energy efficiency than conventional machine learning approaches. However, physical reservoirs h\u2026",
           "citations": [
             {
               "id": "2",
+              "url": "https://arxiv.org/abs/2610.10037",
+              "title": "Matching of signal, noise and hardware timescales for filtering and forecasting of correlated noise signals"
+            }
+          ],
+          "meta": {
+            "score": 3.356,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-07",
+            "authors": "Joshua Donald, Alex Gabbitas, Arthur G. T. Coveney, Sergey Savel'ev, Pavel Borisov"
+          }
+        },
+        {
+          "text": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series \u2014 The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system\u2026",
+          "citations": [
+            {
+              "id": "3",
               "url": "https://arxiv.org/abs/2610.08443",
               "title": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series"
             }
@@ -95,7 +117,7 @@
           "text": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility \u2014 Hybrid statistical-neural pipelines often assume that a successful statistical first stage leaves a cleaner and more learnable residual target. We examine that assumption in short-horizon volatility forecasting through a\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "4",
               "url": "https://arxiv.org/abs/2610.03019",
               "title": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility"
             }
@@ -117,7 +139,7 @@
           "text": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence \u2014 Multi-step forecasting systems, including modern artificial intelligence (AI) models, often issue overlapping predictions for the same future time from different forecast origins. These predictions can disagree even when\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "5",
               "url": "https://arxiv.org/abs/2610.05340",
               "title": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence"
             }
@@ -133,27 +155,6 @@
             "source": "arxiv",
             "date": "2026-10-04",
             "authors": "Oluwatosin Bamidele Fajana, Ricardo S. Ehlers, Marinho G. Andrade"
-          }
-        },
-        {
-          "text": "Forecast Accuracy Is Not Trading Profit: Evolving Small Recurrent Networks for Stock Return Prediction \u2014 Time series forecasting models are typically compared on pointwise error, which scores a prediction in isolation from the decision it is produced for, and a lower forecast error does not imply a better decision downstrea\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2610.07825",
-              "title": "Forecast Accuracy Is Not Trading Profit: Evolving Small Recurrent Networks for Stock Return Prediction"
-            }
-          ],
-          "meta": {
-            "score": 2.794,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-06",
-            "authors": "Jonathan Chang, Zimeng Lyu"
           }
         },
         {
@@ -342,10 +343,31 @@
           }
         },
         {
-          "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
+          "text": "Trading the Multi-Asset Drift Around U.S. Elections \u2014 We analyze a multi-asset calendar anomaly around U.S. federal elections that is consistent across assets and simple to trade. While our previous study documents a robust pre-election drift, the cross-asset pricing of its\u2026",
           "citations": [
             {
               "id": "f5",
+              "url": "https://quantpedia.com/trading-the-multi-asset-drift-around-u-s-elections/",
+              "title": "Trading the Multi-Asset Drift Around U.S. Elections"
+            }
+          ],
+          "meta": {
+            "score": 2.587,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Wed, 07 Oc",
+            "authors": null
+          }
+        },
+        {
+          "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
+          "citations": [
+            {
+              "id": "f6",
               "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
               "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
             }
@@ -359,27 +381,6 @@
             "kind": "fund_research",
             "source": "quantinsti",
             "date": "Wed, 01 Ju",
-            "authors": null
-          }
-        },
-        {
-          "text": "Do Airline Stocks Take Off Around U.S. Holidays? \u2014 Holidays put people in motion. In the days surrounding major U.S. holidays, airports become busier as travelers visit their families or take advantage of extended weekends. Financial markets themselves are known to displ\u2026",
-          "citations": [
-            {
-              "id": "f6",
-              "url": "https://quantpedia.com/do-airline-stocks-take-off-around-u-s-holidays/",
-              "title": "Do Airline Stocks Take Off Around U.S. Holidays?"
-            }
-          ],
-          "meta": {
-            "score": 2.473,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Fri, 18 Se",
             "authors": null
           }
         }
@@ -417,7 +418,7 @@
       },
       "arxiv": {
         "ok": true,
-        "count": 19,
+        "count": 20,
         "errors": [],
         "source": "arxiv"
       },
@@ -479,7 +480,7 @@
         "count": 0
       }
     },
-    "items_ingested": 82,
+    "items_ingested": 83,
     "items_ranked": 65,
     "focus_keywords": []
   }
