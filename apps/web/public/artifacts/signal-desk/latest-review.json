@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261008,
-  "date": "2026-10-08",
+  "number": 20261009,
+  "date": "2026-10-09",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-08",
+  "title": "Reading desk \u2014 2026-10-09",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -70,32 +70,10 @@
           }
         },
         {
-          "text": "Matching of signal, noise and hardware timescales for filtering and forecasting of correlated noise signals \u2014 Physical reservoir computing exploits the nonlinear dynamics of physical systems to process time-dependent data with greater energy efficiency than conventional machine learning approaches. However, physical reservoirs h\u2026",
-          "citations": [
-            {
-              "id": "2",
-              "url": "https://arxiv.org/abs/2610.10037",
-              "title": "Matching of signal, noise and hardware timescales for filtering and forecasting of correlated noise signals"
-            }
-          ],
-          "meta": {
-            "score": 3.356,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-07",
-            "authors": "Joshua Donald, Alex Gabbitas, Arthur G. T. Coveney, Sergey Savel'ev, Pavel Borisov"
-          }
-        },
-        {
           "text": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series \u2014 The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "2",
               "url": "https://arxiv.org/abs/2610.08443",
               "title": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series"
             }
@@ -117,7 +95,7 @@
           "text": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility \u2014 Hybrid statistical-neural pipelines often assume that a successful statistical first stage leaves a cleaner and more learnable residual target. We examine that assumption in short-horizon volatility forecasting through a\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "3",
               "url": "https://arxiv.org/abs/2610.03019",
               "title": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility"
             }
@@ -139,7 +117,7 @@
           "text": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence \u2014 Multi-step forecasting systems, including modern artificial intelligence (AI) models, often issue overlapping predictions for the same future time from different forecast origins. These predictions can disagree even when\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "4",
               "url": "https://arxiv.org/abs/2610.05340",
               "title": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence"
             }
@@ -161,7 +139,7 @@
           "text": "Scale or speed? When do path signatures improve volatility-regime forecasts? \u2014 We study when path signatures, increasingly used as model-free features of return paths, improve out-of-sample forecasts of volatility regimes. In daily United States and developed-market equity returns from 2005 to 2025\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "5",
               "url": "https://arxiv.org/abs/2610.06690",
               "title": "Scale or speed? When do path signatures improve volatility-regime forecasts?"
             }
@@ -176,6 +154,27 @@
             "source": "arxiv",
             "date": "2026-10-05",
             "authors": "Yang Lyu, Kiseop Lee"
+          }
+        },
+        {
+          "text": "HAN-Mamba: Hierarchical Selective State Space Networks for Multi-Scale Financial Volatility Forecasting \u2014 Short-horizon realized volatility forecasting requires the integration of market information that evolves at incompatible temporal resolutions, from second-level order book dynamics to weekly regime drift. Our conference\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2610.10323",
+              "title": "HAN-Mamba: Hierarchical Selective State Space Networks for Multi-Scale Financial Volatility Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 2.732,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-07",
+            "authors": "Mihai Bogdan Deaconu, Ioan Daniel Pop"
           }
         }
       ]
@@ -481,7 +480,7 @@
       }
     },
     "items_ingested": 83,
-    "items_ranked": 65,
+    "items_ranked": 66,
     "focus_keywords": []
   }
 }
