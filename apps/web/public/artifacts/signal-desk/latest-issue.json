@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261009,
-  "date": "2026-10-09",
+  "number": 20261012,
+  "date": "2026-10-12",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-09",
+  "title": "Reading desk \u2014 2026-10-12",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -480,7 +480,7 @@
       }
     },
     "items_ingested": 83,
-    "items_ranked": 66,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
