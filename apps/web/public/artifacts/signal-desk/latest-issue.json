@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261014,
-  "date": "2026-10-14",
+  "number": 20261015,
+  "date": "2026-10-15",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-14",
+  "title": "Reading desk \u2014 2026-10-15",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -114,32 +114,10 @@
           }
         },
         {
-          "text": "Deterministic Prediction as Global Velocity: Flow Matching for Probabilistic Time-Series Forecast \u2014 Accurate uncertainty quantification is critical for many time series forecasting applications, and recent studies have increasingly adopted generative models to capture predictive uncertainty. Existing approaches often c\u2026",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2610.18621",
-              "title": "Deterministic Prediction as Global Velocity: Flow Matching for Probabilistic Time-Series Forecast"
-            }
-          ],
-          "meta": {
-            "score": 3.237,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-13",
-            "authors": "Jiajing Hu, Xu Han, Li-Ping Liu"
-          }
-        },
-        {
           "text": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence \u2014 Multi-step forecasting systems, including modern artificial intelligence (AI) models, often issue overlapping predictions for the same future time from different forecast origins. These predictions can disagree even when\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "4",
               "url": "https://arxiv.org/abs/2610.05340",
               "title": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence"
             }
@@ -158,24 +136,47 @@
           }
         },
         {
-          "text": "Scale or speed? When do path signatures improve volatility-regime forecasts? \u2014 We study when path signatures, increasingly used as model-free features of return paths, improve out-of-sample forecasts of volatility regimes. In daily United States and developed-market equity returns from 2005 to 2025\u2026",
+          "text": "GBTSVR: Twin Support Vector Regression via Granular Ball Computing \u2014 Regression models used in real-world applications are often challenged by noise, outliers, data heterogeneity, and asymmetric error characteristics, which severely limit the effectiveness of conventional point-wise learn\u2026",
           "citations": [
             {
-              "id": "6",
-              "url": "https://arxiv.org/abs/2610.06690",
-              "title": "Scale or speed? When do path signatures improve volatility-regime forecasts?"
+              "id": "5",
+              "url": "https://arxiv.org/abs/2610.20053",
+              "title": "GBTSVR: Twin Support Vector Regression via Granular Ball Computing"
             }
           ],
           "meta": {
-            "score": 2.794,
+            "score": 3.232,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "llm-agents"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-10-05",
-            "authors": "Yang Lyu, Kiseop Lee"
+            "date": "2026-10-14",
+            "authors": "A. Quadir, M. Tanveer"
+          }
+        },
+        {
+          "text": "Retrieval Over Training: Similarity search-based Model Selection for Time Series Anomaly Detection \u2014 Anomaly detection is a fundamental task for time-series analytics, with important implications for the downstream performance of many applications. Despite the large number of anomaly detection methods proposed in the li\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2610.20243",
+              "title": "Retrieval Over Training: Similarity search-based Model Selection for Time Series Anomaly Detection"
+            }
+          ],
+          "meta": {
+            "score": 3.175,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-14",
+            "authors": "Christos Panourgias, Roberto Stanzione, Adrien Petralia, Themis Palpanas, Paul Boniol"
           }
         }
       ]
