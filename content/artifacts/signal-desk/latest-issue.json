@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261015,
-  "date": "2026-10-15",
+  "number": 20261016,
+  "date": "2026-10-16",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-15",
+  "title": "Reading desk \u2014 2026-10-16",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,10 +48,32 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "StaFIR: Convex Learning of Stationarity-Aware Causal Filters \u2014 Reducing nonstationarity in a persistent time series entails deciding how much of its temporal dependence to remove. In finance, fractional differencing is often tuned using the Augmented Dickey--Fuller (ADF) test, limit\u2026",
+          "text": "PathFM: Fast Generative Forecasting of Multivariate Trajectories \u2014 Time series foundation models are becoming increasingly popular for general-purpose forecasting. However, most leading models predict marginal quantiles, leaving the dependence structure of future trajectories unspecifie\u2026",
           "citations": [
             {
               "id": "1",
+              "url": "https://arxiv.org/abs/2610.22358",
+              "title": "PathFM: Fast Generative Forecasting of Multivariate Trajectories"
+            }
+          ],
+          "meta": {
+            "score": 3.361,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-15",
+            "authors": "Jiachen Yao, Xiyuan Zhang, Annan Yu, Boran Han, Abdul Fatir Ansari, Shuai Zhang, Michael Bohlke-Schneider, Bernie Wang"
+          }
+        },
+        {
+          "text": "StaFIR: Convex Learning of Stationarity-Aware Causal Filters \u2014 Reducing nonstationarity in a persistent time series entails deciding how much of its temporal dependence to remove. In finance, fractional differencing is often tuned using the Augmented Dickey--Fuller (ADF) test, limit\u2026",
+          "citations": [
+            {
+              "id": "2",
               "url": "https://arxiv.org/abs/2610.07430",
               "title": "StaFIR: Convex Learning of Stationarity-Aware Causal Filters"
             }
@@ -73,7 +95,7 @@
           "text": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series \u2014 The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system\u2026",
           "citations": [
             {
-              "id": "2",
+              "id": "3",
               "url": "https://arxiv.org/abs/2610.08443",
               "title": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series"
             }
@@ -95,7 +117,7 @@
           "text": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility \u2014 Hybrid statistical-neural pipelines often assume that a successful statistical first stage leaves a cleaner and more learnable residual target. We examine that assumption in short-horizon volatility forecasting through a\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "4",
               "url": "https://arxiv.org/abs/2610.03019",
               "title": "Signal Simplification Is Not Predictive Simplification: Diagnosing Residual Neural Forecasting in Short-Horizon Volatility"
             }
@@ -117,7 +139,7 @@
           "text": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence \u2014 Multi-step forecasting systems, including modern artificial intelligence (AI) models, often issue overlapping predictions for the same future time from different forecast origins. These predictions can disagree even when\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "5",
               "url": "https://arxiv.org/abs/2610.05340",
               "title": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence"
             }
@@ -136,47 +158,24 @@
           }
         },
         {
-          "text": "GBTSVR: Twin Support Vector Regression via Granular Ball Computing \u2014 Regression models used in real-world applications are often challenged by noise, outliers, data heterogeneity, and asymmetric error characteristics, which severely limit the effectiveness of conventional point-wise learn\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2610.20053",
-              "title": "GBTSVR: Twin Support Vector Regression via Granular Ball Computing"
-            }
-          ],
-          "meta": {
-            "score": 3.232,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-14",
-            "authors": "A. Quadir, M. Tanveer"
-          }
-        },
-        {
-          "text": "Retrieval Over Training: Similarity search-based Model Selection for Time Series Anomaly Detection \u2014 Anomaly detection is a fundamental task for time-series analytics, with important implications for the downstream performance of many applications. Despite the large number of anomaly detection methods proposed in the li\u2026",
+          "text": "Scale or speed? When do path signatures improve volatility-regime forecasts? \u2014 We study when path signatures, increasingly used as model-free features of return paths, improve out-of-sample forecasts of volatility regimes. In daily United States and developed-market equity returns from 2005 to 2025\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2610.20243",
-              "title": "Retrieval Over Training: Similarity search-based Model Selection for Time Series Anomaly Detection"
+              "url": "https://arxiv.org/abs/2610.06690",
+              "title": "Scale or speed? When do path signatures improve volatility-regime forecasts?"
             }
           ],
           "meta": {
-            "score": 3.175,
+            "score": 2.794,
             "topics": [
               "time-series",
-              "quant-research",
-              "financial-nlp"
+              "quant-research"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-10-14",
-            "authors": "Christos Panourgias, Roberto Stanzione, Adrien Petralia, Themis Palpanas, Paul Boniol"
+            "date": "2026-10-05",
+            "authors": "Yang Lyu, Kiseop Lee"
           }
         }
       ]
@@ -482,7 +481,7 @@
       }
     },
     "items_ingested": 83,
-    "items_ranked": 64,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
