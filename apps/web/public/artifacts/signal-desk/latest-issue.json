@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261021,
-  "date": "2026-10-21",
+  "number": 20261022,
+  "date": "2026-10-22",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-21",
+  "title": "Reading desk \u2014 2026-10-22",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,10 +48,33 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "StaFIR: Convex Learning of Stationarity-Aware Causal Filters \u2014 Reducing nonstationarity in a persistent time series entails deciding how much of its temporal dependence to remove. In finance, fractional differencing is often tuned using the Augmented Dickey--Fuller (ADF) test, limit\u2026",
+          "text": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity \u2014 We study strategic liquidity provision in decentralized exchanges with concentrated liquidity as a mean-field game. Liquidity providers choose the width of their price range and when to rebalance it, pay a transaction co\u2026",
           "citations": [
             {
               "id": "1",
+              "url": "https://arxiv.org/abs/2610.28863",
+              "title": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity"
+            }
+          ],
+          "meta": {
+            "score": 3.861,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents",
+              "financial-nlp"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-20",
+            "authors": "Mikhail Belokon, Rostislav Berezovskiy"
+          }
+        },
+        {
+          "text": "StaFIR: Convex Learning of Stationarity-Aware Causal Filters \u2014 Reducing nonstationarity in a persistent time series entails deciding how much of its temporal dependence to remove. In finance, fractional differencing is often tuned using the Augmented Dickey--Fuller (ADF) test, limit\u2026",
+          "citations": [
+            {
+              "id": "2",
               "url": "https://arxiv.org/abs/2610.07430",
               "title": "StaFIR: Convex Learning of Stationarity-Aware Causal Filters"
             }
@@ -73,7 +96,7 @@
           "text": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting \u2014 Since the 2021 GameStop short squeeze, r/WallStreetBets (WSB) has been associated with episodes of extreme volatility, and its text is increasingly used to forecast volatility. A model using only large language model (LL\u2026",
           "citations": [
             {
-              "id": "2",
+              "id": "3",
               "url": "https://arxiv.org/abs/2610.25468",
               "title": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting"
             }
@@ -95,7 +118,7 @@
           "text": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series \u2014 The logarithmic multiplicative error model (log-vMEM) has been useful in modeling and forecasting multivariate positive-valued financial time series. The number of parameters grow rapidly with the dimension of the system\u2026",
           "citations": [
             {
-              "id": "3",
+              "id": "4",
               "url": "https://arxiv.org/abs/2610.08443",
               "title": "Scalable Regularized Vector Multiplicative Error Models for Positive-valued Financial Time Series"
             }
@@ -114,32 +137,32 @@
           }
         },
         {
-          "text": "BEACON: Bridging Multimodal Semantics and Asynchronous Propagation for Cloud System Anomaly Detection \u2014 Modern large-scale cloud systems continuously generate massive and multimodal observability data, such as time-series metrics, log records, and system dependency graphs, which reflect the health state of the system. To e\u2026",
+          "text": "Distilling Multi-Teacher Scoring Principles for Unsupervised Time Series Anomaly Detection \u2014 Time series anomalies take diverse forms, and individual detectors encode different anomaly scoring principles that rarely cover all anomaly types. Recent unsupervised time-series anomaly detectors provide complementary\u2026",
           "citations": [
             {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2610.27542",
-              "title": "BEACON: Bridging Multimodal Semantics and Asynchronous Propagation for Cloud System Anomaly Detection"
+              "id": "5",
+              "url": "https://arxiv.org/abs/2610.29063",
+              "title": "Distilling Multi-Teacher Scoring Principles for Unsupervised Time Series Anomaly Detection"
             }
           ],
           "meta": {
-            "score": 3.232,
+            "score": 3.237,
             "topics": [
               "time-series",
               "quant-research",
-              "llm-agents"
+              "financial-nlp"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-10-20",
-            "authors": "Zhe Li, Tengxue Zhang, Yang Shu, Tung Kieu, Lunting Fan, Yingying Zhang, Bin Yang"
+            "date": "2026-10-21",
+            "authors": "Dongchan Cho, Jiho Han, Juwon Hwang, Changhee Min, Minsang Kim, Namsoon Jung"
           }
         },
         {
           "text": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence \u2014 Multi-step forecasting systems, including modern artificial intelligence (AI) models, often issue overlapping predictions for the same future time from different forecast origins. These predictions can disagree even when\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "6",
               "url": "https://arxiv.org/abs/2610.05340",
               "title": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence"
             }
@@ -155,27 +178,6 @@
             "source": "arxiv",
             "date": "2026-10-04",
             "authors": "Oluwatosin Bamidele Fajana, Ricardo S. Ehlers, Marinho G. Andrade"
-          }
-        },
-        {
-          "text": "Scale or speed? When do path signatures improve volatility-regime forecasts? \u2014 We study when path signatures, increasingly used as model-free features of return paths, improve out-of-sample forecasts of volatility regimes. In daily United States and developed-market equity returns from 2005 to 2025\u2026",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/2610.06690",
-              "title": "Scale or speed? When do path signatures improve volatility-regime forecasts?"
-            }
-          ],
-          "meta": {
-            "score": 2.794,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-05",
-            "authors": "Yang Lyu, Kiseop Lee"
           }
         }
       ]
