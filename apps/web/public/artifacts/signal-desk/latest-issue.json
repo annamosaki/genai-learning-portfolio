@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261023,
-  "date": "2026-10-23",
+  "number": 20261026,
+  "date": "2026-10-26",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-23",
+  "title": "Reading desk \u2014 2026-10-26",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,34 +48,10 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Future of Time Series Anomaly Detection: From Historical Review to Unified Outlook \u2014 Time series anomaly detection (TSAD) is a foundational problem in data mining, aiming to identify observations that deviate significantly from nominal temporal patterns. Driven by escalating data volumes and application\u2026",
-          "citations": [
-            {
-              "id": "1",
-              "url": "https://arxiv.org/abs/2610.30628",
-              "title": "Future of Time Series Anomaly Detection: From Historical Review to Unified Outlook"
-            }
-          ],
-          "meta": {
-            "score": 4.258,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents",
-              "financial-nlp",
-              "green-finance"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-22",
-            "authors": "Zhijie Zhong, Zhiwen Yu, Pengyu Li, Liujian Zhang, Qiaoli Ni, Jiang Jun, Jianming Lv, Kaixiang Yang, C. L. Philip Chen"
-          }
-        },
-        {
           "text": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity \u2014 We study strategic liquidity provision in decentralized exchanges with concentrated liquidity as a mean-field game. Liquidity providers choose the width of their price range and when to rebalance it, pay a transaction co\u2026",
           "citations": [
             {
-              "id": "2",
+              "id": "1",
               "url": "https://arxiv.org/abs/2610.28863",
               "title": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity"
             }
@@ -92,6 +68,29 @@
             "source": "arxiv",
             "date": "2026-10-20",
             "authors": "Mikhail Belokon, Rostislav Berezovskiy"
+          }
+        },
+        {
+          "text": "Empirical concentration for chains with infinite memory \u2014 Concentration inequalities for time series usually involve unknown quantities measuring dependence. This prevents their direct use as confidence bounds, or as criteria for learning algorithms. Recent works proved empiric\u2026",
+          "citations": [
+            {
+              "id": "2",
+              "url": "https://arxiv.org/abs/2610.32265",
+              "title": "Empirical concentration for chains with infinite memory"
+            }
+          ],
+          "meta": {
+            "score": 3.634,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp",
+              "green-finance"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-23",
+            "authors": "Pierre Alquier, Paul Doukhan"
           }
         },
         {
@@ -161,25 +160,25 @@
           }
         },
         {
-          "text": "Distilling Multi-Teacher Scoring Principles for Unsupervised Time Series Anomaly Detection \u2014 Time series anomalies take diverse forms, and individual detectors encode different anomaly scoring principles that rarely cover all anomaly types. Recent unsupervised time-series anomaly detectors provide complementary\u2026",
+          "text": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence \u2014 Multi-step forecasting systems, including modern artificial intelligence (AI) models, often issue overlapping predictions for the same future time from different forecast origins. These predictions can disagree even when\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2610.29063",
-              "title": "Distilling Multi-Teacher Scoring Principles for Unsupervised Time Series Anomaly Detection"
+              "url": "https://arxiv.org/abs/2610.05340",
+              "title": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence"
             }
           ],
           "meta": {
-            "score": 3.237,
+            "score": 3.232,
             "topics": [
               "time-series",
               "quant-research",
-              "financial-nlp"
+              "llm-agents"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-10-21",
-            "authors": "Dongchan Cho, Jiho Han, Juwon Hwang, Changhee Min, Minsang Kim, Namsoon Jung"
+            "date": "2026-10-04",
+            "authors": "Oluwatosin Bamidele Fajana, Ricardo S. Ehlers, Marinho G. Andrade"
           }
         }
       ]
@@ -281,10 +280,54 @@
           }
         },
         {
-          "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
+          "text": "Can Weakening Morning Order Flow Predict SPY Reversals? \u2014 In a previous article Building and Testing Trend-Following Strategies on One-Minute SPY Data, we investigated whether retail activity indicators derived from one-minute SPY data could be used to construct profitable tren\u2026",
           "citations": [
             {
               "id": "f2",
+              "url": "https://quantpedia.com/can-weakening-morning-order-flow-predict-spy-reversals/",
+              "title": "Can Weakening Morning Order Flow Predict SPY Reversals?"
+            }
+          ],
+          "meta": {
+            "score": 3.107,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Thu, 24 Se",
+            "authors": null
+          }
+        },
+        {
+          "text": "Shorting Leveraged ETFs: The Role of Borrowing Costs and Rebalancing in Volatility-Decay Strategies \u2014 Leveraged ETFs provide amplified exposure to an underlying index, but their daily reset mechanism creates volatility drag, which can substantially reduce their long-term value. This raises the possibility of exploiting t\u2026",
+          "citations": [
+            {
+              "id": "f3",
+              "url": "https://quantpedia.com/shorting-leveraged-etfs-the-role-of-borrowing-costs-and-rebalancing-in-volatility-decay-strategies/",
+              "title": "Shorting Leveraged ETFs: The Role of Borrowing Costs and Rebalancing in Volatility-Decay Strategies"
+            }
+          ],
+          "meta": {
+            "score": 3.107,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Fri, 23 Oc",
+            "authors": null
+          }
+        },
+        {
+          "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
+          "citations": [
+            {
+              "id": "f4",
               "url": "https://blog.quantinsti.com/cointegrated-pairs-trading-indian-equity-market-epat-project/",
               "title": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project"
             }
@@ -306,7 +349,7 @@
           "text": "Is Managed Futures Value-able? \u2014 In Return StackingTM: Strategies for Overcoming a Low Return Environment, we advocated for the addition of managed futures to traditionally allocated portfolios. We argued that managed futures\u2019 low empirical correlation\u2026",
           "citations": [
             {
-              "id": "f3",
+              "id": "f5",
               "url": "https://blog.thinknewfound.com/2023/06/is-managed-futures-value-able/",
               "title": "Is Managed Futures Value-able?"
             }
@@ -328,7 +371,7 @@
           "text": "Trading the Multi-Asset Drift Around U.S. Elections \u2014 We analyze a multi-asset calendar anomaly around U.S. federal elections that is consistent across assets and simple to trade. While our previous study documents a robust pre-election drift, the cross-asset pricing of its\u2026",
           "citations": [
             {
-              "id": "f4",
+              "id": "f6",
               "url": "https://quantpedia.com/trading-the-multi-asset-drift-around-u-s-elections/",
               "title": "Trading the Multi-Asset Drift Around U.S. Elections"
             }
@@ -342,48 +385,6 @@
             "kind": "fund_research",
             "source": "quantpedia",
             "date": "Wed, 07 Oc",
-            "authors": null
-          }
-        },
-        {
-          "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
-          "citations": [
-            {
-              "id": "f5",
-              "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
-              "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
-            }
-          ],
-          "meta": {
-            "score": 2.53,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "fund_research",
-            "source": "quantinsti",
-            "date": "Wed, 01 Ju",
-            "authors": null
-          }
-        },
-        {
-          "text": "SEC Form 4 Insider Purchases in Python: A Filing-Date Event Study with Free EDGAR Data \u2014 Build a Form 4 insider trading event study in Python with free EDGAR data. Covers SPY-adjusted CARs, clustered inference, cumulative abnormal returns and fully reproducible code.",
-          "citations": [
-            {
-              "id": "f6",
-              "url": "https://blog.quantinsti.com/sec-form-4-insider-trading-python-event-study/",
-              "title": "SEC Form 4 Insider Purchases in Python: A Filing-Date Event Study with Free EDGAR Data"
-            }
-          ],
-          "meta": {
-            "score": 2.473,
-            "topics": [
-              "time-series",
-              "quant-research"
-            ],
-            "kind": "fund_research",
-            "source": "quantinsti",
-            "date": "Tue, 25 Au",
             "authors": null
           }
         }
