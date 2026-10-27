@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261026,
-  "date": "2026-10-26",
+  "number": 20261027,
+  "date": "2026-10-27",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-26",
+  "title": "Reading desk \u2014 2026-10-27",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,10 +48,33 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity \u2014 We study strategic liquidity provision in decentralized exchanges with concentrated liquidity as a mean-field game. Liquidity providers choose the width of their price range and when to rebalance it, pay a transaction co\u2026",
+          "text": "A Multi-Asset Dataset and Tail-Risk Framework for DeFi Yield Trading Derivatives \u2014 Yield trading has emerged as a pivotal innovation in Decentralized Finance (DeFi) by decoupling principal from yield streams to enhance capital efficiency. Despite its significance, the field lacks fine-grained datasets\u2026",
           "citations": [
             {
               "id": "1",
+              "url": "https://arxiv.org/abs/2610.34930",
+              "title": "A Multi-Asset Dataset and Tail-Risk Framework for DeFi Yield Trading Derivatives"
+            }
+          ],
+          "meta": {
+            "score": 3.945,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp",
+              "green-finance"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-26",
+            "authors": "Huaiyu Jia, Jieshun You, Jingyu Liu, Yizhi Luo, Shuo Sun"
+          }
+        },
+        {
+          "text": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity \u2014 We study strategic liquidity provision in decentralized exchanges with concentrated liquidity as a mean-field game. Liquidity providers choose the width of their price range and when to rebalance it, pay a transaction co\u2026",
+          "citations": [
+            {
+              "id": "2",
               "url": "https://arxiv.org/abs/2610.28863",
               "title": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity"
             }
@@ -68,29 +91,6 @@
             "source": "arxiv",
             "date": "2026-10-20",
             "authors": "Mikhail Belokon, Rostislav Berezovskiy"
-          }
-        },
-        {
-          "text": "Empirical concentration for chains with infinite memory \u2014 Concentration inequalities for time series usually involve unknown quantities measuring dependence. This prevents their direct use as confidence bounds, or as criteria for learning algorithms. Recent works proved empiric\u2026",
-          "citations": [
-            {
-              "id": "2",
-              "url": "https://arxiv.org/abs/2610.32265",
-              "title": "Empirical concentration for chains with infinite memory"
-            }
-          ],
-          "meta": {
-            "score": 3.634,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp",
-              "green-finance"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-23",
-            "authors": "Pierre Alquier, Paul Doukhan"
           }
         },
         {
@@ -160,25 +160,25 @@
           }
         },
         {
-          "text": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence \u2014 Multi-step forecasting systems, including modern artificial intelligence (AI) models, often issue overlapping predictions for the same future time from different forecast origins. These predictions can disagree even when\u2026",
+          "text": "ExCal: Optimization-Free Multivariate Time Series Anomaly Detection via Excess Calibration \u2014 We introduce ExCal, a normal-only multivariate time series anomaly detector that combines raw state retrieval, a signal/derivative subspace, and robust statistics across temporal scales. Each expert map receives a high n\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2610.05340",
-              "title": "Bayesian Reconciliation of Overlapping Multi-Step Forecasts: A Post-Processing Framework for Cross-Origin Coherence"
+              "url": "https://arxiv.org/abs/2610.35568",
+              "title": "ExCal: Optimization-Free Multivariate Time Series Anomaly Detection via Excess Calibration"
             }
           ],
           "meta": {
-            "score": 3.232,
+            "score": 3.202,
             "topics": [
               "time-series",
               "quant-research",
-              "llm-agents"
+              "financial-nlp"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-10-04",
-            "authors": "Oluwatosin Bamidele Fajana, Ricardo S. Ehlers, Marinho G. Andrade"
+            "date": "2026-10-26",
+            "authors": "Kadir-Kaan \u00d6zer, Ren\u00e9 Ebeling, Markus Enzweiler"
           }
         }
       ]
@@ -485,7 +485,7 @@
       }
     },
     "items_ingested": 83,
-    "items_ranked": 65,
+    "items_ranked": 66,
     "focus_keywords": []
   }
 }
