@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261027,
-  "date": "2026-10-27",
+  "number": 20261028,
+  "date": "2026-10-28",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-27",
+  "title": "Reading desk \u2014 2026-10-28",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -280,32 +280,10 @@
           }
         },
         {
-          "text": "Can Weakening Morning Order Flow Predict SPY Reversals? \u2014 In a previous article Building and Testing Trend-Following Strategies on One-Minute SPY Data, we investigated whether retail activity indicators derived from one-minute SPY data could be used to construct profitable tren\u2026",
-          "citations": [
-            {
-              "id": "f2",
-              "url": "https://quantpedia.com/can-weakening-morning-order-flow-predict-spy-reversals/",
-              "title": "Can Weakening Morning Order Flow Predict SPY Reversals?"
-            }
-          ],
-          "meta": {
-            "score": 3.107,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "fund_research",
-            "source": "quantpedia",
-            "date": "Thu, 24 Se",
-            "authors": null
-          }
-        },
-        {
           "text": "Shorting Leveraged ETFs: The Role of Borrowing Costs and Rebalancing in Volatility-Decay Strategies \u2014 Leveraged ETFs provide amplified exposure to an underlying index, but their daily reset mechanism creates volatility drag, which can substantially reduce their long-term value. This raises the possibility of exploiting t\u2026",
           "citations": [
             {
-              "id": "f3",
+              "id": "f2",
               "url": "https://quantpedia.com/shorting-leveraged-etfs-the-role-of-borrowing-costs-and-rebalancing-in-volatility-decay-strategies/",
               "title": "Shorting Leveraged ETFs: The Role of Borrowing Costs and Rebalancing in Volatility-Decay Strategies"
             }
@@ -327,7 +305,7 @@
           "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
           "citations": [
             {
-              "id": "f4",
+              "id": "f3",
               "url": "https://blog.quantinsti.com/cointegrated-pairs-trading-indian-equity-market-epat-project/",
               "title": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project"
             }
@@ -349,7 +327,7 @@
           "text": "Is Managed Futures Value-able? \u2014 In Return StackingTM: Strategies for Overcoming a Low Return Environment, we advocated for the addition of managed futures to traditionally allocated portfolios. We argued that managed futures\u2019 low empirical correlation\u2026",
           "citations": [
             {
-              "id": "f5",
+              "id": "f4",
               "url": "https://blog.thinknewfound.com/2023/06/is-managed-futures-value-able/",
               "title": "Is Managed Futures Value-able?"
             }
@@ -364,6 +342,27 @@
             "kind": "fund_research",
             "source": "flirting-with-models",
             "date": "Mon, 19 Ju",
+            "authors": null
+          }
+        },
+        {
+          "text": "Custom Strategy Grading with Quantpedia API \u2014 A trading strategy\u2019s value goes beyond returns\u2014it also depends on what it adds to a portfolio. Our latest case study combines Quantpedia\u2019s Strategy Grading report with a custom API workflow to compare WTMF against 44 pee\u2026",
+          "citations": [
+            {
+              "id": "f5",
+              "url": "https://quantpedia.com/custom-strategy-grading-with-quantpedia-api/",
+              "title": "Custom Strategy Grading with Quantpedia API"
+            }
+          ],
+          "meta": {
+            "score": 2.587,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantpedia",
+            "date": "Tue, 27 Oc",
             "authors": null
           }
         },
