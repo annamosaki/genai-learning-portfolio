@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261028,
-  "date": "2026-10-28",
+  "number": 20261029,
+  "date": "2026-10-29",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-10-28",
+  "title": "Reading desk \u2014 2026-10-29",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -257,33 +257,10 @@
       "heading": "Fund research",
       "paragraphs": [
         {
-          "text": "Buying Complex Retail Investment Products May Not be a Great Idea \u2014 Issuers may deliberately redesign investment products when competitive pressure increases, shifting toward structures that are harder for investors to evaluate and compare.The result is a subtle but important mechanism.\u2026",
-          "citations": [
-            {
-              "id": "f1",
-              "url": "https://alphaarchitect.com/financial-complexity/",
-              "title": "Buying Complex Retail Investment Products May Not be a Great Idea"
-            }
-          ],
-          "meta": {
-            "score": 3.575,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents",
-              "financial-nlp"
-            ],
-            "kind": "fund_research",
-            "source": "alpha-architect",
-            "date": "Mon, 05 Oc",
-            "authors": null
-          }
-        },
-        {
           "text": "Shorting Leveraged ETFs: The Role of Borrowing Costs and Rebalancing in Volatility-Decay Strategies \u2014 Leveraged ETFs provide amplified exposure to an underlying index, but their daily reset mechanism creates volatility drag, which can substantially reduce their long-term value. This raises the possibility of exploiting t\u2026",
           "citations": [
             {
-              "id": "f2",
+              "id": "f1",
               "url": "https://quantpedia.com/shorting-leveraged-etfs-the-role-of-borrowing-costs-and-rebalancing-in-volatility-decay-strategies/",
               "title": "Shorting Leveraged ETFs: The Role of Borrowing Costs and Rebalancing in Volatility-Decay Strategies"
             }
@@ -305,7 +282,7 @@
           "text": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project \u2014 In this EPAT project, Shant Tandon builds a statistical arbitrage strategy using cointegrated stock pairs in the Indian equity market. The study uses walk-forward backtesting, z-score mean reversion, transaction cost mod\u2026",
           "citations": [
             {
-              "id": "f3",
+              "id": "f2",
               "url": "https://blog.quantinsti.com/cointegrated-pairs-trading-indian-equity-market-epat-project/",
               "title": "Statistical Arbitrage Using Cointegrated Stock Pairs in Indian Equity Market (2015-2025) | EPAT Project"
             }
@@ -327,7 +304,7 @@
           "text": "Is Managed Futures Value-able? \u2014 In Return StackingTM: Strategies for Overcoming a Low Return Environment, we advocated for the addition of managed futures to traditionally allocated portfolios. We argued that managed futures\u2019 low empirical correlation\u2026",
           "citations": [
             {
-              "id": "f4",
+              "id": "f3",
               "url": "https://blog.thinknewfound.com/2023/06/is-managed-futures-value-able/",
               "title": "Is Managed Futures Value-able?"
             }
@@ -349,7 +326,7 @@
           "text": "Custom Strategy Grading with Quantpedia API \u2014 A trading strategy\u2019s value goes beyond returns\u2014it also depends on what it adds to a portfolio. Our latest case study combines Quantpedia\u2019s Strategy Grading report with a custom API workflow to compare WTMF against 44 pee\u2026",
           "citations": [
             {
-              "id": "f5",
+              "id": "f4",
               "url": "https://quantpedia.com/custom-strategy-grading-with-quantpedia-api/",
               "title": "Custom Strategy Grading with Quantpedia API"
             }
@@ -370,7 +347,7 @@
           "text": "Trading the Multi-Asset Drift Around U.S. Elections \u2014 We analyze a multi-asset calendar anomaly around U.S. federal elections that is consistent across assets and simple to trade. While our previous study documents a robust pre-election drift, the cross-asset pricing of its\u2026",
           "citations": [
             {
-              "id": "f6",
+              "id": "f5",
               "url": "https://quantpedia.com/trading-the-multi-asset-drift-around-u-s-elections/",
               "title": "Trading the Multi-Asset Drift Around U.S. Elections"
             }
@@ -384,6 +361,27 @@
             "kind": "fund_research",
             "source": "quantpedia",
             "date": "Wed, 07 Oc",
+            "authors": null
+          }
+        },
+        {
+          "text": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL \u2014 Build a guardrail LLM trading risk manager for AAPL with DeepSeek. Includes Python code, walk-forward optimization, and techniques to modulate daily exposure.",
+          "citations": [
+            {
+              "id": "f6",
+              "url": "https://blog.quantinsti.com/ai-aapl-trading-risk-manager-deepseek-python/",
+              "title": "Building a Guardrailed LLM Trading Risk-Manager Agent for AAPL"
+            }
+          ],
+          "meta": {
+            "score": 2.53,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "fund_research",
+            "source": "quantinsti",
+            "date": "Wed, 01 Ju",
             "authors": null
           }
         }
