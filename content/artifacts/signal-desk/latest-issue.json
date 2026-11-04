@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261103,
-  "date": "2026-11-03",
+  "number": 20261104,
+  "date": "2026-11-04",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-11-03",
+  "title": "Reading desk \u2014 2026-11-04",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -140,32 +140,10 @@
           }
         },
         {
-          "text": "SynForecast: Controlled Synthetic Time Series for Forecasting Research \u2014 Synthetic time series constitute a substantial share of the training corpora of several recent forecasting foundation models. Existing studies report benefits at small data budgets and modest synthetic proportions, but e\u2026",
-          "citations": [
-            {
-              "id": "5",
-              "url": "https://arxiv.org/abs/2611.02802",
-              "title": "SynForecast: Controlled Synthetic Time Series for Forecasting Research"
-            }
-          ],
-          "meta": {
-            "score": 3.424,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-11-02",
-            "authors": "Olivier Sprangers, Cristian Challu, Jan Rathfelder, Han Wang, Max Mergenthaler Canseco"
-          }
-        },
-        {
           "text": "Chronos-2: A foundation model for multivariate time series forecasting \u2014 Accurate forecasting with uncertainty quantification is critical in a variety of scientific applications ranging from epidemiology and economics to energy systems and earth sciences. Yet most forecasting models still nee\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "5",
               "url": "https://arxiv.org/abs/2610.41956",
               "title": "Chronos-2: A foundation model for multivariate time series forecasting"
             }
@@ -181,6 +159,28 @@
             "source": "arxiv",
             "date": "2026-10-30",
             "authors": "Abdul Fatir Ansari, Oleksandr Shchur, Jaris K\u00fcken, Andreas Auer, Boran Han, Pedro Mercado, Syama Sundar Rangapuram, Huibin Shen, Lorenzo Stella, Xiyuan Zhang, Mononito Goswami, Shubham Kapoor, Danielle C. Maddix, Pablo Guerron, Florian Saupe, Markus Reichstein, Tony Hu, Junming Yin, Nick Erickson, Prateek Mutalik Desai, Hao Wang, Huzefa Rangwala, George Karypis, Yuyang Wang, Michael Bohlke-Schneider"
+          }
+        },
+        {
+          "text": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting \u2014 Since the 2021 GameStop short squeeze, r/WallStreetBets (WSB) has been associated with episodes of extreme volatility, and its text is increasingly used to forecast volatility. A model using only large language model (LL\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2610.25468",
+              "title": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 3.356,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-18",
+            "authors": "Zhiyu Zheng"
           }
         }
       ]
