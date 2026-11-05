@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261104,
-  "date": "2026-11-04",
+  "number": 20261105,
+  "date": "2026-11-05",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-11-04",
+  "title": "Reading desk \u2014 2026-11-05",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -117,33 +117,10 @@
           }
         },
         {
-          "text": "Evaluating Uncertainty Calibration in Probabilistic Time Series Foundation Models \u2014 Time series foundation models (TSFMs) are increasingly used for probabilistic forecasting across diverse domains, yet the reliability of their uncertainty estimates remains poorly understood. In this work, we study uncer\u2026",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://arxiv.org/abs/2611.03592",
-              "title": "Evaluating Uncertainty Calibration in Probabilistic Time Series Foundation Models"
-            }
-          ],
-          "meta": {
-            "score": 3.758,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp",
-              "green-finance"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-11-02",
-            "authors": "Thomas Decker, Volker Tresp"
-          }
-        },
-        {
           "text": "Chronos-2: A foundation model for multivariate time series forecasting \u2014 Accurate forecasting with uncertainty quantification is critical in a variety of scientific applications ranging from epidemiology and economics to energy systems and earth sciences. Yet most forecasting models still nee\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "4",
               "url": "https://arxiv.org/abs/2610.41956",
               "title": "Chronos-2: A foundation model for multivariate time series forecasting"
             }
@@ -165,7 +142,7 @@
           "text": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting \u2014 Since the 2021 GameStop short squeeze, r/WallStreetBets (WSB) has been associated with episodes of extreme volatility, and its text is increasingly used to forecast volatility. A model using only large language model (LL\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "5",
               "url": "https://arxiv.org/abs/2610.25468",
               "title": "More Mentions, Less Information? Diagnosing Identity and Alignment in Reddit Embeddings for Volatility Forecasting"
             }
@@ -181,6 +158,27 @@
             "source": "arxiv",
             "date": "2026-10-18",
             "authors": "Zhiyu Zheng"
+          }
+        },
+        {
+          "text": "Graph Foundation Models Can Become Effective Multivariate Time Series Anomaly Detectors \u2014 Multivariate time series anomaly detection (MTSAD) relies on modeling both temporal dynamics and inter-sensor dependencies to identify complex system faults. Although graph-based detectors explicitly model sensor topolog\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2611.06441",
+              "title": "Graph Foundation Models Can Become Effective Multivariate Time Series Anomaly Detectors"
+            }
+          ],
+          "meta": {
+            "score": 2.732,
+            "topics": [
+              "time-series",
+              "quant-research"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-11-04",
+            "authors": "Zhuangyan Hu, Zhuoxuan Liang, Wei Li, Xiaohua Jia, Moustafa Youssef, Sumi Helal"
           }
         }
       ]
