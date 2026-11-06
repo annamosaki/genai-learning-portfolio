@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261105,
-  "date": "2026-11-05",
+  "number": 20261106,
+  "date": "2026-11-06",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-11-05",
+  "title": "Reading desk \u2014 2026-11-06",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -161,24 +161,25 @@
           }
         },
         {
-          "text": "Graph Foundation Models Can Become Effective Multivariate Time Series Anomaly Detectors \u2014 Multivariate time series anomaly detection (MTSAD) relies on modeling both temporal dynamics and inter-sensor dependencies to identify complex system faults. Although graph-based detectors explicitly model sensor topolog\u2026",
+          "text": "Evaluating Language Model Features for Zero-Shot Time-Series Anomaly Detection Under Isolation Assumption \u2014 Time-Series Anomaly Detection (TSAD) is a fundamentally challenging task: it is unsupervised, requires high local precision capabilities, and suffers from limited labelled data. Recent work has explored adapting Large La\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2611.06441",
-              "title": "Graph Foundation Models Can Become Effective Multivariate Time Series Anomaly Detectors"
+              "url": "https://arxiv.org/abs/2611.07720",
+              "title": "Evaluating Language Model Features for Zero-Shot Time-Series Anomaly Detection Under Isolation Assumption"
             }
           ],
           "meta": {
-            "score": 2.732,
+            "score": 3.237,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "financial-nlp"
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-11-04",
-            "authors": "Zhuangyan Hu, Zhuoxuan Liang, Wei Li, Xiaohua Jia, Moustafa Youssef, Sumi Helal"
+            "date": "2026-11-05",
+            "authors": "Romain Hermary, Nesryne Mejri, Djamila Aouada"
           }
         }
       ]
