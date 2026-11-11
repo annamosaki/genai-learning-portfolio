@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261110,
-  "date": "2026-11-10",
+  "number": 20261111,
+  "date": "2026-11-11",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-11-10",
+  "title": "Reading desk \u2014 2026-11-11",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -48,126 +48,138 @@
       "heading": "Literature",
       "paragraphs": [
         {
-          "text": "Advances in Financial Machine Learning \u2014 purged CV notes \u2014 Purging and embargo when labeling financial time series to reduce leakage in walk-forward evaluation.",
+          "text": "Information Flow and Market Risk: Transformer-Based Evidence on Sentiment and Volatility Dynamics \u2014 This study examines whether transformer-based financial news sentiment improves equity volatility forecasts beyond conventional market-based predictors. Using data for eleven US stocks, we compare volatility persistence\u2026",
           "citations": [
             {
               "id": "1",
-              "url": "https://www.wiley.com/",
-              "title": "Advances in Financial Machine Learning \u2014 purged CV notes"
+              "url": "https://arxiv.org/abs/2610.39636",
+              "title": "Information Flow and Market Risk: Transformer-Based Evidence on Sentiment and Volatility Dynamics"
             }
           ],
           "meta": {
-            "score": 2.415,
+            "score": 4.074,
             "topics": [
               "time-series",
-              "quant-research"
+              "quant-research",
+              "llm-agents",
+              "financial-nlp"
             ],
             "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Lopez de Prado (method)"
+            "source": "arxiv",
+            "date": "2026-10-29",
+            "authors": "Szymon Lis, Robert \u015alepaczuk, Pawe\u0142 Sakowski"
           }
         },
         {
-          "text": "A decoder-only foundation model for time-series forecasting \u2014 TimesFM introduces a patched decoder-only transformer pretrained for zero-shot forecasting across domains.",
+          "text": "A Multi-Asset Dataset and Tail-Risk Framework for DeFi Yield Trading Derivatives \u2014 Yield trading has emerged as a pivotal innovation in Decentralized Finance (DeFi) by decoupling principal from yield streams to enhance capital efficiency. Despite its significance, the field lacks fine-grained datasets\u2026",
           "citations": [
             {
               "id": "2",
-              "url": "https://arxiv.org/abs/2310.10688",
-              "title": "A decoder-only foundation model for time-series forecasting"
+              "url": "https://arxiv.org/abs/2610.34930",
+              "title": "A Multi-Asset Dataset and Tail-Risk Framework for DeFi Yield Trading Derivatives"
             }
           ],
           "meta": {
-            "score": 1.93,
+            "score": 3.945,
             "topics": [
               "time-series",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Das et al."
-          }
-        },
-        {
-          "text": "Chronos-2: Learning the Language of Time Series \u2014 Chronos-2 adds multivariate and covariate-informed zero-shot forecasting with flexible model sizes.",
-          "citations": [
-            {
-              "id": "3",
-              "url": "https://huggingface.co/amazon/chronos-2",
-              "title": "Chronos-2: Learning the Language of Time Series"
-            }
-          ],
-          "meta": {
-            "score": 1.322,
-            "topics": [
-              "time-series"
-            ],
-            "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Amazon Science"
-          }
-        },
-        {
-          "text": "Detecting greenwashing in corporate communications \u2014 NLP + regression measuring how ESG language shifts investor behavior \u2014 related to Anna's ENSAE greenwashing work.",
-          "citations": [
-            {
-              "id": "4",
-              "url": "https://www.ensae.fr/",
-              "title": "Detecting greenwashing in corporate communications"
-            }
-          ],
-          "meta": {
-            "score": 0.867,
-            "topics": [
+              "quant-research",
               "financial-nlp",
               "green-finance"
             ],
             "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "ENSAE project corpus"
+            "source": "arxiv",
+            "date": "2026-10-26",
+            "authors": "Huaiyu Jia, Jieshun You, Jingyu Liu, Yizhi Luo, Shuo Sun"
           }
         },
         {
-          "text": "Agent2Agent (A2A) Protocol Specification \u2014 Open protocol for opaque agents to discover, communicate, and transact across frameworks; complements MCP.",
+          "text": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity \u2014 We study strategic liquidity provision in decentralized exchanges with concentrated liquidity as a mean-field game. Liquidity providers choose the width of their price range and when to rebalance it, pay a transaction co\u2026",
           "citations": [
             {
-              "id": "5",
-              "url": "https://a2a-protocol.org/",
-              "title": "Agent2Agent (A2A) Protocol Specification"
+              "id": "3",
+              "url": "https://arxiv.org/abs/2610.28863",
+              "title": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity"
             }
           ],
           "meta": {
-            "score": 0.605,
+            "score": 3.861,
             "topics": [
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Linux Foundation A2A"
-          }
-        },
-        {
-          "text": "FinBERT: Financial Sentiment Analysis with Pre-trained Language Models \u2014 Domain-adapted BERT for financial sentiment; still a strong specialist baseline versus generalist LLMs.",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/1908.10063",
-              "title": "FinBERT: Financial Sentiment Analysis with Pre-trained Language Models"
-            }
-          ],
-          "meta": {
-            "score": 0.55,
-            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents",
               "financial-nlp"
             ],
             "kind": "literature",
-            "source": "local-jsonl",
-            "date": null,
-            "authors": "Araci"
+            "source": "arxiv",
+            "date": "2026-10-20",
+            "authors": "Mikhail Belokon, Rostislav Berezovskiy"
+          }
+        },
+        {
+          "text": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting \u2014 GARCH-LSTM hybrid models have become increasingly popular in the volatility forecasting literature. To date, these models have almost exclusively focused on point estimation and accuracy measures such as RMSE and MAPE, w\u2026",
+          "citations": [
+            {
+              "id": "4",
+              "url": "https://arxiv.org/abs/2611.13212",
+              "title": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting"
+            }
+          ],
+          "meta": {
+            "score": 3.48,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-11-09",
+            "authors": "Kyle Parrella, Kejin Wu"
+          }
+        },
+        {
+          "text": "Chronos-2: A foundation model for multivariate time series forecasting \u2014 Accurate forecasting with uncertainty quantification is critical in a variety of scientific applications ranging from epidemiology and economics to energy systems and earth sciences. Yet most forecasting models still nee\u2026",
+          "citations": [
+            {
+              "id": "5",
+              "url": "https://arxiv.org/abs/2610.41956",
+              "title": "Chronos-2: A foundation model for multivariate time series forecasting"
+            }
+          ],
+          "meta": {
+            "score": 3.418,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-10-30",
+            "authors": "Abdul Fatir Ansari, Oleksandr Shchur, Jaris K\u00fcken, Andreas Auer, Boran Han, Pedro Mercado, Syama Sundar Rangapuram, Huibin Shen, Lorenzo Stella, Xiyuan Zhang, Mononito Goswami, Shubham Kapoor, Danielle C. Maddix, Pablo Guerron, Florian Saupe, Markus Reichstein, Tony Hu, Junming Yin, Nick Erickson, Prateek Mutalik Desai, Hao Wang, Huzefa Rangwala, George Karypis, Yuyang Wang, Michael Bohlke-Schneider"
+          }
+        },
+        {
+          "text": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics \u2014 Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly r\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2611.14491",
+              "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics"
+            }
+          ],
+          "meta": {
+            "score": 3.418,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-11-10",
+            "authors": "Peng Chen, Yihang Wang, Zhongwen Rao, Yang Shu, Yuying Qiu, Yuxuan Chen, Lujia Pan, Bin Yang, Chenjuan Guo"
           }
         }
       ]
@@ -408,12 +420,9 @@
         "count": 0
       },
       "arxiv": {
-        "ok": false,
-        "count": 0,
-        "errors": [
-          "rate limited: all:\"time series\" AND (cat:q-fin.ST OR cat:q-fin.CP OR cat:c",
-          "all:\"volatility forecasting\" OR all:\"realized volatility\" OR: "
-        ],
+        "ok": true,
+        "count": 20,
+        "errors": [],
         "source": "arxiv"
       },
       "rss": {
@@ -474,8 +483,8 @@
         "count": 0
       }
     },
-    "items_ingested": 63,
-    "items_ranked": 45,
+    "items_ingested": 83,
+    "items_ranked": 65,
     "focus_keywords": []
   }
 }
