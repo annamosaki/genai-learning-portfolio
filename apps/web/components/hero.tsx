@@ -19,7 +19,10 @@ export function Hero() {
         <Link href="/#projects" className="btn btn-primary">
           {d.hero.ctaWork}
         </Link>
-        <a href={`mailto:${cv.email}`} className="btn btn-ghost">
+        <a href={cv.cvPdf} className="btn btn-ghost" download>
+          Download CV
+        </a>
+        <a href={cv.links.linkedin} className="btn btn-ghost" target="_blank" rel="noreferrer">
           {d.hero.ctaContact}
         </a>
       </div>

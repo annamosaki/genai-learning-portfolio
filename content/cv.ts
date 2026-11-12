@@ -37,11 +37,11 @@ export type Win = {
 export const cv = {
   name: "Anna Mosaki",
   title: "Quantitative Researcher · Data Scientist · AI Engineer",
-  seeking:
-    "Seeking quantitative research, data science and AI engineering roles. Available for immediate start. Based in Lisbon.",
+  seeking: "",
   location: "Lisbon, Portugal",
-  email: "mosakianna@gmail.com",
-  phone: "+33 7 64 69 59 33",
+  email: "",
+  phone: "",
+  cvPdf: "/anna-mosaki-cv.pdf",
   links: {
     github: "https://github.com/annamosaki",
     linkedin: "https://www.linkedin.com/in/annamosaki",

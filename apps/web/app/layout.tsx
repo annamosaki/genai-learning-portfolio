@@ -74,7 +74,7 @@ const personJsonLd = {
   url: cv.links.site,
   image: `${cv.links.site}/opengraph-image`,
   jobTitle: cv.title,
-  email: cv.email,
+  ...(cv.email ? { email: cv.email } : {}),
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lisbon",

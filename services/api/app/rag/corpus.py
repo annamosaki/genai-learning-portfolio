@@ -88,11 +88,14 @@ def build_chunks(raw: str) -> list[Chunk]:
         f"Name: {name}",
         f"Title: {title}",
         f"Location: {location}",
-        f"Email: {email}",
-        f"Phone: {phone}",
-        f"Seeking: {seeking}",
-        f"Summary: {summary}",
     ]
+    if email:
+        profile_lines.append(f"Email: {email}")
+    if phone:
+        profile_lines.append(f"Phone: {phone}")
+    if seeking:
+        profile_lines.append(f"Seeking: {seeking}")
+    profile_lines.append(f"Summary: {summary}")
     if links:
         profile_lines.append("Links: " + ", ".join(f"{k}={v}" for k, v in links.items()))
     chunks.append(Chunk("profile", "Profile & contact", "\n".join(profile_lines)))

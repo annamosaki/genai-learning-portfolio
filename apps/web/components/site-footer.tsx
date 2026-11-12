@@ -9,8 +9,8 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 text-sm text-[var(--color-muted)] sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <p className="display text-[var(--color-text)]">{d.footer.built}</p>
         <div className="flex flex-wrap gap-4 font-mono text-xs">
-          <a className="hover:text-[var(--color-accent)]" href={`mailto:${cv.email}`}>
-            {cv.email}
+          <a className="hover:text-[var(--color-accent)]" href={cv.cvPdf} download>
+            CV
           </a>
           <a className="hover:text-[var(--color-accent)]" href={cv.links.github} target="_blank" rel="noreferrer">
             GitHub

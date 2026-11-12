@@ -1,0 +1,86 @@
+\documentclass[10.3pt]{article}
+\usepackage{cvstyle}
+
+% Public site version: no phone, no email.
+\renewcommand{\cvheader}[1]{%
+  \begin{center}
+    {\color{ink}\huge\bfseries Anna Mosaki}\\[2pt]
+    {\large #1}\\[4pt]
+    {\small
+      \href{https://www.linkedin.com/in/annamosaki/}{linkedin.com/in/annamosaki} \quad|\quad
+      \href{https://annamosaki.com}{annamosaki.com}
+    }
+  \end{center}
+  \vspace{-2pt}
+}
+
+\begin{document}
+\RaggedRight
+
+\cvheader{Quantitative Researcher \(\cdot\) Data Scientist \(\cdot\) AI Engineer}
+
+% ---------- PROFILE ----------
+\section*{Profile}
+Quantitative researcher and data scientist, graduated from ENSAE Paris, with 16 months at BNP Paribas CIB building machine-learning models for trading-desk risk monitoring and NLP analysis of trader communications. Past year: built GenAI systems covering RAG/GraphRAG, multi-agent orchestration, MCP and LLM evals (annamosaki.com).
+
+% ---------- EXPERIENCE ----------
+\section*{Experience}
+
+{\bfseries BNP Paribas CIB} \hfill {\color{gray}\small Paris, France}\\[4pt]
+\hspace*{9pt}\dotmark{bnpA}\hspace{5pt}{\itshape Quantitative Researcher -- Data Scientist} \hfill {\itshape\color{gray}\small Oct 2024 -- Sep 2025}\\[2pt]
+\begin{itemize}[leftmargin=3.4em]
+  \item Research and production of ML/DL time-series anomaly-detection models with streaming inference across product families.
+  \item Collaborated with traders to source data and iterate on the product; NLP analysis of trader communications for market-conduct surveillance; two-week training in the London office.
+  \item Selected for the BNP Paribas CIB Graduate Programme in Quantitative Research.
+\end{itemize}
+\vspace{4pt}
+\hspace*{9pt}\dotmark{bnpB}\hspace{5pt}{\itshape Quantitative Researcher -- Data Scientist, Summer Intern} \hfill {\itshape\color{gray}\small Jun 2024 -- Sep 2024}\\[2pt]
+\begin{itemize}[leftmargin=3.4em]
+  \item Built and benchmarked deep-learning time-series anomaly-detection models on trading data.
+\end{itemize}
+\smash{\begin{tikzpicture}[remember picture, overlay]
+  \draw[gray!55, line width=0.6pt] (bnpA.center) -- (bnpB.center);
+\end{tikzpicture}}
+
+\vspace{2pt}
+\role{Les Associations Mutuelles Le Conservateur}{Paris, France}{ALM Modeling Intern}{Jun 2023 -- Aug 2023}
+\begin{itemize}
+  \item Modeled portfolio Vega sensitivities in VBA; automated recurring financial simulations for the investment team.
+\end{itemize}
+
+% ---------- EDUCATION ----------
+\section*{Education}
+
+\edu{ENSAE Paris -- Institut Polytechnique de Paris}{France}{Engineer's Degree (Dipl\^ome d'Ing\'enieur) -- Master's Degree, Finance and Data Science}{2023 -- 2025}
+Coursework: Stochastic Calculus, Time Series, Advanced Machine Learning, ML for NLP, ML for Finance, Derivatives Pricing \& Hedging, Risk Management, Green Finance, Banking Law.
+\vspace{2pt}
+
+\edu{Universit\'e Paris-Saclay}{France}{Bachelor's Degree in Mathematics and Economics (Double Degree) -- Graduated with Honors}{2020 -- 2023}
+\vspace{2pt}
+
+\edu{\'Ecole Polytechnique F\'ed\'erale de Lausanne (EPFL)}{Switzerland}{Undergraduate studies in Mathematics}{2018 -- 2020}
+
+% ---------- PROJECTS ----------
+\section*{Selected Projects \& GenAI Training}
+\begin{itemize}
+  \item \textbf{\href{https://lab.annamosaki.com/demos/llm-lab}{LLM Foundations}:} 12-level GenAI system --- prompts \(\rightarrow\) GraphRAG \(\rightarrow\) evals, agents, MCP (Python, pydantic-ai).
+  \item \textbf{\href{https://desk.annamosaki.com/demos/agent-desk}{Agent Desk}:} multi-agent investment desk (research/macro/quant/risk/scribe) with FastA2A, HITL gates and dual MCP.
+  \item \textbf{\href{https://digest.annamosaki.com/demos/research-digest}{Research Digest}:} ArXiv + fund/quant RSS desk for time-series \(\times\) finance research.
+\end{itemize}
+
+% ---------- SKILLS ----------
+\section*{Skills}
+\textbf{Technical:} Python (pandas, scikit-learn, TensorFlow, PyTorch, NLP), machine learning, RAG/GraphRAG, LLM agents (pydantic-ai, MCP, A2A), FastAPI, Next.js, Cursor, Claude Code, SQL, VBA, C++, R\\
+\textbf{Languages:} French (native) \(\cdot\) Russian (native) \(\cdot\) Kurdish (native) \(\cdot\) English (fluent) \(\cdot\) Portuguese (advanced) \(\cdot\) Spanish (advanced) \(\cdot\) German (limited)
+
+% ---------- LEADERSHIP ----------
+\section*{Leadership \& Awards}
+\begin{itemize}
+  \item \textbf{1st place -- GenAI Hackathon} (AWS \(\times\) Sia Partners \(\times\) Mistral \(\times\) Gide): RAG system for legal-document drafting.
+  \item \textbf{1st place -- H-W3B Hackathon} (Sia Partners \(\times\) Tezos): blockchain-secured digital passport for vehicles.
+  \item \textbf{Best End-of-Studies Finance Internship Prize} (ENSAE Paris): awarded for the BNP Paribas CIB quantitative research internship.
+  \item \textbf{Forum ENSAE, Communication Manager} (Sep 2023 -- Mar 2024): conferences with executives from Citadel, Soci\'et\'e G\'en\'erale, Cr\'edit Agricole and INSEE.
+  \item \textbf{Georgian Caucasian Dance} (10 years): competition dancer; diploma as official trainer.
+\end{itemize}
+
+\end{document}

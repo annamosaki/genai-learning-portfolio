@@ -1,0 +1,62 @@
+% cvstyle.sty — shared styling for Anna Mosaki's CV variants.
+% Keep all layout/formatting here so every version stays visually consistent.
+\ProvidesPackage{cvstyle}
+
+% ---------- PAGE & FONT ----------
+\usepackage[left=0.62in,right=0.62in,top=0.42in,bottom=0.42in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{tikz}
+
+\definecolor{ink}{RGB}{0,0,0}
+\definecolor{gray}{RGB}{90,90,90}
+
+% small filled dot used as a timeline marker; keeps its absolute page
+% position so a later overlay picture can draw a connecting line to it
+\newcommand{\dotmark}[1]{\tikz[remember picture, baseline=-0.45ex]\node[circle, fill=gray, inner sep=1.6pt] (#1) {};}
+
+\hypersetup{colorlinks=true, urlcolor=ink, linkcolor=ink}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{0.94}
+
+% ---------- SECTION TITLES ----------
+\titleformat{\section}
+  {\color{ink}\bfseries\large}
+  {}{0em}{}
+  [\vspace{0pt}{\color{ink}\titlerule[0.5pt]}]
+\titlespacing{\section}{0pt}{4pt}{6pt}
+
+% ---------- LISTS (dash bullets everywhere) ----------
+\setlist[itemize]{leftmargin=1.4em, itemsep=0pt, parsep=0pt, topsep=0pt, label=\textbf{-}}
+
+% ---------- HELPERS ----------
+\newcommand{\role}[4]{%
+  {\bfseries #1} \hfill {\color{gray}\small #2}\\
+  {\itshape #3} \hfill {\itshape\color{gray}\small #4}\\[0pt]
+}
+\newcommand{\edu}[4]{%
+  {\bfseries #1} \hfill {\color{gray}\small #2}\\
+  {\itshape #3} \hfill {\itshape\color{gray}\small #4}\\[0pt]
+}
+
+% Header: #1 = role subtitle line
+\newcommand{\cvheader}[1]{%
+  \begin{center}
+    {\color{ink}\huge\bfseries Anna Mosaki}\\[2pt]
+    {\large #1}\\[4pt]
+    {\small
+      +33\,7\,64\,69\,59\,33 \quad|\quad
+      \href{mailto:mosakianna@gmail.com}{mosakianna@gmail.com} \quad|\quad
+      \href{https://www.linkedin.com/in/annamosaki/}{linkedin.com/in/annamosaki} \quad|\quad
+      \href{https://annamosaki.com}{annamosaki.com}
+    }
+  \end{center}
+  \vspace{-2pt}
+}
