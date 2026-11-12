@@ -1,19 +1,13 @@
 import json
-from pathlib import Path
 
 from fastapi import APIRouter, Query, Request
 
 from ..rate_limit import check_limit, client_ip
+from ..serverless_runtime import task_root
 
 router = APIRouter(tags=["horizon"])
 
-ARTIFACT = (
-    Path(__file__).resolve().parents[4]
-    / "content"
-    / "artifacts"
-    / "horizon"
-    / "sample-forecast.json"
-)
+ARTIFACT = task_root() / "content" / "artifacts" / "horizon" / "sample-forecast.json"
 
 
 @router.get("/forecast")

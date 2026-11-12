@@ -32,11 +32,14 @@ async def health(_request):
     )
 
 
+mcp_app = mcp.streamable_http_app()
+
 app = Starlette(
     routes=[
         Route("/health", health),
-        Mount("/", app=mcp.streamable_http_app()),
-    ]
+        Mount("/", app=mcp_app),
+    ],
+    lifespan=mcp_app.lifespan,
 )
 
 if __name__ == "__main__":

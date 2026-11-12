@@ -34,9 +34,21 @@ async def lifespan(app: FastAPI):
     print(f"📁 Data directory: {settings.data_dir}")
     print(f"🔑 OpenAI API key configured: {'Yes' if settings.openai_api_key else 'No'}")
     
-    # Warm up data store (load indexes on startup)
+    # Warm up data store. The image ships corpus files without the gitignored index.
     try:
         chunks = data_store.load_chunks()
+        if not chunks:
+            await corpus_docs.reindex_corpus(use_openai_embeddings=False)
+            chunks = data_store.load_chunks() or []
+            if chunks and not data_store.load_graph():
+                from .graph.extract import SimpleGraphExtractor
+
+                graph_data, communities = SimpleGraphExtractor().extract_from_chunks(chunks)
+                index_dir = Path(settings.index_dir)
+                index_dir.mkdir(parents=True, exist_ok=True)
+                (index_dir / "graph.json").write_text(json.dumps(graph_data))
+                (index_dir / "communities.json").write_text(json.dumps(communities))
+                data_store.clear_cache()
         embeddings = data_store.load_embeddings()
         print(f"📚 Loaded {len(chunks)} chunks" + (f" and embeddings ({embeddings.shape})" if embeddings is not None else ""))
     except Exception as e:
@@ -367,7 +379,9 @@ async def get_graph():
                 "communities": len(communities_data)
             }
         }
-        
+
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error loading graph data: {str(e)}")
 

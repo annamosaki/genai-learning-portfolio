@@ -22,6 +22,12 @@ if is_serverless():
     # Match digest-api / pipeline: ARTIFACT_DIR already points at the desk folder.
     _art = Path(os.environ.get("ARTIFACT_DIR") or str(artifact_dir("signal-desk")))
     _art.mkdir(parents=True, exist_ok=True)
+    baked = ROOT / "content" / "artifacts" / "signal-desk"
+    for name in ("latest-review.json", "latest-issue.json"):
+        dest = _art / name
+        src = baked / name
+        if not dest.exists() and src.exists():
+            dest.write_text(src.read_text())
     ARTIFACT = _art / "latest-review.json"
     ARTIFACT_LEGACY = _art / "latest-issue.json"
     TOPICS = PROJECT / "topics.yaml"

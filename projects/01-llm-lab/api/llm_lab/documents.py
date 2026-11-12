@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 import re
 import time
@@ -170,7 +171,7 @@ async def reindex_corpus(use_openai_embeddings: bool = True) -> Dict[str, Any]:
             from .retrieval.embed import EmbeddingManager
 
             manager = EmbeddingManager()
-            embeddings = await manager.create_embeddings(all_chunks)
+            embeddings = await asyncio.wait_for(manager.create_embeddings(all_chunks), timeout=25)
             embed_mode = "openai"
         except Exception as exc:
             print(f"Embedding via OpenAI failed, falling back to hash: {exc}")

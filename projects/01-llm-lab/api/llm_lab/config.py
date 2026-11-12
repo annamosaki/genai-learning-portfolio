@@ -1,5 +1,6 @@
 """Configuration settings for LLM Lab API."""
 
+import os
 from pathlib import Path
 from typing import Optional
 
@@ -31,7 +32,12 @@ class Settings(BaseSettings):
     debug: bool = False
     data_dir: str = str(_API_ROOT / "data")
     corpus_dir: str = str(_API_ROOT / "data" / "corpus")
-    index_dir: str = str(_API_ROOT / "data" / "index")
+    # Lambda's task directory is read-only. Rebuild indexes under /tmp.
+    index_dir: str = (
+        "/tmp/llm-lab/index"
+        if os.environ.get("SERVERLESS") == "1"
+        else str(_API_ROOT / "data" / "index")
+    )
     replay_dir: str = str(_API_ROOT / "data" / "replay")
 
 
