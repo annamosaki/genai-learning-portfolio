@@ -34,6 +34,9 @@ const nextConfig: NextConfig = {
     };
     return config;
   },
+  async redirects() {
+    return [{ source: "/favicon.ico", destination: "/icon", permanent: false }];
+  },
   async rewrites() {
     return [
       {
