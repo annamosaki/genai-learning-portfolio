@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261111,
-  "date": "2026-11-11",
+  "number": 20261112,
+  "date": "2026-11-12",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-11-11",
+  "title": "Reading desk \u2014 2026-11-12",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -367,12 +367,12 @@
           }
         },
         {
-          "text": "Trading the Multi-Asset Drift Around U.S. Elections \u2014 We analyze a multi-asset calendar anomaly around U.S. federal elections that is consistent across assets and simple to trade. While our previous study documents a robust pre-election drift, the cross-asset pricing of its\u2026",
+          "text": "The Capacity of Equity Anomalies \u2014 Every practitioner knows the pitch: a strategy with a Sharpe ratio of 1 and a t-stat above 2.0 must be a great business. But as Avramov, Bongaerts, Crego, and Kvaerner argue in their new paper, alpha tells you the return\u2026",
           "citations": [
             {
               "id": "f6",
-              "url": "https://quantpedia.com/trading-the-multi-asset-drift-around-u-s-elections/",
-              "title": "Trading the Multi-Asset Drift Around U.S. Elections"
+              "url": "https://quantpedia.com/the-capacity-of-equity-anomalies/",
+              "title": "The Capacity of Equity Anomalies"
             }
           ],
           "meta": {
@@ -383,7 +383,7 @@
             ],
             "kind": "fund_research",
             "source": "quantpedia",
-            "date": "Wed, 07 Oc",
+            "date": "Thu, 12 No",
             "authors": null
           }
         }
