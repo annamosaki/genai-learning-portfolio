@@ -24,6 +24,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: 'LLM Lab - Foundation Ladder Demo',
   description: 'Interactive demonstration of LLM foundation concepts across 12 progressive levels',
+  icons: { icon: 'https://annamosaki.com/icon' },
 };
 
 export default function RootLayout({

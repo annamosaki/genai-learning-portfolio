@@ -10,6 +10,7 @@ export default {
   assetPrefix: basePath || undefined,
   env: {
     NEXT_PUBLIC_ZONE_BASE_PATH: basePath,
+    NEXT_PUBLIC_LAB_API_URL: labApi,
     NEXT_PUBLIC_PORTFOLIO_URL: process.env.NEXT_PUBLIC_PORTFOLIO_URL || "http://localhost:3000",
   },
   async rewrites() {

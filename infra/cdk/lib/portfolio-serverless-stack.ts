@@ -263,6 +263,7 @@ export class PortfolioServerlessStack extends cdk.Stack {
         env: [
           { name: "ZONE_BASE_PATH", value: "/demos/llm-lab" },
           { name: "LAB_API_URL", value: customApi.LabApi },
+          { name: "NEXT_PUBLIC_LAB_API_URL", value: customApi.LabApi },
           { name: "NEXT_PUBLIC_PORTFOLIO_URL", value: "https://annamosaki.com" },
           { name: "AMPLIFY_MONOREPO_APP_ROOT", value: "projects/01-llm-lab/web" },
         ],
