@@ -7,7 +7,7 @@ import os
 
 import uvicorn
 from starlette.applications import Starlette
-from starlette.routing import Mount, Route
+from starlette.routing import Route
 from starlette.responses import JSONResponse
 
 from yfmcp.server import mcp
@@ -32,15 +32,10 @@ async def health(_request):
     )
 
 
-mcp_app = mcp.streamable_http_app()
-
-app = Starlette(
-    routes=[
-        Route("/health", health),
-        Mount("/", app=mcp_app),
-    ],
-    lifespan=mcp_app.lifespan,
-)
+# Use the MCP app itself so its lifespan starts the session manager.
+# Mounting it under another Starlette left that task group uninitialized.
+app = mcp.streamable_http_app()
+app.router.routes.append(Route("/health", health))
 
 if __name__ == "__main__":
     print(f"Starting yfmcp on http://{HOST}:{PORT} (MCP /mcp, health /health)", flush=True)
