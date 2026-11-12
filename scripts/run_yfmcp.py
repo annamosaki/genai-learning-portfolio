@@ -19,6 +19,34 @@ mcp.settings.host = HOST
 mcp.settings.port = PORT
 mcp.settings.log_level = os.environ.get("YFMCP_LOG_LEVEL", "INFO")
 
+# The SDK only allows localhost Host headers unless told otherwise.
+# CloudFront calls this as yf.annamosaki.com, which otherwise returns 421.
+_security = getattr(mcp.settings, "transport_security", None)
+if _security is not None:
+    if hasattr(_security, "enable_dns_rebinding_protection"):
+        _security.enable_dns_rebinding_protection = False
+    _hosts = list(getattr(_security, "allowed_hosts", []) or [])
+    for _host in (
+        "yf.annamosaki.com",
+        "yf.annamosaki.com:*",
+        "*.lambda-url.us-east-1.on.aws",
+        "*.lambda-url.us-east-1.on.aws:*",
+    ):
+        if _host not in _hosts:
+            _hosts.append(_host)
+    _security.allowed_hosts = _hosts
+    _origins = list(getattr(_security, "allowed_origins", []) or [])
+    for _origin in (
+        "https://yf.annamosaki.com",
+        "https://annamosaki.com",
+        "https://www.annamosaki.com",
+        "https://desk.annamosaki.com",
+        "https://lab.annamosaki.com",
+    ):
+        if _origin not in _origins:
+            _origins.append(_origin)
+    _security.allowed_origins = _origins
+
 
 async def health(_request):
     return JSONResponse(
