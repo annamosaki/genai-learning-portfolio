@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261116,
-  "date": "2026-11-16",
+  "number": 20261117,
+  "date": "2026-11-17",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-11-16",
+  "title": "Reading desk \u2014 2026-11-17",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -117,10 +117,33 @@
           }
         },
         {
-          "text": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting \u2014 GARCH-LSTM hybrid models have become increasingly popular in the volatility forecasting literature. To date, these models have almost exclusively focused on point estimation and accuracy measures such as RMSE and MAPE, w\u2026",
+          "text": "LINK: Lightweight and Inductive Node-to-Node Propagation Rule Learning for Traffic Kriging \u2014 Spatio-temporal traffic kriging aims to reconstruct traffic time series at unobserved locations with no historical traffic observations by leveraging spatial and temporal dependencies across the road network. Existing Gr\u2026",
           "citations": [
             {
               "id": "4",
+              "url": "https://arxiv.org/abs/2611.20521",
+              "title": "LINK: Lightweight and Inductive Node-to-Node Propagation Rule Learning for Traffic Kriging"
+            }
+          ],
+          "meta": {
+            "score": 3.691,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents",
+              "green-finance"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-11-16",
+            "authors": "You Shang, Yu-Kwan Ching, Weifeng Su, Guanyao Li, Ruiyuan Li, Gary Shueng-Han Chan"
+          }
+        },
+        {
+          "text": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting \u2014 GARCH-LSTM hybrid models have become increasingly popular in the volatility forecasting literature. To date, these models have almost exclusively focused on point estimation and accuracy measures such as RMSE and MAPE, w\u2026",
+          "citations": [
+            {
+              "id": "5",
               "url": "https://arxiv.org/abs/2611.13212",
               "title": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting"
             }
@@ -142,7 +165,7 @@
           "text": "Chronos-2: A foundation model for multivariate time series forecasting \u2014 Accurate forecasting with uncertainty quantification is critical in a variety of scientific applications ranging from epidemiology and economics to energy systems and earth sciences. Yet most forecasting models still nee\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "6",
               "url": "https://arxiv.org/abs/2610.41956",
               "title": "Chronos-2: A foundation model for multivariate time series forecasting"
             }
@@ -158,28 +181,6 @@
             "source": "arxiv",
             "date": "2026-10-30",
             "authors": "Abdul Fatir Ansari, Oleksandr Shchur, Jaris K\u00fcken, Andreas Auer, Boran Han, Pedro Mercado, Syama Sundar Rangapuram, Huibin Shen, Lorenzo Stella, Xiyuan Zhang, Mononito Goswami, Shubham Kapoor, Danielle C. Maddix, Pablo Guerron, Florian Saupe, Markus Reichstein, Tony Hu, Junming Yin, Nick Erickson, Prateek Mutalik Desai, Hao Wang, Huzefa Rangwala, George Karypis, Yuyang Wang, Michael Bohlke-Schneider"
-          }
-        },
-        {
-          "text": "Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting \u2014 Generative models have become the standard approach in language and vision. These models are typically pretrained first and then fine-tuned. Recent work demonstrates how to pretrain an autoregressive generative model on\u2026",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/2611.14117",
-              "title": "Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting"
-            }
-          ],
-          "meta": {
-            "score": 3.361,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-11-10",
-            "authors": "Fedor Shabashev"
           }
         }
       ]
@@ -484,7 +485,7 @@
       }
     },
     "items_ingested": 83,
-    "items_ranked": 64,
+    "items_ranked": 63,
     "focus_keywords": []
   }
 }
