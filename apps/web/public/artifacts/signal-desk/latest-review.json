@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261123,
-  "date": "2026-11-23",
+  "number": 20261124,
+  "date": "2026-11-24",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-11-23",
+  "title": "Reading desk \u2014 2026-11-24",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -94,33 +94,10 @@
           }
         },
         {
-          "text": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity \u2014 We study strategic liquidity provision in decentralized exchanges with concentrated liquidity as a mean-field game. Liquidity providers choose the width of their price range and when to rebalance it, pay a transaction co\u2026",
-          "citations": [
-            {
-              "id": "3",
-              "url": "https://arxiv.org/abs/2610.28863",
-              "title": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity"
-            }
-          ],
-          "meta": {
-            "score": 3.861,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents",
-              "financial-nlp"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-10-20",
-            "authors": "Mikhail Belokon, Rostislav Berezovskiy"
-          }
-        },
-        {
           "text": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting \u2014 GARCH-LSTM hybrid models have become increasingly popular in the volatility forecasting literature. To date, these models have almost exclusively focused on point estimation and accuracy measures such as RMSE and MAPE, w\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "3",
               "url": "https://arxiv.org/abs/2611.13212",
               "title": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting"
             }
@@ -142,7 +119,7 @@
           "text": "Chronos-2: A foundation model for multivariate time series forecasting \u2014 Accurate forecasting with uncertainty quantification is critical in a variety of scientific applications ranging from epidemiology and economics to energy systems and earth sciences. Yet most forecasting models still nee\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "4",
               "url": "https://arxiv.org/abs/2610.41956",
               "title": "Chronos-2: A foundation model for multivariate time series forecasting"
             }
@@ -164,7 +141,7 @@
           "text": "Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting \u2014 Generative models have become the standard approach in language and vision. These models are typically pretrained first and then fine-tuned. Recent work demonstrates how to pretrain an autoregressive generative model on\u2026",
           "citations": [
             {
-              "id": "6",
+              "id": "5",
               "url": "https://arxiv.org/abs/2611.14117",
               "title": "Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting"
             }
@@ -180,6 +157,28 @@
             "source": "arxiv",
             "date": "2026-11-10",
             "authors": "Fedor Shabashev"
+          }
+        },
+        {
+          "text": "Toward a Scalable and Adaptive Evaluation Measure for Time Series Anomaly Detection \u2014 Time Series Anomaly Detection (TSAD) is a fundamental task for time series analytics. Unlike other domains, where anomaly detection mainly focuses on point-based anomalies, TSAD must also handle range-based anomalies. Ne\u2026",
+          "citations": [
+            {
+              "id": "6",
+              "url": "https://arxiv.org/abs/2611.30385",
+              "title": "Toward a Scalable and Adaptive Evaluation Measure for Time Series Anomaly Detection"
+            }
+          ],
+          "meta": {
+            "score": 3.232,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "llm-agents"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-11-23",
+            "authors": "Emmanouil Sylligardos, Mingyi Huang, John Paparrizos, Pierre Senellart, Paul Boniol"
           }
         }
       ]
