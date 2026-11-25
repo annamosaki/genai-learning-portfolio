@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261124,
-  "date": "2026-11-24",
+  "number": 20261125,
+  "date": "2026-11-25",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-11-24",
+  "title": "Reading desk \u2014 2026-11-25",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -160,12 +160,12 @@
           }
         },
         {
-          "text": "Toward a Scalable and Adaptive Evaluation Measure for Time Series Anomaly Detection \u2014 Time Series Anomaly Detection (TSAD) is a fundamental task for time series analytics. Unlike other domains, where anomaly detection mainly focuses on point-based anomalies, TSAD must also handle range-based anomalies. Ne\u2026",
+          "text": "FourStat: A Dual AutoEncoder Leveraging Frequency and Stationarity for Time Series Anomaly Detection \u2014 While numerous studies have focused on multivariate time series anomaly detection, many existing methods perform poorly or are not directly applicable to univariate settings. We introduce FourStat, a dual-model framework\u2026",
           "citations": [
             {
               "id": "6",
-              "url": "https://arxiv.org/abs/2611.30385",
-              "title": "Toward a Scalable and Adaptive Evaluation Measure for Time Series Anomaly Detection"
+              "url": "https://arxiv.org/abs/2611.32714",
+              "title": "FourStat: A Dual AutoEncoder Leveraging Frequency and Stationarity for Time Series Anomaly Detection"
             }
           ],
           "meta": {
@@ -177,8 +177,8 @@
             ],
             "kind": "literature",
             "source": "arxiv",
-            "date": "2026-11-23",
-            "authors": "Emmanouil Sylligardos, Mingyi Huang, John Paparrizos, Pierre Senellart, Paul Boniol"
+            "date": "2026-11-24",
+            "authors": "Saman Hadian, Ramtin Moslemi, Mohammad Mohammadi, Sarina Heshmati, Siavash Ahmadi, Babak Hossein Khalaj, Mohammad Hossein Rohban"
           }
         }
       ]
