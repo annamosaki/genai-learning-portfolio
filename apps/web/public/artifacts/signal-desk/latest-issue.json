@@ -1,10 +1,10 @@
 {
   "kind": "personal-review",
   "delivery": "local-only",
-  "number": 20261125,
-  "date": "2026-11-25",
+  "number": 20261126,
+  "date": "2026-11-26",
   "mode": "live",
-  "title": "Reading desk \u2014 2026-11-25",
+  "title": "Reading desk \u2014 2026-11-26",
   "lede": "Time series applied to finance and what quant / fund research desks are",
   "focus_query": null,
   "focus_keywords": [],
@@ -94,10 +94,33 @@
           }
         },
         {
-          "text": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting \u2014 GARCH-LSTM hybrid models have become increasingly popular in the volatility forecasting literature. To date, these models have almost exclusively focused on point estimation and accuracy measures such as RMSE and MAPE, w\u2026",
+          "text": "Train-Only-Constrained LM for Synthetic Clinical Trajectories: Leak-Safe Calibration and Auditable Dynamics \u2014 Simulating clinical time series necessitates temporal realism, calibration that preserves model integrity, and privacy transparency. We present a train-only, constrained language-model pipeline that factorizes generation\u2026",
           "citations": [
             {
               "id": "3",
+              "url": "https://arxiv.org/abs/2611.34258",
+              "title": "Train-Only-Constrained LM for Synthetic Clinical Trajectories: Leak-Safe Calibration and Auditable Dynamics"
+            }
+          ],
+          "meta": {
+            "score": 3.661,
+            "topics": [
+              "time-series",
+              "quant-research",
+              "financial-nlp",
+              "green-finance"
+            ],
+            "kind": "literature",
+            "source": "arxiv",
+            "date": "2026-11-25",
+            "authors": "Yaser Kord, Moritz Hess"
+          }
+        },
+        {
+          "text": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting \u2014 GARCH-LSTM hybrid models have become increasingly popular in the volatility forecasting literature. To date, these models have almost exclusively focused on point estimation and accuracy measures such as RMSE and MAPE, w\u2026",
+          "citations": [
+            {
+              "id": "4",
               "url": "https://arxiv.org/abs/2611.13212",
               "title": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting"
             }
@@ -119,7 +142,7 @@
           "text": "Chronos-2: A foundation model for multivariate time series forecasting \u2014 Accurate forecasting with uncertainty quantification is critical in a variety of scientific applications ranging from epidemiology and economics to energy systems and earth sciences. Yet most forecasting models still nee\u2026",
           "citations": [
             {
-              "id": "4",
+              "id": "5",
               "url": "https://arxiv.org/abs/2610.41956",
               "title": "Chronos-2: A foundation model for multivariate time series forecasting"
             }
@@ -141,7 +164,7 @@
           "text": "Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting \u2014 Generative models have become the standard approach in language and vision. These models are typically pretrained first and then fine-tuned. Recent work demonstrates how to pretrain an autoregressive generative model on\u2026",
           "citations": [
             {
-              "id": "5",
+              "id": "6",
               "url": "https://arxiv.org/abs/2611.14117",
               "title": "Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting"
             }
@@ -157,28 +180,6 @@
             "source": "arxiv",
             "date": "2026-11-10",
             "authors": "Fedor Shabashev"
-          }
-        },
-        {
-          "text": "FourStat: A Dual AutoEncoder Leveraging Frequency and Stationarity for Time Series Anomaly Detection \u2014 While numerous studies have focused on multivariate time series anomaly detection, many existing methods perform poorly or are not directly applicable to univariate settings. We introduce FourStat, a dual-model framework\u2026",
-          "citations": [
-            {
-              "id": "6",
-              "url": "https://arxiv.org/abs/2611.32714",
-              "title": "FourStat: A Dual AutoEncoder Leveraging Frequency and Stationarity for Time Series Anomaly Detection"
-            }
-          ],
-          "meta": {
-            "score": 3.232,
-            "topics": [
-              "time-series",
-              "quant-research",
-              "llm-agents"
-            ],
-            "kind": "literature",
-            "source": "arxiv",
-            "date": "2026-11-24",
-            "authors": "Saman Hadian, Ramtin Moslemi, Mohammad Mohammadi, Sarina Heshmati, Siavash Ahmadi, Babak Hossein Khalaj, Mohammad Hossein Rohban"
           }
         }
       ]
